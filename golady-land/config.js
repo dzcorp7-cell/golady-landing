@@ -14,18 +14,15 @@ var CONFIG = {
     remise:     "−16%",
     stock:      8,
 
-    /* ── DESCRIPTION ── */
     description: "Les Sandales Easy Move sont pensées pour la femme algérienne moderne — un design sobre, une stabilité parfaite et un confort qui vous accompagne tout au long de la journée. Elles allient simplicité et élégance pour un usage quotidien sans compromis.",
 
-    /* ── CARACTÉRISTIQUES (icon + titre + description courte) ── */
     features: [
-      { icon: "👠", titre: "Talon stable 6 cm",        desc: "Confort toute la journée sans fatigue" },
-      { icon: "✨", titre: "Finition premium",          desc: "Matière soignée, brillance durable" },
-      { icon: "🛡️", titre: "Semelle antidérapante",    desc: "Sécurité sur tous les sols" },
-      { icon: "📐", titre: "Taille fidèle",             desc: "Commandez votre pointure habituelle" }
+      { icon: "👠", titre: "Talon stable 6 cm",      desc: "Confort toute la journée sans fatigue" },
+      { icon: "✨", titre: "Finition premium",        desc: "Matière soignée, brillance durable"    },
+      { icon: "🛡️", titre: "Semelle antidérapante", desc: "Sécurité sur tous les sols"             },
+      { icon: "📐", titre: "Taille fidèle",           desc: "Commandez votre pointure habituelle"   }
     ],
 
-    /* ── GUIDE POINTURES ── */
     guide_pointures: [
       { pointure: "36", longueur: "22.5 cm" },
       { pointure: "37", longueur: "23.5 cm" },
@@ -35,7 +32,6 @@ var CONFIG = {
       { pointure: "41", longueur: "25.5 cm" }
     ],
 
-    /* ── CONSEIL STYLE ── */
     conseil_style: "À porter avec un jean, une robe simple ou une tenue de travail. Ces sandales à talon moyen stable, avec leur bon maintien du pied et leur confort de marche, sont parfaites pour le quotidien, le travail et les longues journées actives."
   },
 

@@ -23,17 +23,17 @@ var CONFIG = {
     stock:      8,
     description: "Les Sandales Easy Move sont pensées pour la femme algérienne moderne — un design sobre, une stabilité parfaite et un confort qui vous accompagne tout au long de la journée. Elles allient simplicité et élégance pour un usage quotidien sans compromis.",
     features: [
-      { icon: "👠", titre: "Talon stable 6 cm", desc: "Confort toute la journée sans fatigue" },
-      { icon: "✨", titre: "Finition premium", desc: "Matière soignée, brillance durable" },
+      { icon: "👠", titre: "Talon stable 6 cm",      desc: "Confort toute la journée sans fatigue" },
+      { icon: "✨", titre: "Finition premium",        desc: "Matière soignée, brillance durable" },
       { icon: "🛡️", titre: "Semelle antidérapante", desc: "Sécurité sur tous les sols" },
-      { icon: "📐", titre: "Taille fidèle", desc: "Commandez votre pointure habituelle" }
+      { icon: "📐", titre: "Taille fidèle",           desc: "Commandez votre pointure habituelle" }
     ],
     guide_pointures: [
       { pointure: "36", longueur: "22.5 cm" },
       { pointure: "37", longueur: "23.5 cm" },
-      { pointure: "38", longueur: "24 cm" },
+      { pointure: "38", longueur: "24 cm"   },
       { pointure: "39", longueur: "24.5 cm" },
-      { pointure: "40", longueur: "25 cm" },
+      { pointure: "40", longueur: "25 cm"   },
       { pointure: "41", longueur: "25.5 cm" }
     ],
     conseil_style: "À porter avec un jean, une robe simple ou une tenue de travail. Ces sandales à talon moyen stable, avec leur bon maintien du pied et leur confort de marche, sont parfaites pour le quotidien, le travail et les longues journées actives."
@@ -135,64 +135,6 @@ var CONFIG = {
 
   <style>
 
-
-    /* ── SÉLECTEUR COULEUR GALERIE ── */
-    .color-switcher { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
-    .color-swatch {
-      display: flex; flex-direction: column; align-items: center; gap: 4px;
-      cursor: pointer; border: 2px solid transparent; border-radius: 10px;
-      padding: 4px; transition: border-color .15s, transform .15s;
-      background: var(--white);
-    }
-    .color-swatch:hover { border-color: var(--gold); transform: translateY(-2px); }
-    .color-swatch.active { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(201,168,76,.2); }
-    .color-swatch__img { width: 56px; height: 56px; border-radius: 7px; object-fit: cover; background: var(--grey-bg); }
-    .color-swatch__dot { width: 10px; height: 10px; border-radius: 50%; border: 1.5px solid rgba(0,0,0,.15); }
-    .color-swatch__name { font-size: 10px; font-weight: 600; color: var(--grey-text); }
-
-    @media (max-width: 860px) {
-      .color-swatch__img { width: 48px; height: 48px; }
-      .color-swatch__name { font-size: 9px; }
-    }
-
-
-    /* ── DESCRIPTION PRODUIT ── */
-    .prod-desc { font-size: 14px; color: var(--grey-text); line-height: 1.7; }
-    .prod-features { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 12px; }
-    .prod-feature { display: flex; align-items: flex-start; gap: 10px; background: var(--grey-bg); border-radius: 10px; padding: 12px; }
-    .prod-feature__icon { font-size: 20px; flex-shrink: 0; }
-    .prod-feature__title { font-size: 13px; font-weight: 700; }
-    .prod-feature__desc { font-size: 11px; color: var(--grey-text); margin-top: 2px; }
-
-    /* ── STATS BARRE ── */
-    .stats-bar { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; background: var(--black); border-radius: var(--radius); padding: 20px 16px; }
-    .stats-bar__item { text-align: center; }
-    .stats-bar__num { font-size: 20px; font-weight: 800; color: var(--gold); }
-    .stats-bar__label { font-size: 10px; color: rgba(255,255,255,.5); margin-top: 3px; }
-
-    /* ── CONSEIL STYLE ── */
-    .conseil-style { background: linear-gradient(135deg, #1a0a00, #2d1800); border: 1px solid var(--gold); border-radius: var(--radius); padding: 24px; display: flex; gap: 16px; align-items: flex-start; }
-    .conseil-style__icon { font-size: 32px; flex-shrink: 0; }
-    .conseil-style__title { font-family: var(--font-display); font-size: 16px; font-weight: 700; color: var(--gold); margin-bottom: 8px; }
-    .conseil-style__text { font-size: 13px; color: rgba(255,255,255,.8); line-height: 1.7; }
-
-    /* ── GUIDE POINTURES ── */
-    .guide-pointures { background: var(--white); border: 1px solid var(--grey-border); border-radius: var(--radius); overflow: hidden; }
-    .guide-pointures__title { background: var(--gold-light); border-bottom: 1px solid var(--gold); padding: 12px 16px; font-size: 13px; font-weight: 700; display: flex; align-items: center; gap: 8px; }
-    .guide-pointures table { width: 100%; border-collapse: collapse; font-size: 13px; }
-    .guide-pointures th { background: var(--grey-bg); padding: 9px 16px; text-align: left; font-weight: 700; font-size: 11px; text-transform: uppercase; letter-spacing: .04em; color: var(--grey-text); }
-    .guide-pointures td { padding: 9px 16px; border-top: 1px solid var(--grey-border); }
-    .guide-pointures tr:hover td { background: var(--gold-light); }
-
-    @media (max-width: 860px) {
-      .prod-features { grid-template-columns: 1fr 1fr; }
-      .stats-bar { grid-template-columns: repeat(2, 1fr); gap: 8px; padding: 16px 12px; }
-      .stats-bar__num { font-size: 18px; }
-    }
-    @media (max-width: 400px) {
-      .prod-features { grid-template-columns: 1fr; }
-    }
-
     /* ── FIX UNIVERSEL DÉBORDEMENT ── */
     *, *::before, *::after { max-width: 100%; }
     img { max-width: 100%; height: auto; display: block; }
@@ -252,15 +194,56 @@ var CONFIG = {
     /* ── PAGE LAYOUT ── */
     .page { max-width: 1100px; margin: 0 auto; padding: 32px 16px 0; display: grid; grid-template-columns: minmax(0,480px) minmax(0,1fr); gap: 40px; align-items: start; }
 
-    /* ── GALERIE ── */
+    /* ── SÉLECTEUR COULEUR GALERIE ── */
+    .color-switcher { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
+    .color-swatch { display: flex; flex-direction: column; align-items: center; gap: 4px; cursor: pointer; border: 2px solid transparent; border-radius: 10px; padding: 4px; transition: border-color .15s, transform .15s; background: var(--white); }
+    .color-swatch:hover { border-color: var(--gold); transform: translateY(-2px); }
+    .color-swatch.active { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(201,168,76,.2); }
+    .color-swatch__img { width: 56px; height: 56px; border-radius: 7px; object-fit: cover; background: var(--grey-bg); }
+    .color-swatch__dot { width: 10px; height: 10px; border-radius: 50%; border: 1.5px solid rgba(0,0,0,.15); }
+    .color-swatch__name { font-size: 10px; font-weight: 600; color: var(--grey-text); }
+
+    /* ── GALERIE CAROUSEL ── */
     .gallery { position: sticky; top: 72px; }
-    .gallery__main { border-radius: var(--radius); overflow: hidden; background: var(--grey-bg); aspect-ratio: 1 / 1.1; position: relative; }
-    .gallery__main img { width: 100%; height: 100%; object-fit: contain; display: none; position: absolute; top: 0; left: 0; transition: opacity .3s; background: var(--grey-bg); }
-    .gallery__main img.active { display: block; }
-    .gallery__thumbs { display: flex; gap: 8px; margin-top: 10px; overflow-x: auto; padding-bottom: 4px; scrollbar-width: thin; }
-    .gallery__thumb { flex-shrink: 0; width: 64px; height: 64px; border-radius: 8px; overflow: hidden; border: 2px solid transparent; cursor: pointer; padding: 0; background: none; transition: border-color .15s; }
-    .gallery__thumb.active, .gallery__thumb:hover { border-color: var(--gold); }
-    .gallery__thumb img { width: 100%; height: 100%; object-fit: cover; }
+    .gallery__carousel { border-radius: var(--radius); overflow: hidden; background: var(--grey-bg); aspect-ratio: 1 / 1.1; position: relative; }
+    .gallery__carousel-track { display: flex; height: 100%; transition: transform .4s ease; }
+    .gallery__carousel-track img { flex-shrink: 0; width: 100%; height: 100%; object-fit: contain; background: var(--grey-bg); }
+    .gallery__nav { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,.9); border: none; border-radius: 50%; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 2; box-shadow: 0 2px 8px rgba(0,0,0,.15); transition: background .15s; }
+    .gallery__nav:hover { background: var(--white); }
+    .gallery__nav--prev { left: 10px; }
+    .gallery__nav--next { right: 10px; }
+    .gallery__dots { display: flex; justify-content: center; gap: 5px; margin-top: 10px; }
+    .gallery__dot { width: 6px; height: 6px; border-radius: 50%; background: var(--grey-border); border: none; cursor: pointer; padding: 0; transition: background .2s, transform .2s; }
+    .gallery__dot.active { background: var(--gold); transform: scale(1.4); }
+    .gallery__counter { position: absolute; bottom: 10px; right: 12px; background: rgba(0,0,0,.5); color: #fff; font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 12px; }
+
+    /* ── DESCRIPTION PRODUIT ── */
+    .prod-desc { font-size: 14px; color: var(--grey-text); line-height: 1.7; margin-bottom: 12px; }
+    .prod-features { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .prod-feature { display: flex; align-items: flex-start; gap: 10px; background: var(--grey-bg); border-radius: 10px; padding: 12px; }
+    .prod-feature__icon { font-size: 20px; flex-shrink: 0; }
+    .prod-feature__title { font-size: 13px; font-weight: 700; }
+    .prod-feature__desc { font-size: 11px; color: var(--grey-text); margin-top: 2px; }
+
+    /* ── STATS BAR ── */
+    .stats-bar { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; background: var(--black); border-radius: var(--radius); padding: 20px 16px; margin-bottom: 16px; }
+    .stats-bar__item { text-align: center; }
+    .stats-bar__num { font-size: 20px; font-weight: 800; color: var(--gold); }
+    .stats-bar__label { font-size: 10px; color: rgba(255,255,255,.5); margin-top: 3px; }
+
+    /* ── CONSEIL STYLE ── */
+    .conseil-style { background: linear-gradient(135deg, #1a0a00, #2d1800); border: 1px solid var(--gold); border-radius: var(--radius); padding: 24px; display: flex; gap: 16px; align-items: flex-start; }
+    .conseil-style__icon { font-size: 32px; flex-shrink: 0; }
+    .conseil-style__title { font-family: var(--font-display); font-size: 16px; font-weight: 700; color: var(--gold); margin-bottom: 8px; }
+    .conseil-style__text { font-size: 13px; color: rgba(255,255,255,.8); line-height: 1.7; }
+
+    /* ── GUIDE POINTURES ── */
+    .guide-pointures { background: var(--white); border: 1px solid var(--grey-border); border-radius: var(--radius); overflow: hidden; }
+    .guide-pointures__title { background: var(--gold-light); border-bottom: 1px solid var(--gold); padding: 12px 16px; font-size: 13px; font-weight: 700; display: flex; align-items: center; gap: 8px; }
+    .guide-pointures table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .guide-pointures th { background: var(--grey-bg); padding: 9px 16px; text-align: left; font-weight: 700; font-size: 11px; text-transform: uppercase; letter-spacing: .04em; color: var(--grey-text); }
+    .guide-pointures td { padding: 9px 16px; border-top: 1px solid var(--grey-border); }
+    .guide-pointures tr:hover td { background: var(--gold-light); }
 
     /* Viewers */
     .viewers { margin-top: 10px; display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--grey-text); background: var(--grey-bg); border-radius: 8px; padding: 8px 12px; }
@@ -289,7 +272,6 @@ var CONFIG = {
     .color-label { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; color: var(--black); }
     .color-label span { color: var(--gold); font-weight: 800; }
     .color-btns { display: flex; gap: 8px; flex-wrap: wrap; }
-    .color-btns-inline { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
     .color-btn {
       display: flex; align-items: center; gap: 7px;
       padding: 8px 14px; border: 2px solid var(--grey-border);
@@ -365,7 +347,7 @@ var CONFIG = {
     .reviews-wrap::-webkit-scrollbar { display: none; }
     .reviews-track { display: flex; gap: 10px; width: max-content; padding: 4px 2px; }
     .reviews-track:active { cursor: grabbing; }
-    .reviews-track img { flex-shrink: 0; width: 160px; height: 220px; border-radius: 12px; object-fit: contain; background: #f5f5f5; box-shadow: 0 2px 12px rgba(0,0,0,.1); pointer-events: none; user-select: none; }
+    .reviews-track img { flex-shrink: 0; width: 320px; height: 440px; border-radius: 12px; object-fit: contain; background: #f5f5f5; box-shadow: 0 2px 12px rgba(0,0,0,.1); pointer-events: none; user-select: none; }
     .reviews-dots { display: flex; justify-content: center; gap: 6px; margin-top: 12px; }
     .reviews-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--grey-border); border: none; cursor: pointer; transition: background .2s, transform .2s; padding: 0; }
     .reviews-dot.active { background: var(--gold); transform: scale(1.3); }
@@ -395,7 +377,7 @@ var CONFIG = {
     .signature__stat-label { font-size: 11px; color: rgba(255,255,255,.5); margin-top: 4px; }
 
     /* ── GARANTIE ── */
-    .garantie-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .garantie-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; } .garantie-grid .garantie-item:last-child { grid-column: 1 / -1; }
     .garantie-item { background: var(--white); border: 1px solid var(--grey-border); border-radius: 10px; padding: 16px; display: flex; align-items: flex-start; gap: 12px; }
     .garantie-item__icon { font-size: 24px; flex-shrink: 0; }
     .garantie-item__title { font-size: 13px; font-weight: 700; margin-bottom: 4px; }
@@ -433,16 +415,17 @@ var CONFIG = {
     @media (max-width: 860px) {
       .page { grid-template-columns: 1fr; gap: 20px; padding: 16px 12px 0; }
       .gallery { position: static; width: 100%; }
-      .gallery__main { aspect-ratio: 1 / 1; min-height: 280px; }
-      .gallery__thumbs { gap: 6px; }
-      .gallery__thumb { width: 54px; height: 54px; }
+      .gallery__carousel { aspect-ratio: 1 / 1; min-height: 280px; }
+      .color-swatch__img { width: 48px; height: 48px; }
+      .prod-features { grid-template-columns: 1fr 1fr; }
+      .stats-bar { grid-template-columns: repeat(2,1fr); padding: 14px; }
       .sizes { grid-template-columns: repeat(3, minmax(0,1fr)); gap: 6px; }
       .size-btn { padding: 10px 4px; font-size: 13px; }
       .signature { grid-template-columns: 1fr; gap: 20px; padding: 24px 16px; }
       .garantie-grid { grid-template-columns: 1fr; }
       .sections { margin-top: 20px; padding: 0 12px 48px; }
       .order-bloc__body { padding: 12px; }
-      .reviews-track img { width: 130px; height: 180px; }
+      .reviews-track img { width: 260px; height: 360px; }
       .cta-bottom { padding: 24px 16px; }
       .cta-bottom .cta-group { max-width: 100%; }
       .wa-btn { font-size: 15px; padding: 14px 10px; }
@@ -456,7 +439,7 @@ var CONFIG = {
     @media (max-width: 400px) {
       .sizes { grid-template-columns: repeat(3, minmax(0,1fr)); }
       .color-btn { padding: 7px 10px; font-size: 12px; }
-      .reviews-track img { width: 120px; height: 160px; }
+      .reviews-track img { width: 240px; height: 320px; }
     }
 
     .call-btn--dark { background: transparent !important; color: var(--white) !important; border-color: rgba(255,255,255,.4) !important; }
@@ -605,14 +588,12 @@ var CONFIG = {
       <div class="order-bloc__body">
 
         <div class="step"><div class="step__badge">1</div><span class="step__label">Choisissez votre couleur</span></div>
-        <div class="color-btns-inline" id="color-btns"></div>
-        <div class="confirm-msg" id="color-confirm" style="display:none;">
+        <div class="color-btns" id="color-btns" style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px;"></div>
+        <div class="confirm-msg" id="color-confirm" style="margin-bottom:8px;">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
           Couleur <strong id="color-label"></strong> sélectionnée ✓
         </div>
-
         <div class="divider"></div>
-
         <div class="step"><div class="step__badge">2</div><span class="step__label">Choisissez votre pointure</span></div>
         <div class="sizes" id="sizes-grid"></div>
         <div class="alert" id="size-alert">
@@ -709,8 +690,7 @@ var CONFIG = {
 
     <!-- STATS + AVIS CLIENTS -->
     <div class="reviews-section">
-      <!-- Stats bar -->
-      <div class="stats-bar" style="margin-bottom:16px;">
+      <div class="stats-bar">
         <div class="stats-bar__item"><div class="stats-bar__num">+8000</div><div class="stats-bar__label">Clientes</div></div>
         <div class="stats-bar__item"><div class="stats-bar__num">4.9⭐</div><div class="stats-bar__label">Note moyenne</div></div>
         <div class="stats-bar__item"><div class="stats-bar__num">58</div><div class="stats-bar__label">Wilayas</div></div>
@@ -737,14 +717,14 @@ var CONFIG = {
   <section class="signature">
     <div class="signature__left">
       <div class="signature__label">GoLady — L'élégance algérienne</div>
-      <div class="signature__title" id="sig-title">Chaque paire est<br><em>une promesse</em></div>
-      <p class="signature__desc" id="sig-desc" style="font-size:13px;color:rgba(255,255,255,.7);line-height:1.7;margin:12px 0;"></p>
+      <div class="signature__title">Chaque paire est<br><em>une promesse</em></div>
+      <p id="sig-desc" style="font-size:13px;color:rgba(255,255,255,.7);line-height:1.7;margin:10px 0;"></p>
       <div class="signature__items" id="sig-features"></div>
     </div>
     <div class="signature__right">
       <div class="signature__stat">
         <div class="signature__stat-num">+8000</div>
-        <div class="signature__stat-label">Clientes satisfaites</div>
+        <div class="signature__stat-label">Clientes</div>
       </div>
       <div class="signature__stat">
         <div class="signature__stat-num">4.9⭐</div>
@@ -756,7 +736,7 @@ var CONFIG = {
       </div>
       <div class="signature__stat">
         <div class="signature__stat-num">2h</div>
-        <div class="signature__stat-label">Confirmation WhatsApp</div>
+        <div class="signature__stat-label">Confirmation</div>
       </div>
     </div>
   </section>
@@ -780,13 +760,6 @@ var CONFIG = {
         </div>
       </div>
       <div class="garantie-item">
-        <div class="garantie-item__icon">🔄</div>
-        <div>
-          <div class="garantie-item__title">Échange sous 7 jours</div>
-          <div class="garantie-item__desc">La pointure ne convient pas ? Nous l'échangeons sans problème et sans frais supplémentaires.</div>
-        </div>
-      </div>
-      <div class="garantie-item">
         <div class="garantie-item__icon">💬</div>
         <div>
           <div class="garantie-item__title">Suivi WhatsApp</div>
@@ -798,7 +771,7 @@ var CONFIG = {
 
   <!-- CONSEIL STYLE -->
   <section>
-    <div class="conseil-style" id="conseil-style-section">
+    <div class="conseil-style">
       <div class="conseil-style__icon">💡</div>
       <div>
         <div class="conseil-style__title">Conseil Style GoLady</div>
@@ -809,9 +782,9 @@ var CONFIG = {
 
   <!-- GUIDE POINTURES -->
   <section>
-    <div class="guide-pointures" id="guide-pointures-section">
+    <div class="guide-pointures">
       <div class="guide-pointures__title">📐 Guide des pointures — Taille fidèle</div>
-      <table id="guide-table">
+      <table>
         <thead><tr><th>Pointure</th><th>Longueur pied</th><th>Conseil</th></tr></thead>
         <tbody id="guide-tbody"></tbody>
       </table>
@@ -824,15 +797,23 @@ var CONFIG = {
     <div class="faq" id="faq">
       <div class="faq-item">
         <button class="faq-question">Dois-je payer à l'avance ?<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
-        <div class="faq-answer">Non. Vous payez uniquement quand le livreur arrive à votre porte. Vous pouvez inspecter le colis avant de payer.</div>
+        <div class="faq-answer">Non, vous ne payez rien à l'avance. Vous payez uniquement quand le livreur arrive à votre porte avec le colis. Vous pouvez l'inspecter avant de payer.</div>
       </div>
       <div class="faq-item">
-        <button class="faq-question">Délai de livraison ?<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
-        <div class="faq-answer">24–48h pour les grandes villes, 48–72h pour les autres wilayas. Numéro de suivi envoyé par WhatsApp.</div>
+        <button class="faq-question">Quel est le délai de livraison ?<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="faq-answer">En général 24–48h pour les grandes villes, 48–72h pour les autres wilayas. Nous vous envoyons le numéro de suivi par WhatsApp.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Livrez-vous dans ma wilaya ?<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="faq-answer">Oui, nous livrons dans les 58 wilayas d'Algérie, y compris le grand sud. En cas de doute, contactez-nous sur WhatsApp.</div>
       </div>
       <div class="faq-item">
         <button class="faq-question">Et si la pointure ne convient pas ?<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
-        <div class="faq-answer">Contactez-nous sur WhatsApp sous 7 jours pour un échange gratuit.</div>
+        <div class="faq-answer">Pas de souci. Contactez-nous sur WhatsApp sous 7 jours pour un échange gratuit avec la bonne pointure.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Comment passer ma commande ?<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="faq-answer">Choisissez la couleur et la pointure, remplissez vos informations, puis cliquez sur le bouton vert. WhatsApp s'ouvre automatiquement avec le message déjà rédigé. Il ne vous reste qu'à l'envoyer 😊</div>
       </div>
     </div>
   </section>
@@ -897,24 +878,24 @@ document.addEventListener("DOMContentLoaded", function() {
   /* ── Infos produit ── */
   document.getElementById('product-title').textContent = CONFIG.produit.nom;
 
-  /* ── Description produit ── */
+  /* ── Description + features ── */
   var descSection = document.getElementById('prod-desc-section');
   if (descSection && CONFIG.produit.description) {
-    var descHTML = '<p class="prod-desc">' + CONFIG.produit.description + '</p>';
-    if (CONFIG.produit.features && CONFIG.produit.features.length) {
-      descHTML += '<div class="prod-features">';
+    var dHTML = '<p class="prod-desc">' + CONFIG.produit.description + '</p>';
+    if (CONFIG.produit.features) {
+      dHTML += '<div class="prod-features">';
       CONFIG.produit.features.forEach(function(f) {
-        descHTML += '<div class="prod-feature"><div class="prod-feature__icon">' + f.icon + '</div><div><div class="prod-feature__title">' + f.titre + '</div><div class="prod-feature__desc">' + f.desc + '</div></div></div>';
+        dHTML += '<div class="prod-feature"><div class="prod-feature__icon">' + f.icon + '</div><div><div class="prod-feature__title">' + f.titre + '</div><div class="prod-feature__desc">' + f.desc + '</div></div></div>';
       });
-      descHTML += '</div>';
+      dHTML += '</div>';
     }
-    descSection.innerHTML = descHTML;
+    descSection.innerHTML = dHTML;
   }
 
-  /* ── Signature features ── */
-  var sigFeatures = document.getElementById('sig-features');
+  /* ── Signature description + features ── */
   var sigDesc = document.getElementById('sig-desc');
   if (sigDesc && CONFIG.produit.description) sigDesc.textContent = CONFIG.produit.description;
+  var sigFeatures = document.getElementById('sig-features');
   if (sigFeatures && CONFIG.produit.features) {
     CONFIG.produit.features.forEach(function(f) {
       var div = document.createElement('div');
@@ -959,9 +940,9 @@ document.addEventListener("DOMContentLoaded", function() {
     viewersEl.textContent = viewers;
   }, 8000);
 
-  /* ── GALERIE ── */
-  var galleryTrack  = document.getElementById('gallery-track');
-  var galleryDots   = document.getElementById('gallery-dots');
+  /* ── GALERIE CAROUSEL ── */
+  var galleryTrack   = document.getElementById('gallery-track');
+  var galleryDots    = document.getElementById('gallery-dots');
   var galleryCurrent = 0;
   var galleryPhotos  = [];
 
@@ -977,7 +958,7 @@ document.addEventListener("DOMContentLoaded", function() {
     galleryPhotos = photos;
     galleryCurrent = 0;
     galleryTrack.innerHTML = '';
-    galleryDots.innerHTML = '';
+    galleryDots.innerHTML  = '';
     photos.forEach(function(url, i) {
       var img = document.createElement('img');
       img.src = url; img.alt = CONFIG.produit.nom;
@@ -985,20 +966,18 @@ document.addEventListener("DOMContentLoaded", function() {
       galleryTrack.appendChild(img);
       var dot = document.createElement('button');
       dot.className = 'gallery__dot' + (i === 0 ? ' active' : '');
-      dot.addEventListener('click', function() { goToGallery(i); });
+      (function(idx){ dot.addEventListener('click', function() { goToGallery(idx); }); })(i);
       galleryDots.appendChild(dot);
     });
-    document.getElementById('gallery-total').textContent = photos.length;
+    document.getElementById('gallery-total').textContent   = photos.length;
     document.getElementById('gallery-current').textContent = 1;
     galleryTrack.style.transform = 'translateX(0)';
   }
 
   document.getElementById('gallery-prev').addEventListener('click', function() { goToGallery(galleryCurrent - 1); });
   document.getElementById('gallery-next').addEventListener('click', function() { goToGallery(galleryCurrent + 1); });
-
-  // swipe tactile galerie
-  var gStartX = 0;
   var gCarousel = document.getElementById('gallery-carousel');
+  var gStartX = 0;
   gCarousel.addEventListener('touchstart', function(e) { gStartX = e.touches[0].clientX; }, {passive:true});
   gCarousel.addEventListener('touchend', function(e) {
     if (Math.abs(gStartX - e.changedTouches[0].clientX) > 40)
@@ -1007,32 +986,38 @@ document.addEventListener("DOMContentLoaded", function() {
 
   /* ── COULEURS ── */
   var colorBtns     = document.getElementById('color-btns');
+  var switcher      = document.getElementById('color-switcher');
   var selectedColor = null;
   var selectedSize  = null;
 
+  function selectColor(couleur, ci) {
+    selectedColor = couleur;
+    buildGallery(couleur.photos);
+    buildSizes(couleur.pointures);
+    selectedSize = null;
+    document.getElementById('size-confirm').classList.remove('show');
+    // confirm couleur
+    var cc = document.getElementById('color-confirm');
+    var cl = document.getElementById('color-label');
+    if (cc && cl) { cl.textContent = couleur.nom; cc.style.display = 'flex'; }
+    // sync form buttons
+    colorBtns.querySelectorAll('.color-btn').forEach(function(b, i) { b.classList.toggle('selected', i === ci); });
+    // sync switcher
+    if (switcher) switcher.querySelectorAll('.color-swatch').forEach(function(s, i) { s.classList.toggle('active', i === ci); });
+  }
+
+  // Boutons dans le formulaire
   CONFIG.couleurs.forEach(function(couleur, ci) {
     var btn = document.createElement('button');
     btn.type = 'button';
     btn.className = 'color-btn' + (ci === 0 ? ' selected' : '');
     btn.innerHTML = '<span class="color-btn__dot" style="background:' + couleur.hex + '"></span>' + couleur.nom;
-    btn.addEventListener('click', function() {
-      colorBtns.querySelectorAll('.color-btn').forEach(function(b) { b.classList.remove('selected'); });
-      btn.classList.add('selected');
-      selectedColor = couleur;
-      colorLabel.textContent = couleur.nom;
-      buildGallery(couleur.photos);
-      buildSizes(couleur.pointures);
-      selectedSize = null;
-      document.getElementById('size-confirm').classList.remove('show');
-    });
+    (function(c, i){ btn.addEventListener('click', function() { selectColor(c, i); }); })(couleur, ci);
     colorBtns.appendChild(btn);
   });
 
-  /* ── SÉLECTEUR COULEUR GALERIE ── */
-  var switcher = document.getElementById('color-switcher');
-
-  function buildSwitcher() {
-    switcher.innerHTML = '';
+  // Switcher visuel au-dessus de la galerie
+  if (switcher) {
     CONFIG.couleurs.forEach(function(couleur, ci) {
       var sw = document.createElement('div');
       sw.className = 'color-swatch' + (ci === 0 ? ' active' : '');
@@ -1040,41 +1025,14 @@ document.addEventListener("DOMContentLoaded", function() {
         '<img class="color-swatch__img" src="' + couleur.photos[0] + '" alt="' + couleur.nom + '" loading="lazy">' +
         '<span class="color-swatch__dot" style="background:' + couleur.hex + '"></span>' +
         '<span class="color-swatch__name">' + couleur.nom + '</span>';
-      (function(couleur, ci) {
-        sw.addEventListener('click', function() {
-          switcher.querySelectorAll('.color-swatch').forEach(function(s) { s.classList.remove('active'); });
-          sw.classList.add('active');
-          // sync formulaire
-          var formBtns = document.querySelectorAll('#color-btns .color-btn');
-          formBtns.forEach(function(b) { b.classList.remove('selected'); });
-          if (formBtns[ci]) formBtns[ci].classList.add('selected');
-          // mettre à jour la couleur et la galerie directement
-          selectedColor = couleur;
-          buildGallery(couleur.photos);
-          buildSizes(couleur.pointures);
-          selectedSize = null;
-          document.getElementById('size-confirm').classList.remove('show');
-          var cc = document.getElementById('color-confirm');
-          var cl = document.getElementById('color-label');
-          if (cc && cl) { cl.textContent = couleur.nom; cc.style.display = 'flex'; }
-        });
-      })(CONFIG.couleurs[ci], ci);
+      (function(c, i){ sw.addEventListener('click', function() { selectColor(c, i); }); })(couleur, ci);
       switcher.appendChild(sw);
-    });
-  }
-
-  // Sync galerie→switcher quand on clique dans le formulaire
-  function syncSwitcher(ci) {
-    switcher.querySelectorAll('.color-swatch').forEach(function(s, i) {
-      s.classList.toggle('active', i === ci);
     });
   }
 
   /* Init avec première couleur */
   selectedColor = CONFIG.couleurs[0];
   buildGallery(selectedColor.photos);
-  buildSwitcher();
-  // show first color as confirmed
   var cc0 = document.getElementById('color-confirm');
   var cl0 = document.getElementById('color-label');
   if (cc0 && cl0) { cl0.textContent = selectedColor.nom; cc0.style.display = 'flex'; }
