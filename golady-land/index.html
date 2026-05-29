@@ -231,20 +231,6 @@ var CONFIG = {
     .stats-bar__num { font-size: 20px; font-weight: 800; color: var(--gold); }
     .stats-bar__label { font-size: 10px; color: rgba(255,255,255,.5); margin-top: 3px; }
 
-    /* ── CONSEIL STYLE ── */
-    .conseil-style { background: linear-gradient(135deg, #1a0a00, #2d1800); border: 1px solid var(--gold); border-radius: var(--radius); padding: 24px; display: flex; gap: 16px; align-items: flex-start; }
-    .conseil-style__icon { font-size: 32px; flex-shrink: 0; }
-    .conseil-style__title { font-family: var(--font-display); font-size: 16px; font-weight: 700; color: var(--gold); margin-bottom: 8px; }
-    .conseil-style__text { font-size: 13px; color: rgba(255,255,255,.8); line-height: 1.7; }
-
-    /* ── GUIDE POINTURES ── */
-    .guide-pointures { background: var(--white); border: 1px solid var(--grey-border); border-radius: var(--radius); overflow: hidden; }
-    .guide-pointures__title { background: var(--gold-light); border-bottom: 1px solid var(--gold); padding: 12px 16px; font-size: 13px; font-weight: 700; display: flex; align-items: center; gap: 8px; }
-    .guide-pointures table { width: 100%; border-collapse: collapse; font-size: 13px; }
-    .guide-pointures th { background: var(--grey-bg); padding: 9px 16px; text-align: left; font-weight: 700; font-size: 11px; text-transform: uppercase; letter-spacing: .04em; color: var(--grey-text); }
-    .guide-pointures td { padding: 9px 16px; border-top: 1px solid var(--grey-border); }
-    .guide-pointures tr:hover td { background: var(--gold-light); }
-
     /* Viewers */
     .viewers { margin-top: 10px; display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--grey-text); background: var(--grey-bg); border-radius: 8px; padding: 8px 12px; }
     .viewers__dot { width: 8px; height: 8px; border-radius: 50%; background: var(--red); animation: pulse 1s infinite; flex-shrink: 0; }
@@ -413,6 +399,8 @@ var CONFIG = {
 
     /* ── RESPONSIVE ── */
     @media (max-width: 860px) {
+      .stats-bar { grid-template-columns: repeat(2,1fr); padding: 14px; }
+      .stats-bar__num { font-size: 18px; }
       .page { grid-template-columns: 1fr; gap: 20px; padding: 16px 12px 0; }
       .gallery { position: static; width: 100%; }
       .gallery__carousel { aspect-ratio: 1 / 1; min-height: 280px; }
@@ -576,9 +564,6 @@ var CONFIG = {
       <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Confirmation WhatsApp sous 2 heures</li>
     </ul>
 
-    <!-- DESCRIPTION PRODUIT -->
-    <div id="prod-desc-section"></div>
-
     <!-- COMMANDE -->
     <div class="order-bloc" id="order-bloc">
       <div class="order-bloc__header">
@@ -713,35 +698,15 @@ var CONFIG = {
 <!-- SECTIONS BAS -->
 <div class="sections">
 
-  <!-- SIGNATURE GOLADY -->
-  <section class="signature">
-    <div class="signature__left">
-      <div class="signature__label">GoLady — L'élégance algérienne</div>
-      <div class="signature__title">Chaque paire est<br><em>une promesse</em></div>
-      <p id="sig-desc" style="font-size:13px;color:rgba(255,255,255,.7);line-height:1.7;margin:10px 0;"></p>
-      <div class="signature__items" id="sig-features"></div>
-    </div>
-    <div class="signature__right">
-      <div class="signature__stat">
-        <div class="signature__stat-num">+8000</div>
-        <div class="signature__stat-label">Clientes</div>
-      </div>
-      <div class="signature__stat">
-        <div class="signature__stat-num">4.9⭐</div>
-        <div class="signature__stat-label">Note moyenne</div>
-      </div>
-      <div class="signature__stat">
-        <div class="signature__stat-num">58</div>
-        <div class="signature__stat-label">Wilayas livrées</div>
-      </div>
-      <div class="signature__stat">
-        <div class="signature__stat-num">2h</div>
-        <div class="signature__stat-label">Confirmation</div>
-      </div>
-    </div>
-  </section>
+  <!-- STATS BAR -->
+  <div class="stats-bar">
+    <div class="stats-bar__item"><div class="stats-bar__num">+8000</div><div class="stats-bar__label">Clientes</div></div>
+    <div class="stats-bar__item"><div class="stats-bar__num">4.9⭐</div><div class="stats-bar__label">Note moyenne</div></div>
+    <div class="stats-bar__item"><div class="stats-bar__num">58</div><div class="stats-bar__label">Wilayas</div></div>
+    <div class="stats-bar__item"><div class="stats-bar__num">2h</div><div class="stats-bar__label">Confirmation</div></div>
+  </div>
 
-  <!-- GARANTIE -->
+  <!-- GARANTIES -->
   <section>
     <div class="section-title">🛡️ Nos garanties</div>
     <div class="garantie-grid">
@@ -749,71 +714,48 @@ var CONFIG = {
         <div class="garantie-item__icon">💰</div>
         <div>
           <div class="garantie-item__title">Paiement à la réception</div>
-          <div class="garantie-item__desc">Vous ne payez rien avant la livraison. Vous pouvez inspecter votre colis avant de payer.</div>
+          <div class="garantie-item__desc">Vous payez uniquement à la livraison. Inspectez avant de payer.</div>
         </div>
       </div>
       <div class="garantie-item">
         <div class="garantie-item__icon">🚚</div>
         <div>
           <div class="garantie-item__title">Livraison 24–72h</div>
-          <div class="garantie-item__desc">Nous livrons dans toutes les wilayas d'Algérie, y compris le grand sud.</div>
+          <div class="garantie-item__desc">Toutes les wilayas, y compris le grand sud.</div>
+        </div>
+      </div>
+      <div class="garantie-item">
+        <div class="garantie-item__icon">🔄</div>
+        <div>
+          <div class="garantie-item__title">Échange sous 7 jours</div>
+          <div class="garantie-item__desc">Mauvaise pointure ? On échange gratuitement.</div>
         </div>
       </div>
       <div class="garantie-item">
         <div class="garantie-item__icon">💬</div>
         <div>
           <div class="garantie-item__title">Suivi WhatsApp</div>
-          <div class="garantie-item__desc">Nous vous informons à chaque étape — confirmation, expédition, livraison.</div>
+          <div class="garantie-item__desc">Confirmation, expédition, livraison — on vous tient informée.</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CONSEIL STYLE -->
-  <section>
-    <div class="conseil-style">
-      <div class="conseil-style__icon">💡</div>
-      <div>
-        <div class="conseil-style__title">Conseil Style GoLady</div>
-        <div class="conseil-style__text" id="conseil-style-text"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- GUIDE POINTURES -->
-  <section>
-    <div class="guide-pointures">
-      <div class="guide-pointures__title">📐 Guide des pointures — Taille fidèle</div>
-      <table>
-        <thead><tr><th>Pointure</th><th>Longueur pied</th><th>Conseil</th></tr></thead>
-        <tbody id="guide-tbody"></tbody>
-      </table>
-    </div>
-  </section>
-
-  <!-- FAQ -->
+  <!-- FAQ COURTE -->
   <section>
     <div class="section-title">❓ Questions fréquentes</div>
     <div class="faq" id="faq">
       <div class="faq-item">
         <button class="faq-question">Dois-je payer à l'avance ?<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
-        <div class="faq-answer">Non, vous ne payez rien à l'avance. Vous payez uniquement quand le livreur arrive à votre porte avec le colis. Vous pouvez l'inspecter avant de payer.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question">Quel est le délai de livraison ?<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
-        <div class="faq-answer">En général 24–48h pour les grandes villes, 48–72h pour les autres wilayas. Nous vous envoyons le numéro de suivi par WhatsApp.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question">Livrez-vous dans ma wilaya ?<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
-        <div class="faq-answer">Oui, nous livrons dans les 58 wilayas d'Algérie, y compris le grand sud. En cas de doute, contactez-nous sur WhatsApp.</div>
+        <div class="faq-answer">Non. Vous payez uniquement quand le livreur arrive chez vous. Vous pouvez inspecter le colis avant de payer.</div>
       </div>
       <div class="faq-item">
         <button class="faq-question">Et si la pointure ne convient pas ?<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
-        <div class="faq-answer">Pas de souci. Contactez-nous sur WhatsApp sous 7 jours pour un échange gratuit avec la bonne pointure.</div>
+        <div class="faq-answer">Contactez-nous sur WhatsApp sous 7 jours pour un échange gratuit.</div>
       </div>
       <div class="faq-item">
-        <button class="faq-question">Comment passer ma commande ?<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
-        <div class="faq-answer">Choisissez la couleur et la pointure, remplissez vos informations, puis cliquez sur le bouton vert. WhatsApp s'ouvre automatiquement avec le message déjà rédigé. Il ne vous reste qu'à l'envoyer 😊</div>
+        <button class="faq-question">Livrez-vous dans toutes les wilayas ?<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="faq-answer">Oui, les 58 wilayas d'Algérie, y compris le grand sud. En cas de doute, contactez-nous sur WhatsApp.</div>
       </div>
     </div>
   </section>
@@ -878,19 +820,6 @@ document.addEventListener("DOMContentLoaded", function() {
   /* ── Infos produit ── */
   document.getElementById('product-title').textContent = CONFIG.produit.nom;
 
-  /* ── Description + features ── */
-  var descSection = document.getElementById('prod-desc-section');
-  if (descSection && CONFIG.produit.description) {
-    var dHTML = '<p class="prod-desc">' + CONFIG.produit.description + '</p>';
-    if (CONFIG.produit.features) {
-      dHTML += '<div class="prod-features">';
-      CONFIG.produit.features.forEach(function(f) {
-        dHTML += '<div class="prod-feature"><div class="prod-feature__icon">' + f.icon + '</div><div><div class="prod-feature__title">' + f.titre + '</div><div class="prod-feature__desc">' + f.desc + '</div></div></div>';
-      });
-      dHTML += '</div>';
-    }
-    descSection.innerHTML = dHTML;
-  }
 
   /* ── Signature description + features ── */
   var sigDesc = document.getElementById('sig-desc');
@@ -906,8 +835,6 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   /* ── Conseil style ── */
-  var conseilEl = document.getElementById('conseil-style-text');
-  if (conseilEl && CONFIG.produit.conseil_style) conseilEl.textContent = CONFIG.produit.conseil_style;
 
   /* ── Guide pointures ── */
   var guideTbody = document.getElementById('guide-tbody');
