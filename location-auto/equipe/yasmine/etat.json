@@ -1,11 +1,11 @@
 {
   "agent": "Yasmine",
   "poste": "Directrice artistique",
-  "etat": "a_zero",
-  "progression": 0,
-  "tache_en_cours": null,
-  "prochaine_etape": "Attendre la validation de Nadir, puis atelier logo",
-  "bloque_par": "nadir",
+  "etat": "en_cours",
+  "progression": 5,
+  "tache_en_cours": "Le nom est validé, préparation des pistes de logo",
+  "prochaine_etape": "3 pistes de logo pour Haboub Location",
+  "bloque_par": null,
   "livrables": [
     {
       "nom": "Logo simple",

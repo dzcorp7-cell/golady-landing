@@ -2,14 +2,14 @@
   "agent": "Nadir",
   "poste": "Stratège de marque",
   "etat": "a_valider",
-  "progression": 50,
-  "tache_en_cours": "5 propositions de nom et slogans livrées",
-  "prochaine_etape": "Grille des offres et prix (attend la liste des voitures)",
-  "bloque_par": "choix du nom",
+  "progression": 65,
+  "tache_en_cours": "Nom validé : Haboub Location. 5 slogans proposés.",
+  "prochaine_etape": "Grille des offres et prix",
+  "bloque_par": "choix du slogan et liste des voitures",
   "livrables": [
     {
       "nom": "Nom",
-      "etat": "a_valider"
+      "etat": "valide"
     },
     {
       "nom": "Slogan",

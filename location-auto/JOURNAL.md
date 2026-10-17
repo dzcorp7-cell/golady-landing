@@ -8,3 +8,6 @@
 | 2026-10-17 | Sofiane | Carte des choses à faire (25 points) publiée pour tri. |
 | 2026-10-17 | Sofiane | Décision 002 : carte triée. 12 Oui, 10 Plus tard, 1 Non. |
 | 2026-10-17 | Nadir | Note 02 : 5 propositions de nom et slogans. Passe à « à valider ». |
+| 2026-10-17 | Sofiane | Décision 003 : le nom est Haboub Location. |
+| 2026-10-17 | Nadir | Note 03 : 5 slogans en darija et français. |
+| 2026-10-17 | Yasmine | Débloquée par le nom. Passe en cours. |
