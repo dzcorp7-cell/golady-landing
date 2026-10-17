@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tableau de bord</title>
+<style>
+  :root { --bg:#f6f7f9; --card:#fff; --ink:#1b1f24; --muted:#6b7280; --line:#e5e7eb;
+    --zero:#9ca3af; --cours:#2563eb; --valider:#d97706; --valide:#16a34a; --bloque:#dc2626; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#0f1115; --card:#181b21; --ink:#e5e7eb; --muted:#9ca3af; --line:#2a2f38; } }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.5 system-ui,sans-serif; padding:24px 16px; }
+  h1 { font-size:1.4rem; margin:0 0 4px; }
+  .sub { color:var(--muted); margin:0 0 20px; font-size:.9rem; }
+  .global { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px; margin-bottom:20px; }
+  .bar { height:10px; background:var(--line); border-radius:6px; overflow:hidden; margin-top:8px; }
+  .bar i { display:block; height:100%; background:var(--cours); width:0; transition:width .4s; }
+  .grid { display:grid; gap:14px; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px; border-top:4px solid var(--zero); }
+  .card h2 { margin:0; font-size:1.05rem; }
+  .poste { color:var(--muted); font-size:.85rem; margin:0 0 10px; }
+  .badge { display:inline-block; font-size:.75rem; padding:2px 8px; border-radius:999px; color:#fff; background:var(--zero); }
+  .a_zero{background:var(--zero)} .en_cours{background:var(--cours)} .a_valider{background:var(--valider)} .valide{background:var(--valide)} .bloque{background:var(--bloque)}
+  .card[data-etat="a_zero"]{border-top-color:var(--zero)} .card[data-etat="en_cours"]{border-top-color:var(--cours)}
+  .card[data-etat="a_valider"]{border-top-color:var(--valider)} .card[data-etat="valide"]{border-top-color:var(--valide)} .card[data-etat="bloque"]{border-top-color:var(--bloque)}
+  ul { padding-left:18px; margin:10px 0 0; font-size:.9rem; }
+  li span { color:var(--muted); font-size:.8rem; }
+  .next { margin-top:10px; font-size:.85rem; color:var(--muted); }
+  .err { color:var(--bloque); }
+</style>
+</head>
+<body>
+<h1>Tableau de bord du chantier</h1>
+<p class="sub">Location de voitures, avec ou sans chauffeur. Le nom de l'entreprise reste à choisir.</p>
+<div class="global"><strong>Progression globale</strong> <span id="pct">0 %</span><div class="bar"><i id="gbar"></i></div></div>
+<div class="grid" id="grid"></div>
+<script>
+const agents = ['sofiane','nadir','yasmine','karim','lina'];
+const labels = {a_zero:'À zéro', en_cours:'En cours', a_valider:'À valider', valide:'Validé', bloque:'Bloqué'};
+Promise.all(agents.map(a => fetch(`../equipe/${a}/etat.json`).then(r => r.json()))).then(list => {
+  const grid = document.getElementById('grid'); let total = 0;
+  for (const d of list) {
+    total += d.progression;
+    const el = document.createElement('div'); el.className = 'card'; el.dataset.etat = d.etat;
+    el.innerHTML = `<h2>${d.agent} <span class="badge ${d.etat}">${labels[d.etat]}</span></h2>
+      <p class="poste">${d.poste}</p>
+      <div class="bar"><i style="width:${d.progression}%"></i></div>
+      <ul>${d.livrables.map(l => `<li>${l.nom} <span>· ${labels[l.etat]}</span></li>`).join('')}</ul>
+      <p class="next"><strong>Prochaine étape :</strong> ${d.prochaine_etape}${d.bloque_par ? ` <br><em>Attend : ${d.bloque_par}</em>` : ''}</p>`;
+    grid.appendChild(el);
+  }
+  const pct = Math.round(total / list.length);
+  document.getElementById('pct').textContent = pct + ' %';
+  document.getElementById('gbar').style.width = pct + '%';
+}).catch(() => { document.getElementById('grid').innerHTML = '<p class="err">Ouvre ce fichier via un petit serveur local (ex. <code>python3 -m http.server</code>) pour qu il puisse lire les états.</p>'; });
+</script>
+</body>
+</html>

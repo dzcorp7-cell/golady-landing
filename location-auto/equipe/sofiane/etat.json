@@ -1,0 +1,24 @@
+{
+  "agent": "Sofiane",
+  "poste": "Chef de projet",
+  "etat": "en_cours",
+  "progression": 15,
+  "tache_en_cours": "Mise en place de l équipe et du tableau de bord",
+  "prochaine_etape": "Obtenir les réponses aux questions ouvertes pour débloquer Nadir",
+  "bloque_par": null,
+  "livrables": [
+    {
+      "nom": "Tableau de bord",
+      "etat": "en_cours"
+    },
+    {
+      "nom": "Journal",
+      "etat": "en_cours"
+    },
+    {
+      "nom": "Questions ouvertes",
+      "etat": "en_cours"
+    }
+  ],
+  "derniere_maj": "2026-10-17"
+}

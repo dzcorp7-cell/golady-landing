@@ -1,0 +1,11 @@
+{
+  "agent": "Lina",
+  "poste": "Responsable marketing et supports",
+  "etat": "a_zero",
+  "progression": 0,
+  "tache_en_cours": null,
+  "prochaine_etape": "Attendre le brand book de Yasmine",
+  "bloque_par": "yasmine",
+  "livrables": [{"nom":"Carte de visite","etat":"a_zero"},{"nom":"Flyer","etat":"a_zero"},{"nom":"Templates réseaux sociaux","etat":"a_zero"},{"nom":"Calendrier éditorial","etat":"a_zero"},{"nom":"Messages WhatsApp","etat":"a_zero"},{"nom":"Signature mail","etat":"a_zero"}],
+  "derniere_maj": "2026-10-17"
+}

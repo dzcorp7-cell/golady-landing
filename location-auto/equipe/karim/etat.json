@@ -1,0 +1,11 @@
+{
+  "agent": "Karim",
+  "poste": "Designer UI/UX et développeur",
+  "etat": "a_zero",
+  "progression": 0,
+  "tache_en_cours": null,
+  "prochaine_etape": "Attendre le brand book de Yasmine",
+  "bloque_par": "yasmine",
+  "livrables": [{"nom":"Système de design","etat":"a_zero"},{"nom":"Landing page","etat":"a_zero"},{"nom":"Parcours de réservation","etat":"a_zero"},{"nom":"QR codes","etat":"a_zero"}],
+  "derniere_maj": "2026-10-17"
+}

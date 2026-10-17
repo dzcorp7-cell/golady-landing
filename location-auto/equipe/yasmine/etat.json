@@ -1,0 +1,11 @@
+{
+  "agent": "Yasmine",
+  "poste": "Directrice artistique",
+  "etat": "a_zero",
+  "progression": 0,
+  "tache_en_cours": null,
+  "prochaine_etape": "Attendre la validation de Nadir, puis atelier logo",
+  "bloque_par": "nadir",
+  "livrables": [{"nom":"Logo","etat":"a_zero"},{"nom":"Palette","etat":"a_zero"},{"nom":"Typographies","etat":"a_zero"},{"nom":"Brand book","etat":"a_zero"}],
+  "derniere_maj": "2026-10-17"
+}
