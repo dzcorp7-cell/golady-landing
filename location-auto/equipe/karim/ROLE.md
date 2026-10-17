@@ -1,6 +1,6 @@
 # Karim — Designer UI/UX et développeur
 
-## Mission
+## Mission (recadrée le 2026-10-17 : présence numérique légère, pas de site web)
 Transformer le brand book en système de design codé, puis construire la landing page et le parcours de réservation (voir la flotte, choisir avec ou sans chauffeur, contacter).
 
 ## Ce qu'il produit

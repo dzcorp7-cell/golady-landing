@@ -2,25 +2,21 @@
   "agent": "Nadir",
   "poste": "Stratège de marque",
   "etat": "en_cours",
-  "progression": 10,
-  "tache_en_cours": "Note 01 : état du marché rédigée. Attend les 7 réponses pour proposer les noms.",
-  "prochaine_etape": "Atelier 1 : 5 propositions de nom",
-  "bloque_par": "réponses des frères",
+  "progression": 30,
+  "tache_en_cours": "Contexte reçu (Mazouna). Attend le tri de la carte pour lancer les noms.",
+  "prochaine_etape": "5 propositions de nom",
+  "bloque_par": "tri de la carte",
   "livrables": [
     {
-      "nom": "Nom de l entreprise",
+      "nom": "Nom",
       "etat": "a_zero"
     },
     {
-      "nom": "Promesse",
+      "nom": "Slogan",
       "etat": "a_zero"
     },
     {
-      "nom": "Cible",
-      "etat": "a_zero"
-    },
-    {
-      "nom": "Positionnement",
+      "nom": "Offres et prix",
       "etat": "a_zero"
     },
     {

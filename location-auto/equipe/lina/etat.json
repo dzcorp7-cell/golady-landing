@@ -6,6 +6,31 @@
   "tache_en_cours": null,
   "prochaine_etape": "Attendre le brand book de Yasmine",
   "bloque_par": "yasmine",
-  "livrables": [{"nom":"Carte de visite","etat":"a_zero"},{"nom":"Flyer","etat":"a_zero"},{"nom":"Templates réseaux sociaux","etat":"a_zero"},{"nom":"Calendrier éditorial","etat":"a_zero"},{"nom":"Messages WhatsApp","etat":"a_zero"},{"nom":"Signature mail","etat":"a_zero"}],
+  "livrables": [
+    {
+      "nom": "Enseigne et vitrine",
+      "etat": "a_zero"
+    },
+    {
+      "nom": "Affiche tarifs",
+      "etat": "a_zero"
+    },
+    {
+      "nom": "Flyer",
+      "etat": "a_zero"
+    },
+    {
+      "nom": "Carte de visite",
+      "etat": "a_zero"
+    },
+    {
+      "nom": "Publications",
+      "etat": "a_zero"
+    },
+    {
+      "nom": "Papiers (grille, contrat, état des lieux)",
+      "etat": "a_zero"
+    }
+  ],
   "derniere_maj": "2026-10-17"
 }

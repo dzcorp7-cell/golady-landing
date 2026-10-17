@@ -6,6 +6,19 @@
   "tache_en_cours": null,
   "prochaine_etape": "Attendre la validation de Nadir, puis atelier logo",
   "bloque_par": "nadir",
-  "livrables": [{"nom":"Logo","etat":"a_zero"},{"nom":"Palette","etat":"a_zero"},{"nom":"Typographies","etat":"a_zero"},{"nom":"Brand book","etat":"a_zero"}],
+  "livrables": [
+    {
+      "nom": "Logo simple",
+      "etat": "a_zero"
+    },
+    {
+      "nom": "2 couleurs, 1 police",
+      "etat": "a_zero"
+    },
+    {
+      "nom": "Brand book 1 page",
+      "etat": "a_zero"
+    }
+  ],
   "derniere_maj": "2026-10-17"
 }
