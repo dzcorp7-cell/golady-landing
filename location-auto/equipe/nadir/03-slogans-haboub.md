@@ -1,13 +1,15 @@
-# Nadir — Note 03 : slogans pour Haboub Location
+# Nadir — Note 03 (corrigée) : slogans pour Haboub Location
+
+Haboub = le surnom de Habib. On joue sur la confiance et la proximité.
 
 | # | Darija | Français | L'idée |
 |---|--------|----------|--------|
-| 1 | طوموبيلتك تجيك كي الهبوب | Votre voiture arrive comme le vent | Rapidité, joue sur le nom |
-| 2 | اكري و هبّ | Loue et file | Court, énergique |
-| 3 | هبوب، الكرا ساهل | Haboub, louer c'est simple | Simplicité, rassure |
-| 4 | معاك وين ما تهبّ | Avec toi, où que tu ailles | Proximité, avec ou sans chauffeur |
-| 5 | كرا هبوب، سومة تعجبك | Location Haboub, un prix qui te plaît | Le prix d'abord, acte de présence |
+| 1 | عند حبوب، راك في دارك | Chez Haboub, t'es comme chez toi | Accueil, confiance |
+| 2 | حبوب يكريلك، بلا تخمام | Haboub te loue, sans prise de tête | Simplicité |
+| 3 | الكرا مع واحد تعرفو | Louer avec quelqu'un que tu connais | Contre les loueurs anonymes |
+| 4 | طوموبيلة نقية، سومة معقولة | Voiture propre, prix correct | Le concret, acte de présence |
+| 5 | حبوب، كلمة و ثقة | Haboub, une parole et de la confiance | Sérieux, réputation |
 
 ## Avis de Nadir
-- **N°2 « اكري و هبّ » (Loue et file)** : le plus court, il tient sur un sticker et se dit en une seconde.
-- **N°4 « معاك وين ما تهبّ »** : si tu veux mettre en avant le service avec chauffeur.
+- **N°1 « عند حبوب، راك في دارك »** : chaleureux, se dit naturellement, et colle à un nom-surnom.
+- **N°4** en ligne secondaire sous le logo sur l'affiche tarifs : c'est l'argument concret.
