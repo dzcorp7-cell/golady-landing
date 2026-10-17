@@ -2,8 +2,8 @@
   "agent": "Sofiane",
   "poste": "Chef de projet",
   "etat": "en_cours",
-  "progression": 30,
-  "tache_en_cours": "Décision 001 consignée. Carte des choses à trier publiée.",
+  "progression": 40,
+  "tache_en_cours": "Décision 002 consignée : 12 Oui, 10 Plus tard, 1 Non.",
   "prochaine_etape": "Obtenir les réponses aux questions ouvertes pour débloquer Nadir",
   "bloque_par": null,
   "livrables": [

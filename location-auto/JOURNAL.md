@@ -6,3 +6,5 @@
 | 2026-10-17 | Nadir | Passe en cours. Note 01 état du marché rédigée. Attend les réponses aux 7 questions. |
 | 2026-10-17 | Sofiane | Décision 001 : Mazouna (Relizane), marketing simple, pas de site web. Feuille de route recadrée. |
 | 2026-10-17 | Sofiane | Carte des choses à faire (25 points) publiée pour tri. |
+| 2026-10-17 | Sofiane | Décision 002 : carte triée. 12 Oui, 10 Plus tard, 1 Non. |
+| 2026-10-17 | Nadir | Note 02 : 5 propositions de nom et slogans. Passe à « à valider ». |

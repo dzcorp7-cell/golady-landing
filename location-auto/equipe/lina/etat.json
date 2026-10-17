@@ -8,27 +8,31 @@
   "bloque_par": "yasmine",
   "livrables": [
     {
-      "nom": "Enseigne et vitrine",
+      "nom": "Sticker vitrine",
       "etat": "a_zero"
     },
     {
-      "nom": "Affiche tarifs",
+      "nom": "Affiche tarifs A3",
       "etat": "a_zero"
     },
     {
-      "nom": "Flyer",
+      "nom": "Flyer A5",
       "etat": "a_zero"
     },
     {
-      "nom": "Carte de visite",
+      "nom": "10 premières publications",
       "etat": "a_zero"
     },
     {
-      "nom": "Publications",
+      "nom": "Grille tarifaire",
       "etat": "a_zero"
     },
     {
-      "nom": "Papiers (grille, contrat, état des lieux)",
+      "nom": "Contrat de location",
+      "etat": "a_zero"
+    },
+    {
+      "nom": "Fiche état des lieux",
       "etat": "a_zero"
     }
   ],

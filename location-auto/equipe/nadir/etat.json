@@ -1,19 +1,19 @@
 {
   "agent": "Nadir",
   "poste": "Stratège de marque",
-  "etat": "en_cours",
-  "progression": 30,
-  "tache_en_cours": "Contexte reçu (Mazouna). Attend le tri de la carte pour lancer les noms.",
-  "prochaine_etape": "5 propositions de nom",
-  "bloque_par": "tri de la carte",
+  "etat": "a_valider",
+  "progression": 50,
+  "tache_en_cours": "5 propositions de nom et slogans livrées",
+  "prochaine_etape": "Grille des offres et prix (attend la liste des voitures)",
+  "bloque_par": "choix du nom",
   "livrables": [
     {
       "nom": "Nom",
-      "etat": "a_zero"
+      "etat": "a_valider"
     },
     {
       "nom": "Slogan",
-      "etat": "a_zero"
+      "etat": "a_valider"
     },
     {
       "nom": "Offres et prix",
@@ -21,7 +21,7 @@
     },
     {
       "nom": "Ton et langues",
-      "etat": "a_zero"
+      "etat": "en_cours"
     }
   ],
   "derniere_maj": "2026-10-17"

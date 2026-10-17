@@ -4,23 +4,15 @@
   "etat": "a_zero",
   "progression": 0,
   "tache_en_cours": null,
-  "prochaine_etape": "WhatsApp Business, Facebook, Google Maps, QR",
+  "prochaine_etape": "Page Facebook et QR code vers WhatsApp",
   "bloque_par": "yasmine",
   "livrables": [
-    {
-      "nom": "WhatsApp Business",
-      "etat": "a_zero"
-    },
     {
       "nom": "Page Facebook",
       "etat": "a_zero"
     },
     {
-      "nom": "Fiche Google Maps",
-      "etat": "a_zero"
-    },
-    {
-      "nom": "QR codes",
+      "nom": "QR code vers WhatsApp",
       "etat": "a_zero"
     }
   ],
