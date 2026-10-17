@@ -2,10 +2,10 @@
   "agent": "Nadir",
   "poste": "Stratège de marque",
   "etat": "a_valider",
-  "progression": 65,
-  "tache_en_cours": "Nom validé : Haboub Location (surnom de Habib). Slogans refaits.",
+  "progression": 75,
+  "tache_en_cours": "Nom et slogan validés.",
   "prochaine_etape": "Grille des offres et prix",
-  "bloque_par": "choix du slogan et liste des voitures",
+  "bloque_par": "liste des voitures",
   "livrables": [
     {
       "nom": "Nom",
@@ -13,7 +13,7 @@
     },
     {
       "nom": "Slogan",
-      "etat": "a_valider"
+      "etat": "valide"
     },
     {
       "nom": "Offres et prix",

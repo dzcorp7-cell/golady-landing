@@ -13,3 +13,5 @@
 | 2026-10-17 | Yasmine | Débloquée par le nom. Passe en cours. |
 | 2026-10-17 | Nadir | Correction : Haboub est le surnom de Habib. Slogans refaits sur la confiance et la proximité. |
 | 2026-10-17 | Nadir | Slogans en français (pro et DZ friendly) ajoutés à la note 03. |
+| 2026-10-17 | Sofiane | Décision 004 : slogan « La confiance, au volant. » |
+| 2026-10-17 | Yasmine | 3 pistes de logo livrées (volant, sceau, bilingue). |

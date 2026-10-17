@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 200" font-family="Montserrat, Arial Black, sans-serif">
+  <rect width="520" height="200" fill="#ffffff"/>
+  <text x="30" y="118" font-size="78" font-weight="900" fill="#0B3D6B" letter-spacing="2">HAB</text>
+  <g transform="translate(272,92)">
+    <circle r="34" fill="none" stroke="#F2A900" stroke-width="10"/>
+    <circle r="8" fill="#F2A900"/>
+    <path d="M-30,6 L-8,4 M30,6 L8,4 M0,8 L0,30" stroke="#F2A900" stroke-width="8" stroke-linecap="round"/>
+  </g>
+  <text x="314" y="118" font-size="78" font-weight="900" fill="#0B3D6B" letter-spacing="2">UB</text>
+  <text x="32" y="156" font-size="20" font-weight="700" fill="#0B3D6B" letter-spacing="9">LOCATION</text>
+  <text x="32" y="184" font-size="15" font-style="italic" fill="#5A6B7D">La confiance, au volant.</text>
+</svg>

@@ -1,19 +1,19 @@
 {
   "agent": "Yasmine",
   "poste": "Directrice artistique",
-  "etat": "en_cours",
-  "progression": 5,
-  "tache_en_cours": "Le nom est validé, préparation des pistes de logo",
-  "prochaine_etape": "3 pistes de logo pour Haboub Location",
+  "etat": "a_valider",
+  "progression": 35,
+  "tache_en_cours": "3 pistes de logo livrées",
+  "prochaine_etape": "Logo final après ton choix",
   "bloque_par": null,
   "livrables": [
     {
       "nom": "Logo simple",
-      "etat": "a_zero"
+      "etat": "a_valider"
     },
     {
       "nom": "2 couleurs, 1 police",
-      "etat": "a_zero"
+      "etat": "a_valider"
     },
     {
       "nom": "Brand book 1 page",
