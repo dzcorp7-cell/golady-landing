@@ -1,11 +1,32 @@
 {
   "agent": "Nadir",
   "poste": "Stratège de marque",
-  "etat": "a_zero",
-  "progression": 0,
-  "tache_en_cours": null,
-  "prochaine_etape": "Atelier 1 : choisir le nom et la promesse",
-  "bloque_par": null,
-  "livrables": [{"nom":"Nom de l entreprise","etat":"a_zero"},{"nom":"Promesse","etat":"a_zero"},{"nom":"Cible","etat":"a_zero"},{"nom":"Positionnement","etat":"a_zero"},{"nom":"Ton et langues","etat":"a_zero"}],
+  "etat": "en_cours",
+  "progression": 10,
+  "tache_en_cours": "Note 01 : état du marché rédigée. Attend les 7 réponses pour proposer les noms.",
+  "prochaine_etape": "Atelier 1 : 5 propositions de nom",
+  "bloque_par": "réponses des frères",
+  "livrables": [
+    {
+      "nom": "Nom de l entreprise",
+      "etat": "a_zero"
+    },
+    {
+      "nom": "Promesse",
+      "etat": "a_zero"
+    },
+    {
+      "nom": "Cible",
+      "etat": "a_zero"
+    },
+    {
+      "nom": "Positionnement",
+      "etat": "a_zero"
+    },
+    {
+      "nom": "Ton et langues",
+      "etat": "a_zero"
+    }
+  ],
   "derniere_maj": "2026-10-17"
 }
