@@ -1,0 +1,477 @@
+<style>
+/* Layout : 3 pages A4 (feuille 1 recto = fiche contrat, feuille 1 verso = CG français, feuille 2 recto = CG arabe). Aperçu écran = pages empilées ; impression = 1 page par feuille. */
+:root{
+  --bg:#dcd9d2; --paper:#ffffff; --ink:#15130f; --muted:#5f584e; --rule:#b9b2a5; --rule-soft:#e1dcd2;
+  --accent:#0f4c5c; --accent-soft:#e8f0f2; --warn:#8a3b12; --warn-soft:#fbeee4; --field:#faf8f3;
+  --fr:"Spectral",Georgia,"Times New Roman",serif;
+  --ar:"Noto Naskh Arabic","Amiri","Traditional Arabic",serif;
+  --ui:"IBM Plex Sans","Inter",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){ --bg:#1a1a1d; color-scheme:dark } }
+:root[data-theme="dark"]{ --bg:#1a1a1d; color-scheme:dark }
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--fr);font-size:10.5pt;line-height:1.35;
+  padding-block:20px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.stack{display:flex;flex-direction:column;align-items:center;gap:22px}
+.hint{font-family:var(--ui);font-size:12.5px;color:var(--muted);max-width:210mm;width:100%;background:var(--accent-soft);color:var(--ink);border-left:3px solid var(--accent);padding:8px 12px}
+.page{background:var(--paper);color:var(--ink);width:210mm;min-height:297mm;padding:12mm 13mm 11mm;box-shadow:0 2px 10px rgba(0,0,0,.18);position:relative;max-width:100%;overflow:hidden}
+@media (max-width:820px){.page{width:100%;min-height:0;padding:16px 14px}}
+.foot{position:absolute;left:13mm;right:13mm;bottom:6mm;display:flex;justify-content:space-between;font-family:var(--ui);font-size:7.5pt;color:var(--muted);border-top:.5pt solid var(--rule-soft);padding-top:2mm}
+@media (max-width:820px){.foot{position:static;margin-top:14px}}
+
+/* ---------- en-tête ---------- */
+.head{display:grid;grid-template-columns:1fr 22mm 1fr;align-items:center;gap:4mm;border-bottom:1.6pt solid var(--accent);padding-bottom:2mm}
+.head .fr{font-size:9pt;line-height:1.3}
+.head .fr b{font-size:13pt;display:block;letter-spacing:.02em}
+.head .ar{font-family:var(--ar);font-size:10.5pt;direction:rtl;text-align:right;line-height:1.5}
+.head .ar b{font-size:15pt;display:block}
+.head .logo{width:22mm;height:22mm;border:.6pt dashed var(--rule);border-radius:50%;display:grid;place-items:center;font-family:var(--ui);font-size:7pt;color:var(--muted);text-align:center;line-height:1.2}
+.head small{display:block;font-family:var(--ui);color:var(--muted);font-size:8pt}
+.ph{color:var(--warn)}
+
+h1{font-size:15pt;font-weight:700;letter-spacing:.06em;text-transform:uppercase;text-align:center;margin:2mm 0 0}
+.h1ar{font-family:var(--ar);font-size:16pt;text-align:center;direction:rtl;margin:0 0 2mm;line-height:1.3}
+.numline{display:flex;justify-content:space-between;gap:4mm;flex-wrap:wrap;font-family:var(--ui);font-size:8.5pt;color:var(--muted);border:.5pt solid var(--rule);padding:1mm 3mm;margin-bottom:1.8mm}
+.numline b{color:var(--ink);font-family:var(--ui);letter-spacing:.04em}
+
+/* ---------- en bref ---------- */
+.brief{display:grid;grid-template-columns:repeat(4,1fr);border:1pt solid var(--accent);margin-bottom:2.5mm}
+.brief div{padding:1mm 2.5mm;border-right:.5pt solid var(--rule-soft);min-width:0}
+.brief div:last-child{border-right:0}
+.brief b{display:block;font-family:var(--ui);font-size:7pt;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+.brief span{font-family:var(--ui);font-size:9.5pt;display:block;border-bottom:.6pt dotted var(--ink);min-height:5mm;margin-top:.5mm}
+.brief i{font-family:var(--ar);font-style:normal;font-size:7.8pt;color:var(--muted);display:block;direction:rtl;text-align:right}
+@media (max-width:600px){.brief{grid-template-columns:1fr 1fr}}
+
+/* ---------- sections ---------- */
+h2{font-family:var(--ui);font-size:8pt;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:2mm 0 1mm;display:flex;justify-content:space-between;align-items:baseline;gap:3mm;border-bottom:.6pt solid var(--rule);padding-bottom:.6mm}
+h2 .ar{font-family:var(--ar);font-size:10.5pt;letter-spacing:0;text-transform:none;direction:rtl;font-weight:500}
+
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:1mm 5mm}
+.grid .full{grid-column:1/-1}
+.grid.c3{grid-template-columns:1fr 1fr 1fr}
+@media (max-width:600px){.grid,.grid.c3{grid-template-columns:1fr}}
+.f{display:grid;grid-template-columns:auto 1fr auto;align-items:baseline;gap:1.5mm;min-width:0}
+.f .lf{white-space:nowrap;font-size:9pt}
+.f .la{font-family:var(--ar);font-size:9.5pt;direction:rtl;white-space:nowrap;color:var(--muted)}
+.f .v{border-bottom:.6pt dotted var(--ink);min-height:4.8mm;background:var(--field);font-family:var(--ui);font-size:9pt;padding:0 1.5mm;min-width:0;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.checks{display:flex;gap:5mm;flex-wrap:wrap;font-family:var(--ui);font-size:8.5pt;margin-top:1.2mm}
+.box{display:inline-block;width:3.2mm;height:3.2mm;border:.7pt solid var(--ink);vertical-align:-.5mm;margin-right:1mm}
+
+table{width:100%;border-collapse:collapse;font-family:var(--ui);font-size:8.5pt}
+th,td{border:.5pt solid var(--rule);padding:1.1mm 2mm;text-align:left;vertical-align:middle}
+th{background:var(--accent-soft);font-weight:600;font-size:8pt}
+td.ar,th.ar{direction:rtl;text-align:right;font-family:var(--ar);font-size:9.5pt}
+td.num{text-align:right;font-variant-numeric:tabular-nums;width:26mm}
+td.in{height:5mm}
+.tscroll{overflow-x:auto}
+
+.two{display:grid;grid-template-columns:1fr 1fr;gap:3mm}
+@media (max-width:600px){.two{grid-template-columns:1fr}}
+.pane{border:.5pt solid var(--rule);padding:1.5mm 2.5mm;min-height:22mm;font-family:var(--ui);font-size:8pt;color:var(--muted)}
+.pane b{color:var(--ink);display:block;font-size:7.5pt;letter-spacing:.08em;text-transform:uppercase;margin-bottom:1mm}
+.carsvg{width:100%;height:auto;display:block;max-height:20mm}
+.carsvg.big{max-height:38mm}
+.legend{font-family:var(--ui);font-size:7.5pt;color:var(--muted);margin-top:1mm}
+
+.sig{display:grid;grid-template-columns:1fr 1fr;gap:5mm;margin-top:3mm}
+@media (max-width:600px){.sig{grid-template-columns:1fr}}
+.sig div{border-top:.8pt solid var(--ink);padding-top:1.2mm;min-height:22mm;font-family:var(--ui);font-size:8pt;color:var(--muted)}
+.sig b{display:block;color:var(--ink);font-size:9pt}
+.sig .ar{font-family:var(--ar);font-size:10pt;direction:rtl;text-align:right;display:block;color:var(--ink)}
+.mention{font-family:var(--ui);font-size:7.2pt;color:var(--muted);margin-top:1.5mm;border-top:.5pt solid var(--rule-soft);padding-top:1.2mm;display:grid;grid-template-columns:1fr 1fr;gap:4mm}
+.mention .ar{font-family:var(--ar);font-size:9pt;direction:rtl;text-align:right}
+@media (max-width:600px){.mention{grid-template-columns:1fr}}
+
+/* ---------- pages CG ---------- */
+.cgtitle{text-align:center;border-bottom:1.2pt solid var(--accent);padding-bottom:1.5mm;margin-bottom:3mm}
+.cgtitle h1{margin:0;font-size:13pt}
+.cgtitle .sub{font-family:var(--ui);font-size:8pt;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.cols{column-count:2;column-gap:7mm;column-rule:.5pt solid var(--rule-soft)}
+@media (max-width:700px){.cols{column-count:1}}
+.cols h3{font-family:var(--ui);font-size:7.8pt;font-weight:600;color:var(--accent);margin:1.8mm 0 .6mm;break-after:avoid;letter-spacing:.04em}
+.cols p,.cols li{font-size:7.9pt;line-height:1.32;margin:0 0 .8mm}
+.cols ul{padding-left:3.5mm;margin:0 0 1mm}
+.cols li{padding-left:.5mm}
+.cols .first{margin-top:0}
+.amt{background:var(--warn-soft);color:var(--warn);padding:0 1mm;font-family:var(--ui);font-size:7.8pt;white-space:nowrap}
+.excl{break-inside:avoid;margin:1.5mm 0}
+.excl table{font-size:7.6pt}
+.excl th,.excl td{padding:.6mm 1.5mm}
+
+.ar-page{direction:rtl}
+.ar-page .cols h3{font-family:var(--ar);font-size:9.8pt;font-weight:700}
+.ar-page .cols p,.ar-page .cols li{font-family:var(--ar);font-size:8.9pt;line-height:1.4}
+.ar-page .cols ul{padding-left:0;padding-right:4mm}
+.ar-page .cgtitle h1{font-family:var(--ar);font-size:16pt;letter-spacing:0;text-transform:none}
+.ar-page .amt{font-family:var(--ar);font-size:8.3pt}
+.ar-page th,.ar-page td{text-align:right;font-family:var(--ar);font-size:8.3pt}
+.ar-page .excl table{font-size:8.3pt}
+
+.accept{margin-top:2.5mm;border:1pt solid var(--accent);padding:2mm 3mm;display:grid;grid-template-columns:1fr auto;gap:4mm;font-size:8.5pt;align-items:end;break-inside:avoid}
+.accept .sgn{min-width:48mm;border-bottom:.6pt dotted var(--ink);font-family:var(--ui);font-size:7.5pt;color:var(--muted)}
+.ar-page .accept{font-family:var(--ar);font-size:10pt}
+
+@page{size:A4;margin:0}
+@media print{
+  body{background:#fff;padding:0}
+  .stack{gap:0;display:block}
+  .hint{display:none}
+  .page{box-shadow:none;width:210mm;height:297mm;page-break-after:always;break-after:page;margin:0}
+  .page:last-child{page-break-after:auto}
+  .foot{position:absolute}
+}
+</style>
+
+<div class="stack">
+<div class="hint"><b>Version 0.2, aperçu papier.</b> Quatre pages A4, soit deux feuilles recto-verso : feuille 1 = fiche contrat + état des lieux, feuille 2 = conditions générales FR + AR. En rouge : à remplir avec vos informations et vos tarifs.</div>
+
+<!-- ======================= PAGE 1 : FICHE CONTRAT ======================= -->
+<section class="page" id="p1">
+<div class="head">
+  <div class="fr">
+    <b class="ph">[NOM COMMERCIAL]</b>
+    <small>Location de véhicules sans chauffeur</small>
+    <small>RC n° <span class="ph">[…………………]</span> · NIF <span class="ph">[…………………]</span> · AI <span class="ph">[…………]</span></small>
+    <small><span class="ph">[Adresse de l'agence, commune, wilaya]</span></small>
+    <small>Tél. <span class="ph">[0X XX XX XX XX]</span> · <span class="ph">[e-mail / site]</span></small>
+  </div>
+  <div class="logo">LOGO<br>ou<br>CACHET</div>
+  <div class="ar">
+    <b class="ph">[الاسم التجاري]</b>
+    <small>كراء السيارات بدون سائق</small>
+    <small>س.ت رقم <span class="ph">[…………]</span> · ر.ج <span class="ph">[…………]</span></small>
+    <small class="ph">[عنوان الوكالة، البلدية، الولاية]</small>
+    <small>الهاتف <span class="ph">[…………]</span></small>
+  </div>
+</div>
+
+<h1>Contrat de location de véhicule</h1>
+<div class="h1ar">عقد كراء سيارة</div>
+<div class="numline">
+  <span>Contrat n° <b>_______ / 2026</b></span>
+  <span>Fait à <b>_____________</b> le <b>____ / ____ / 2026</b></span>
+  <span dir="rtl" style="font-family:var(--ar);font-size:10pt">عقد رقم <b>_______ / 2026</b></span>
+</div>
+
+<div class="brief">
+  <div><b>Caution · الكفالة</b><span></span><i>مبلغ الضمان، يُسترجع عند الرجوع</i></div>
+  <div><b>Franchise sinistre · الفرنشيز</b><span></span><i>يبقى على عاتق المستأجر في حالة حادث</i></div>
+  <div><b>Km inclus / jour · الكيلومترات</b><span></span><i>الزائد يُحتسب بـ ____ دج/كلم</i></div>
+  <div><b>Retard · التأخير</b><span></span><i>بعد 30 دقيقة تسامح</i></div>
+</div>
+
+<h2><span>1 · Le locataire (conducteur principal)</span><span class="ar">1 · المستأجر (السائق الرئيسي)</span></h2>
+<div class="grid">
+  <div class="f full"><span class="lf">Nom et prénom</span><span class="v"></span><span class="la">الاسم واللقب</span></div>
+  <div class="f"><span class="lf">Né(e) le</span><span class="v"></span><span class="la">تاريخ الميلاد</span></div>
+  <div class="f"><span class="lf">à</span><span class="v"></span><span class="la">مكان الميلاد</span></div>
+  <div class="f full"><span class="lf">Adresse</span><span class="v"></span><span class="la">العنوان</span></div>
+  <div class="f"><span class="lf">Tél.</span><span class="v"></span><span class="la">الهاتف</span></div>
+  <div class="f"><span class="lf">Tél. proche</span><span class="v"></span><span class="la">هاتف قريب</span></div>
+  <div class="f"><span class="lf">CNI / Passeport n°</span><span class="v"></span><span class="la">ب.ت.و / جواز</span></div>
+  <div class="f"><span class="lf">Délivré(e) le / par</span><span class="v"></span><span class="la">تاريخ ومكان الإصدار</span></div>
+  <div class="f"><span class="lf">Permis n°</span><span class="v"></span><span class="la">رخصة السياقة رقم</span></div>
+  <div class="f"><span class="lf">Délivré le / daïra</span><span class="v"></span><span class="la">التاريخ / الدائرة</span></div>
+</div>
+<div class="grid" style="margin-top:1.2mm">
+  <div class="f"><span class="lf">2e conducteur (nom)</span><span class="v"></span><span class="la">سائق إضافي</span></div>
+  <div class="f"><span class="lf">Permis n° / date</span><span class="v"></span><span class="la">رخصة رقم / تاريخ</span></div>
+</div>
+
+<h2><span>2 · Le véhicule</span><span class="ar">2 · السيارة</span></h2>
+<div class="grid c3">
+  <div class="f"><span class="lf">Marque</span><span class="v"></span><span class="la">النوع</span></div>
+  <div class="f"><span class="lf">Modèle</span><span class="v"></span><span class="la">الطراز</span></div>
+  <div class="f"><span class="lf">Couleur</span><span class="v"></span><span class="la">اللون</span></div>
+  <div class="f"><span class="lf">Immatriculation</span><span class="v"></span><span class="la">رقم التسجيل</span></div>
+  <div class="f"><span class="lf">N° châssis</span><span class="v"></span><span class="la">رقم الهيكل</span></div>
+  <div class="f"><span class="lf">Carburant</span><span class="v"></span><span class="la">الوقود</span></div>
+  <div class="f full" style="grid-column:span 2"><span class="lf">Assurance (cie / police n°)</span><span class="v"></span><span class="la">التأمين</span></div>
+  <div class="f"><span class="lf">CT valable au</span><span class="v"></span><span class="la">المراقبة التقنية</span></div>
+</div>
+
+<h2><span>3 · Durée, prix, paiement</span><span class="ar">3 · المدة والثمن والدفع</span></h2>
+<div class="grid">
+  <div class="f"><span class="lf">Départ</span><span class="v">____ / ____ / 2026 &nbsp;à&nbsp; ____ h ____</span><span class="la">الانطلاق</span></div>
+  <div class="f"><span class="lf">Retour prévu</span><span class="v">____ / ____ / 2026 &nbsp;à&nbsp; ____ h ____</span><span class="la">الرجوع</span></div>
+  <div class="f"><span class="lf">Lieu départ / retour</span><span class="v"></span><span class="la">المكان</span></div>
+  <div class="f"><span class="lf">Nombre de jours</span><span class="v"></span><span class="la">عدد الأيام</span></div>
+</div>
+<div class="tscroll" style="margin-top:1.5mm">
+<table>
+<tr><th>Désignation</th><th class="ar">البيان</th><th>DA</th></tr>
+<tr><td>Prix journalier ________ DA × ____ jour(s)</td><td class="ar">الثمن اليومي × عدد الأيام</td><td class="num in"></td></tr>
+<tr><td>Options (2e conducteur, livraison, siège enfant…)</td><td class="ar">خيارات</td><td class="num in"></td></tr>
+<tr><td><b>Total location</b> &nbsp;·&nbsp; acompte versé ________ DA &nbsp;·&nbsp; reste au départ ________ DA</td><td class="ar"><b>مجموع الكراء</b></td><td class="num in"></td></tr>
+<tr><td><b>Dépôt de garantie (caution)</b> restituable au retour, art. 5</td><td class="ar"><b>مبلغ الضمان</b> يُسترجع عند الرجوع</td><td class="num in"></td></tr>
+</table>
+</div>
+<div class="checks">
+  <span>Paiement : <span class="box"></span>Espèces <span class="box"></span>CCP/virement <span class="box"></span>Carte</span>
+  <span>Caution : <span class="box"></span>Espèces <span class="box"></span>Chèque non encaissé <span class="box"></span>Autre ______</span>
+  
+</div>
+
+<div class="sig">
+  <div><b>Le locataire · <span class="ar" style="display:inline">المستأجر</span></b>« Lu et approuvé, y compris l'état des lieux (page 2) et les conditions générales (pages 3 et 4) » · signature et empreinte<br><span class="ar">« قرأت ووافقت، بما في ذلك الشروط العامة » · الإمضاء والبصمة</span></div>
+  <div><b>Le loueur · <span class="ar" style="display:inline">المؤجِّر</span></b>Nom du représentant, signature et cachet de l'agence · إمضاء وختم الوكالة</div>
+</div>
+<div class="mention">
+  <div>Contrat établi en deux exemplaires originaux, un pour chaque partie. L'état des lieux (page 2) et les conditions générales (pages 3 et 4) font partie intégrante du contrat. Le locataire reconnaît avoir reçu copie des documents du véhicule.</div>
+  <div class="ar">حُرّر هذا العقد في نسختين أصليتين، نسخة لكل طرف. معاينة الحالة (الصفحة 2) والشروط العامة (الصفحتان 3 و4) جزء لا يتجزأ من العقد. يقرّ المستأجر باستلام نسخة من وثائق السيارة.</div>
+</div>
+<div class="foot"><span class="ph">[Nom commercial] · RC [………] · NIF [………]</span><span>Contrat n° _______ · page 1 / 4</span></div>
+</section>
+
+<!-- ======================= PAGE 2 : ÉTAT DES LIEUX ======================= -->
+<section class="page" id="p2">
+<div class="cgtitle"><h1>État des lieux du véhicule · محضر معاينة السيارة</h1><div class="sub">Annexe au contrat n° _______ · <span class="ph">[Nom commercial]</span> · immatriculation ______________</div></div>
+<h2><span>4 · État du véhicule au départ et au retour, contradictoire</span><span class="ar">4 · حالة السيارة عند الانطلاق والرجوع، معاينة حضورية</span></h2>
+<div class="tscroll">
+<table>
+<tr><th style="width:44mm"></th><th>Départ · الانطلاق</th><th>Retour · الرجوع</th></tr>
+<tr><td>Kilométrage · العداد</td><td class="in">_____________ km</td><td class="in">_____________ km</td></tr>
+<tr><td>Carburant · الوقود</td><td>☐1/8 ☐2/8 ☐3/8 ☐4/8 ☐5/8 ☐6/8 ☐7/8 ☐8/8</td><td>☐1/8 ☐2/8 ☐3/8 ☐4/8 ☐5/8 ☐6/8 ☐7/8 ☐8/8</td></tr>
+<tr><td>Pneus, roue secours, cric, triangle · العجلات والعدة</td><td class="in">☐ OK &nbsp; ☐ remarque :</td><td class="in">☐ OK &nbsp; ☐ remarque :</td></tr>
+<tr><td>Propreté, documents à bord, clés · النظافة والوثائق</td><td class="in">☐ OK &nbsp; ☐ remarque :</td><td class="in">☐ OK &nbsp; ☐ remarque :</td></tr>
+<tr><td>Date et heure réelles · التاريخ والساعة</td><td class="in"></td><td class="in"></td></tr>
+</table>
+</div>
+<div class="two" style="margin-top:1.5mm">
+  <div class="pane"><b>Dégâts au départ · الأضرار عند الانطلاق</b>
+    <svg class="carsvg big" viewBox="0 0 300 70" aria-label="silhouette de voiture, vue de dessus">
+      <rect x="20" y="12" width="260" height="46" rx="18" fill="none" stroke="#5f584e" stroke-width="1"/>
+      <rect x="80" y="18" width="140" height="34" rx="8" fill="none" stroke="#5f584e" stroke-width="1"/>
+      <line x1="150" y1="18" x2="150" y2="52" stroke="#5f584e" stroke-width="1"/>
+      <rect x="40" y="6" width="22" height="8" rx="2" fill="#fff" stroke="#5f584e" stroke-width="1"/><rect x="238" y="6" width="22" height="8" rx="2" fill="#fff" stroke="#5f584e" stroke-width="1"/>
+      <rect x="40" y="56" width="22" height="8" rx="2" fill="#fff" stroke="#5f584e" stroke-width="1"/><rect x="238" y="56" width="22" height="8" rx="2" fill="#fff" stroke="#5f584e" stroke-width="1"/>
+      <text x="8" y="38" font-size="8" fill="#5f584e" font-family="sans-serif">AV</text><text x="283" y="38" font-size="8" fill="#5f584e" font-family="sans-serif">AR</text>
+    </svg>
+    Marquer : R rayure · B bosse · E éclat · C cassé</div>
+  <div class="pane"><b>Dégâts au retour · الأضرار عند الرجوع</b>
+    <svg class="carsvg big" viewBox="0 0 300 70" aria-label="silhouette de voiture, vue de dessus">
+      <rect x="20" y="12" width="260" height="46" rx="18" fill="none" stroke="#5f584e" stroke-width="1"/>
+      <rect x="80" y="18" width="140" height="34" rx="8" fill="none" stroke="#5f584e" stroke-width="1"/>
+      <line x1="150" y1="18" x2="150" y2="52" stroke="#5f584e" stroke-width="1"/>
+      <rect x="40" y="6" width="22" height="8" rx="2" fill="#fff" stroke="#5f584e" stroke-width="1"/><rect x="238" y="6" width="22" height="8" rx="2" fill="#fff" stroke="#5f584e" stroke-width="1"/>
+      <rect x="40" y="56" width="22" height="8" rx="2" fill="#fff" stroke="#5f584e" stroke-width="1"/><rect x="238" y="56" width="22" height="8" rx="2" fill="#fff" stroke="#5f584e" stroke-width="1"/>
+      <text x="8" y="38" font-size="8" fill="#5f584e" font-family="sans-serif">AV</text><text x="283" y="38" font-size="8" fill="#5f584e" font-family="sans-serif">AR</text>
+    </svg>
+    Photos horodatées prises : ☐ départ &nbsp; ☐ retour</div>
+</div>
+
+
+<h2><span>5 · Observations</span><span class="ar">5 · ملاحظات</span></h2>
+<div class="two">
+  <div class="pane" style="min-height:42mm"><b>Au départ · عند الانطلاق</b></div>
+  <div class="pane" style="min-height:42mm"><b>Au retour · عند الرجوع</b></div>
+</div>
+<h2><span>6 · Signatures au départ</span><span class="ar">6 · الإمضاءات عند الانطلاق</span></h2>
+<div class="sig" style="margin-top:1mm">
+  <div style="min-height:20mm"><b>Le locataire · المستأجر</b>Reconnaît l'état décrit ci-dessus · يقرّ بالحالة المبيّنة أعلاه</div>
+  <div style="min-height:20mm"><b>Pour l'agence · عن الوكالة</b></div>
+</div>
+<h2><span>7 · Restitution et clôture</span><span class="ar">7 · الاسترجاع وإقفال العقد</span></h2>
+<div class="sig" style="margin-top:1mm">
+  <div style="min-height:22mm"><b>Le locataire · المستأجر</b>Rendu le ____/____/2026 à ____h____. Caution : ☐ restituée en totalité ☐ retenue ________ DA, motif : ______________________________. Signature :</div>
+  <div style="min-height:22mm"><b>Pour l'agence · عن الوكالة</b>Km parcourus ________ · km excédentaires ________ · carburant manquant ________ · retard ________ · dégâts ________ DA. Solde : ☐ réglé ☐ reste dû ________ DA. Signature :</div>
+</div>
+<div class="foot"><span class="ph">[Nom commercial] · RC [………] · NIF [………]</span><span>Contrat n° _______ · page 2 / 4</span></div>
+</section>
+
+<!-- ======================= PAGE 3 : CG FRANÇAIS ======================= -->
+<section class="page" id="p3">
+<div class="cgtitle"><h1>Conditions générales de location</h1><div class="sub">Partie intégrante du contrat n° _______ · <span class="ph">[Nom commercial]</span></div></div>
+<div class="cols">
+
+<h3 class="first">Art. 1 · Objet</h3>
+<p>Le loueur donne en location au locataire, qui accepte, le véhicule désigné en page 1, pour l'usage et la durée convenus. Le véhicule reste la propriété exclusive du loueur. Le locataire n'en est que détenteur : il ne peut ni le prêter, le sous-louer, le céder, le mettre en gage ni l'utiliser comme garantie.</p>
+
+<h3>Art. 2 · Conditions du locataire</h3>
+<ul>
+<li>Âge minimum <span class="amt">[25] ans</span> ; permis valide depuis au moins <span class="amt">[2] ans</span>, de la catégorie du véhicule.</li>
+<li>Originaux présentés : pièce d'identité ou passeport, permis, justificatif de domicile. Le loueur en conserve copie.</li>
+<li>Toute fausse déclaration sur l'identité, l'adresse ou le permis entraîne la résiliation immédiate aux torts du locataire et engage sa responsabilité civile et pénale.</li>
+</ul>
+
+<h3>Art. 3 · Usage du véhicule</h3>
+<ul>
+<li>Seuls le locataire et le second conducteur inscrits en page 1 peuvent conduire. Toute conduite par un tiers prive le locataire des garanties d'assurance ; il supporte alors la totalité des dommages.</li>
+<li>Usage personnel uniquement. Interdits : transport rémunéré de personnes ou de marchandises, apprentissage de la conduite, remorquage, compétition ou essai, activité illicite, dépassement du nombre de places de la carte grise, circulation hors routes carrossables, conduite sous alcool ou stupéfiants.</li>
+<li>Le véhicule ne quitte pas le territoire national sans autorisation écrite du loueur.</li>
+</ul>
+
+<h3>Art. 4 · Durée, prolongation, retard</h3>
+<ul>
+<li>La journée est une période de 24 h à partir de l'heure de départ, avec une tolérance de <span class="amt">30 min</span> au retour.</li>
+<li>Au-delà, chaque heure entamée est facturée <span class="amt">[700] DA</span> ; au-delà de <span class="amt">[3] h</span>, une journée complète est due.</li>
+<li>Toute prolongation est demandée au loueur au moins <span class="amt">[6] h</span> avant la fin prévue, acceptée par lui et payée d'avance. À défaut, le véhicule est réputé non restitué : le loueur peut alerter les services de sécurité et engager des poursuites.</li>
+</ul>
+
+<h3>Art. 5 · Prix, paiement, caution</h3>
+<ul>
+<li>Le prix suit le tarif affiché en agence ; il est réglé intégralement au départ, en dinars.</li>
+<li>Un dépôt de garantie (caution) du montant indiqué en page 1 est versé au départ. Il est restitué au retour du véhicule après vérification, déduction faite des sommes dues : carburant manquant, dégâts, franchise, amendes, retard, kilomètres excédentaires, nettoyage.</li>
+<li>La caution n'est pas un plafond de responsabilité : si les sommes dues la dépassent, le locataire règle la différence sous <span class="amt">8 jours</span>.</li>
+</ul>
+
+<h3>Art. 6 · Kilométrage et carburant</h3>
+<ul>
+<li>Le forfait inclut <span class="amt">[____] km</span> par 24 h (ou kilométrage illimité si coché en page 1). Tout km supplémentaire est facturé <span class="amt">[____] DA</span>.</li>
+<li>Le véhicule est restitué au niveau de carburant du départ. Le carburant manquant est facturé au prix de la pompe majoré de <span class="amt">[500] DA</span> de frais de service.</li>
+<li>Toute intervention sur le compteur est interdite.</li>
+</ul>
+
+<h3>Art. 7 · État, entretien, pannes</h3>
+<ul>
+<li>Le véhicule est livré propre, en bon état de marche, avec accessoires et documents. L'état contradictoire de la page 2 fait foi entre les parties.</li>
+<li>Le locataire surveille les niveaux et la pression des pneus et conduit en bon père de famille.</li>
+<li>L'usure mécanique normale est à la charge du loueur. Toute panne ou dégradation due à une faute, une négligence ou un usage anormal (embrayage, boîte, moteur, sous-caisse, pneus, intérieur) est à la charge du locataire.</li>
+<li>Aucune réparation sans accord écrit du loueur ; les réparations autorisées sont remboursées sur facture. Aucune indemnité n'est due au locataire pour panne ou immobilisation.</li>
+</ul>
+
+<h3>Art. 8 · Assurance, franchise, exclusions</h3>
+<ul>
+<li>Le véhicule est couvert par l'assurance obligatoire de responsabilité civile. Couverture souscrite : <span class="amt">[RC seule / tous risques]</span>, police indiquée en page 1.</li>
+<li>En cas de sinistre, le locataire supporte la franchise indiquée en page 1 par événement, même non responsable, plus les frais d'immobilisation au tarif journalier pendant la réparation.</li>
+<li>L'assurance ne joue pas, et le locataire supporte l'intégralité du dommage, en cas de : conducteur non déclaré, alcool ou stupéfiants, permis non valide, usage interdit, vol par négligence (clés dans le véhicule, véhicule non verrouillé), fausse déclaration, infraction au Code de la route.</li>
+<li>Les effets personnels laissés dans le véhicule ne sont pas couverts.</li>
+</ul>
+<div class="excl">
+<table>
+<tr><th colspan="2">Hors franchise : facturés au réel sur facture</th></tr>
+<tr><td>Pneus, jantes, enjoliveurs</td><td>Vitres, rétroviseurs, optiques</td></tr>
+<tr><td>Dessous de caisse, carter</td><td>Intérieur : sièges, brûlures, taches</td></tr>
+<tr><td>Erreur de carburant</td><td>Clés, documents, accessoires perdus</td></tr>
+</table>
+</div>
+
+<h3>Art. 9 · Accident, vol</h3>
+<ul>
+<li>En cas d'accident, le locataire prévient immédiatement le loueur, fait établir un constat amiable ou un procès-verbal (police, gendarmerie), ne reconnaît aucune responsabilité et remet les documents au loueur sous <span class="amt">24 h</span>.</li>
+<li>En cas de vol, il dépose plainte immédiatement et remet au loueur le récépissé, les clés et les documents du véhicule.</li>
+<li>Le défaut de déclaration dans les délais engage son entière responsabilité.</li>
+</ul>
+
+<h3>Art. 10 · Infractions</h3>
+<p>Le locataire est seul responsable des infractions, amendes, mises en fourrière et retraits de permis survenus pendant la location, y compris notifiés après restitution. Le loueur peut communiquer son identité aux autorités.</p>
+
+<h3>Art. 11 · Documents et clés</h3>
+<p>Carte grise, attestation d'assurance, contrôle technique et clés sont remis au départ et rendus au retour. Leur perte est facturée <span class="amt">[____] DA</span> plus les frais réels de remplacement. Le véhicule est réputé non restitué tant que clés et documents ne sont pas rendus.</p>
+
+<h3>Art. 12 · Restitution, annulation, résiliation</h3>
+<ul>
+<li>Restitution au lieu, à la date et à l'heure convenus, pendant les horaires d'ouverture, en présence des deux parties.</li>
+<li>Annulation par le locataire moins de <span class="amt">[48] h</span> avant le départ : l'acompte est conservé.</li>
+<li>Le loueur peut résilier sans indemnité et reprendre le véhicule en cas de manquement du locataire aux présentes conditions.</li>
+</ul>
+
+<h3>Art. 13 · Données personnelles</h3>
+<p>Les informations recueillies servent à la gestion de la location et sont conservées conformément à la loi n° 18-07 relative à la protection des données à caractère personnel. Elles peuvent être transmises à l'assureur et aux autorités en cas de sinistre ou d'infraction.</p>
+
+<h3>Art. 14 · Litiges</h3>
+<p>Le contrat est régi par le droit algérien. À défaut de règlement amiable, tout litige relève du tribunal compétent du siège du loueur.</p>
+</div>
+<div class="accept"><div>Je soussigné(e), locataire, déclare avoir lu et accepté l'ensemble des présentes conditions générales.</div><div class="sgn">Date, signature et empreinte</div></div>
+<div class="foot"><span class="ph">[Nom commercial] · RC [………] · NIF [………]</span><span>Contrat n° _______ · page 3 / 4</span></div>
+</section>
+
+<!-- ======================= PAGE 4 : CG ARABE ======================= -->
+<section class="page ar-page" id="p4" lang="ar">
+<div class="cgtitle"><h1>الشروط العامة للكراء</h1><div class="sub" style="font-family:var(--ar);font-size:9pt;letter-spacing:0;text-transform:none">جزء لا يتجزأ من العقد رقم _______ · <span class="ph">[الاسم التجاري]</span></div></div>
+<div class="cols">
+
+<h3 class="first">المادة 1 · الموضوع</h3>
+<p>يؤجّر المؤجِّر للمستأجر، الذي يقبل، السيارة المبيّنة في الصفحة 1 للاستعمال والمدة المتفق عليهما. تبقى السيارة ملكاً خالصاً للمؤجِّر، والمستأجر مجرّد حائز لها: لا يجوز له إعارتها أو كراؤها من الباطن أو التنازل عنها أو رهنها أو استعمالها كضمان.</p>
+
+<h3>المادة 2 · شروط المستأجر</h3>
+<ul>
+<li>السن الأدنى <span class="amt">[25] سنة</span>؛ رخصة سياقة سارية منذ <span class="amt">[سنتين]</span> على الأقل ومن صنف السيارة.</li>
+<li>تقديم الوثائق الأصلية: بطاقة التعريف أو جواز السفر، رخصة السياقة، إثبات الإقامة. تحتفظ الوكالة بنسخة منها.</li>
+<li>كل تصريح كاذب حول الهوية أو العنوان أو الرخصة يؤدي إلى الفسخ الفوري على مسؤولية المستأجر ويعرّضه للمتابعة المدنية والجزائية.</li>
+</ul>
+
+<h3>المادة 3 · استعمال السيارة</h3>
+<ul>
+<li>لا يُسمح بالسياقة إلا للمستأجر والسائق الثاني المسجّلين في الصفحة 1. كل سياقة من طرف الغير تُسقط ضمانات التأمين ويتحمّل المستأجر كامل الأضرار.</li>
+<li>الاستعمال شخصي فقط. يُمنع: النقل المأجور للأشخاص أو البضائع، تعليم السياقة، الجرّ، السباق أو التجربة، أي نشاط غير مشروع، تجاوز عدد المقاعد المبيّن في البطاقة الرمادية، السير خارج الطرق المعبّدة، السياقة تحت تأثير الكحول أو المخدرات.</li>
+<li>لا تخرج السيارة من التراب الوطني دون ترخيص كتابي من المؤجِّر.</li>
+</ul>
+
+<h3>المادة 4 · المدة والتمديد والتأخير</h3>
+<ul>
+<li>يوم الكراء 24 ساعة من ساعة الانطلاق، مع تسامح <span class="amt">30 دقيقة</span> عند الرجوع.</li>
+<li>بعد ذلك تُحتسب كل ساعة بدأت بـ<span class="amt">[700] دج</span>؛ وبعد <span class="amt">[3] ساعات</span> يُستحق يوم كامل.</li>
+<li>يُطلب أي تمديد من المؤجِّر قبل <span class="amt">[6] ساعات</span> على الأقل من نهاية المدة، ويُقبل ويُدفع مسبقاً. وإلا تُعتبر السيارة غير مُرجَعة ويجوز للمؤجِّر إبلاغ مصالح الأمن والمتابعة القضائية.</li>
+</ul>
+
+<h3>المادة 5 · الثمن والدفع والكفالة</h3>
+<ul>
+<li>يُحدَّد الثمن حسب التسعيرة المعلّقة في الوكالة ويُدفع كاملاً عند الانطلاق بالدينار.</li>
+<li>يُدفع مبلغ ضمان (كفالة) بالقيمة المبيّنة في الصفحة 1 عند الانطلاق. يُسترجع عند إرجاع السيارة بعد المعاينة، بعد خصم المبالغ المستحقة: نقص الوقود، الأضرار، الفرنشيز، الغرامات، التأخير، الكيلومترات الزائدة، التنظيف.</li>
+<li>الكفالة ليست سقفاً للمسؤولية: إذا تجاوزتها المبالغ المستحقة يدفع المستأجر الفرق خلال <span class="amt">8 أيام</span>.</li>
+</ul>
+
+<h3>المادة 6 · الكيلومترات والوقود</h3>
+<ul>
+<li>يشمل الكراء <span class="amt">[____] كلم</span> لكل 24 ساعة (أو كيلومترات غير محدودة إذا أُشّر عليها في الصفحة 1). يُحتسب كل كلم زائد بـ<span class="amt">[____] دج</span>.</li>
+<li>تُرجَع السيارة بمستوى وقود الانطلاق. يُحتسب الوقود الناقص بسعر المحطة مع مصاريف خدمة <span class="amt">[500] دج</span>.</li>
+<li>يُمنع أي تدخل في العداد.</li>
+</ul>
+
+<h3>المادة 7 · الحالة والصيانة والأعطال</h3>
+<ul>
+<li>تُسلَّم السيارة نظيفة وفي حالة سير جيدة مع لوازمها ووثائقها. المعاينة الحضورية في الصفحة 2 حجة بين الطرفين.</li>
+<li>يراقب المستأجر المستويات وضغط العجلات ويستعمل السيارة استعمال الرجل الحريص.</li>
+<li>الاهتلاك الميكانيكي العادي على عاتق المؤجِّر. كل عطب أو ضرر ناتج عن خطأ أو إهمال أو استعمال غير عادي (القابض، علبة السرعة، المحرك، أسفل الهيكل، العجلات، الداخل) على عاتق المستأجر.</li>
+<li>لا تصليح دون موافقة كتابية من المؤجِّر؛ تُعوَّض التصليحات المرخّصة بالفاتورة. لا يستحق المستأجر أي تعويض عن عطب أو توقف.</li>
+</ul>
+
+<h3>المادة 8 · التأمين والفرنشيز والاستثناءات</h3>
+<ul>
+<li>السيارة مغطاة بالتأمين الإلزامي على المسؤولية المدنية. التغطية المكتتبة: <span class="amt">[مسؤولية مدنية / كل المخاطر]</span>، عقد التأمين مبيّن في الصفحة 1.</li>
+<li>في حالة حادث يتحمّل المستأجر الفرنشيز المبيّن في الصفحة 1 عن كل حادث ولو لم يكن مسؤولاً، إضافة إلى مصاريف توقف السيارة بالتسعيرة اليومية طيلة التصليح.</li>
+<li>لا يسري التأمين ويتحمّل المستأجر كامل الضرر في حالة: سائق غير مصرّح به، كحول أو مخدرات، رخصة غير سارية، استعمال ممنوع، سرقة بإهمال (المفاتيح داخل السيارة، سيارة غير مقفلة)، تصريح كاذب، مخالفة قانون المرور.</li>
+<li>الأمتعة الشخصية المتروكة في السيارة غير مغطاة.</li>
+</ul>
+<div class="excl">
+<table>
+<tr><th colspan="2">خارج الفرنشيز: تُحتسب بالتكلفة الحقيقية حسب الفاتورة</th></tr>
+<tr><td>العجلات، الجنوط، الأغطية</td><td>الزجاج، المرايا، المصابيح</td></tr>
+<tr><td>أسفل الهيكل، حوض الزيت</td><td>الداخل: المقاعد، الحروق، البقع</td></tr>
+<tr><td>الخطأ في نوع الوقود</td><td>ضياع المفاتيح أو الوثائق أو اللوازم</td></tr>
+</table>
+</div>
+
+<h3>المادة 9 · الحادث والسرقة</h3>
+<ul>
+<li>في حالة حادث يُبلّغ المستأجر المؤجِّر فوراً، ويحرّر محضراً ودياً أو محضر شرطة أو درك، ولا يعترف بأي مسؤولية، ويسلّم الوثائق للمؤجِّر خلال <span class="amt">24 ساعة</span>.</li>
+<li>في حالة سرقة يودع شكوى فوراً ويسلّم للمؤجِّر وصل الإيداع والمفاتيح ووثائق السيارة.</li>
+<li>عدم التصريح في الآجال يحمّله المسؤولية الكاملة.</li>
+</ul>
+
+<h3>المادة 10 · المخالفات</h3>
+<p>المستأجر وحده مسؤول عن المخالفات والغرامات والحجز في المحشر وسحب الرخصة الواقعة أثناء الكراء، بما فيها المبلَّغة بعد الإرجاع. يجوز للمؤجِّر تبليغ هويته للسلطات.</p>
+
+<h3>المادة 11 · الوثائق والمفاتيح</h3>
+<p>تُسلَّم البطاقة الرمادية وشهادة التأمين والمراقبة التقنية والمفاتيح عند الانطلاق وتُرجَع عند الرجوع. يُحتسب ضياعها بـ<span class="amt">[____] دج</span> زائد مصاريف الاستبدال الحقيقية. تُعتبر السيارة غير مُرجَعة ما لم تُرجَع المفاتيح والوثائق.</p>
+
+<h3>المادة 12 · الإرجاع والإلغاء والفسخ</h3>
+<ul>
+<li>الإرجاع في المكان والتاريخ والساعة المتفق عليها، خلال أوقات العمل، بحضور الطرفين.</li>
+<li>الإلغاء من طرف المستأجر قبل أقل من <span class="amt">[48] ساعة</span> من الانطلاق: يُحتفظ بالتسبيق.</li>
+<li>يجوز للمؤجِّر الفسخ دون تعويض واسترجاع السيارة عند إخلال المستأجر بهذه الشروط.</li>
+</ul>
+
+<h3>المادة 13 · المعطيات الشخصية</h3>
+<p>تُستعمل المعلومات المجمّعة لتسيير الكراء وتُحفظ طبقاً للقانون رقم 18-07 المتعلق بحماية المعطيات ذات الطابع الشخصي، ويجوز تبليغها لشركة التأمين والسلطات في حالة حادث أو مخالفة.</p>
+
+<h3>المادة 14 · النزاعات</h3>
+<p>يخضع العقد للقانون الجزائري. عند تعذّر الحل الودي يُعرض كل نزاع على المحكمة المختصة لمقر المؤجِّر.</p>
+</div>
+<div class="accept"><div>أنا الموقّع أدناه، المستأجر، أصرّح بأنني قرأت ووافقت على جميع هذه الشروط العامة.</div><div class="sgn">التاريخ، الإمضاء والبصمة</div></div>
+<div class="foot" style="direction:ltr"><span class="ph">[Nom commercial] · RC [………] · NIF [………]</span><span>Contrat n° _______ · page 4 / 4</span></div>
+</section>
+</div>
