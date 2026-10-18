@@ -15,3 +15,4 @@
 | 2026-10-17 | Nadir | Slogans en français (pro et DZ friendly) ajoutés à la note 03. |
 | 2026-10-17 | Sofiane | Décision 004 : slogan « La confiance, au volant. » |
 | 2026-10-17 | Yasmine | 3 pistes de logo livrées (volant, sceau, bilingue). |
+| 2026-10-18 | Yasmine | Retour : O en volant gardé, plus sportif et fini. Logo v2 en 3 palettes. |
