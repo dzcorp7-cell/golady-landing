@@ -2,10 +2,10 @@
   "agent": "Nadir",
   "poste": "Stratège de marque",
   "etat": "a_valider",
-  "progression": 75,
-  "tache_en_cours": "Nom et slogan validés.",
+  "progression": 85,
+  "tache_en_cours": "Flotte et prix de base reçus (Clio 5, Sandero, 12 000 DA/j)",
   "prochaine_etape": "Grille des offres et prix",
-  "bloque_par": "liste des voitures",
+  "bloque_par": "prix avec chauffeur, caution",
   "livrables": [
     {
       "nom": "Nom",
@@ -17,7 +17,7 @@
     },
     {
       "nom": "Offres et prix",
-      "etat": "a_zero"
+      "etat": "en_cours"
     },
     {
       "nom": "Ton et langues",
