@@ -20,3 +20,4 @@
 | 2026-10-20 | Yasmine | Logo final livré : SVG vectorisés et PNG, 4 versions. |
 | 2026-10-21 | Sofiane | Décision 006 : numéro, horaires, pas d'option chauffeur pour l'instant. |
 | 2026-10-21 | Lina | Sticker vitrine 60x40, affiche tarifs A3, flyer A5 recto-verso livrés en PDF, avec QR WhatsApp. |
+| 2026-10-21 | Lina | Correction : WhatsApp = 0557 19 04 01. QR et supports refaits avec les deux numéros. |
