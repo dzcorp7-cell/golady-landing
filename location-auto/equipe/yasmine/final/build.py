@@ -16,13 +16,15 @@ def logo_paths(p, ink):
     W=wheel(p,100)
     W=re.sub(r'<text[^>]*>H</text>', f'<path d="{text_path("H",900,12,0,4.2,anchor="middle")}" fill="{p["acc"]}"/>', W)
     W=W.replace('<svg xmlns="http://www.w3.org/2000/svg" viewBox="-50 -50 100 100" width="100" height="100">','<g transform="translate(300,78) scale(.92)">').replace('</svg>','</g>')
-    return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 190">
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 10 560 150">
 <path d="{text_path('HAB',900,96,40,112,-1)}" fill="{ink}"/>
 {W}
 <path d="{text_path('UB',900,96,350,112,-1)}" fill="{ink}"/>
 <rect x="88" y="132" width="40" height="7" fill="{p['acc']}" transform="skewX(-20)"/>
 <path d="{text_path('LOCATION',800,24,128,141,10)}" fill="{ink}"/>
-<path d="{text_path('La confiance, au volant.',500,17,44,174,1)}" fill="{ink}" fill-opacity=".75"/>
+<rect x="377" y="122" width="4" height="20" fill="{ink}" transform="skewX(-20)"/>
+<path d="{text_path('MAZOUNA',800,24,346,141,10)}" fill="{p['acc']}"/>
+
 </svg>'''
 p=PAL['carbone']
 open('final/haboub-logo-sur-fond-sombre.svg','w').write(logo_paths(p,p['ink']))
