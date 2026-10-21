@@ -1,23 +1,23 @@
 {
   "agent": "Lina",
   "poste": "Responsable marketing et supports",
-  "etat": "a_zero",
-  "progression": 0,
-  "tache_en_cours": null,
-  "prochaine_etape": "Attendre le brand book de Yasmine",
-  "bloque_par": "yasmine",
+  "etat": "a_valider",
+  "progression": 45,
+  "tache_en_cours": "Sticker vitrine, affiche tarifs A3 et flyer A5 livrés en PDF",
+  "prochaine_etape": "Grille tarifaire, contrat, état des lieux, 10 publications Facebook",
+  "bloque_par": null,
   "livrables": [
     {
       "nom": "Sticker vitrine",
-      "etat": "a_zero"
+      "etat": "a_valider"
     },
     {
       "nom": "Affiche tarifs A3",
-      "etat": "a_zero"
+      "etat": "a_valider"
     },
     {
       "nom": "Flyer A5",
-      "etat": "a_zero"
+      "etat": "a_valider"
     },
     {
       "nom": "10 premières publications",

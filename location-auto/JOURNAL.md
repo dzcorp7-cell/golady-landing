@@ -18,3 +18,5 @@
 | 2026-10-18 | Yasmine | Retour : O en volant gardé, plus sportif et fini. Logo v2 en 3 palettes. |
 | 2026-10-20 | Sofiane | Décision 005 : palette carbone & rouge, flotte Clio 5 / Sandero, 12 000 DA/j. |
 | 2026-10-20 | Yasmine | Logo final livré : SVG vectorisés et PNG, 4 versions. |
+| 2026-10-21 | Sofiane | Décision 006 : numéro, horaires, pas d'option chauffeur pour l'instant. |
+| 2026-10-21 | Lina | Sticker vitrine 60x40, affiche tarifs A3, flyer A5 recto-verso livrés en PDF, avec QR WhatsApp. |
