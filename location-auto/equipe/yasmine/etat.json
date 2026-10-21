@@ -1,15 +1,15 @@
 {
   "agent": "Yasmine",
   "poste": "Directrice artistique",
-  "etat": "a_valider",
-  "progression": 75,
-  "tache_en_cours": "Logo final livré (SVG vectorisés + PNG)",
-  "prochaine_etape": "Brand book d une page",
+  "etat": "valide",
+  "progression": 85,
+  "tache_en_cours": "Logo de référence choisi (Flow v1)",
+  "prochaine_etape": "Icône 1:1 via Flow, version fond blanc, puis brand book",
   "bloque_par": null,
   "livrables": [
     {
       "nom": "Logo simple",
-      "etat": "a_valider"
+      "etat": "valide"
     },
     {
       "nom": "2 couleurs, 1 police",
