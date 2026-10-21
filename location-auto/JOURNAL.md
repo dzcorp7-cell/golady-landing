@@ -23,3 +23,5 @@
 | 2026-10-21 | Lina | Correction : WhatsApp = 0557 19 04 01. QR et supports refaits avec les deux numéros. |
 | 2026-10-21 | Yasmine | Logo : slogan retiré, LOCATION / MAZOUNA. Supports régénérés. Retour : rendu trop léger, on reprend élément par élément. |
 | 2026-10-21 | Sofiane | Décision 008 : logo Flow v1 retenu. Flow pour les visuels, ici pour mise en page, QR et fichiers d'impression. |
+| 2026-10-21 | Yasmine | Icône Flow et version fond blanc reçues. Photo de profil 1080 prête. |
+| 2026-10-21 | Lina | Affiche tarifs A3 v2 avec logo Flow. |
