@@ -29,3 +29,4 @@
 | 2026-10-23 | Lina | Modèle de fiche Sandero : post 4:5 et story 9:16, FR + AR, emplacement photo Flow. Prompts Flow écrits. |
 | 2026-10-23 | Lina | Fiches Sandero trois-quarts avant (post + story, FR + AR) avec photo Flow. |
 | 2026-10-23 | Lina | Décision 010 : 6 angles marketing, 24 fiches (post + story, FR + AR). |
+| 2026-10-23 | Lina | Fiches en situation réelle (Flow) : travail, fêtes, famille. Post + story, FR + AR. |
