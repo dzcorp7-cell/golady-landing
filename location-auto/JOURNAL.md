@@ -31,3 +31,4 @@
 | 2026-10-23 | Lina | Décision 010 : 6 angles marketing, 24 fiches (post + story, FR + AR). |
 | 2026-10-23 | Lina | Fiches en situation réelle (Flow) : travail, fêtes, famille. Post + story, FR + AR. |
 | 2026-10-23 | Yasmine | Kit logo : originaux Flow, vectoriel redessiné (SVG + PDF), PNG transparents 1000/3000 px, formats réseaux. |
+| 2026-10-23 | Lina | Flyer A5 recto-verso bilingue FR/AR, Sandero 11 500 DA, fonds perdus 3 mm. |
