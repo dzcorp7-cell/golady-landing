@@ -46,8 +46,8 @@ body{{font-family:M,sans-serif;color:#F4F5F7}}
 <div class="band"><div><span>Appel · اتصل</span><b>0796 96 04 26</b></div><div style="text-align:right"><span>WhatsApp · واتساب</span><b>0557 19 04 01</b></div></div></div>
 
 <div class="p"><div class="v-top"></div><div class="v-tag"><span>Pour tous vos besoins</span></div>
-<div class="v-tag" style="left:auto;right:10mm;top:68mm"><span class="ar" style="font-family:C">لكل احتياجاتك</span></div><div class="cols"><div><h3>Pourquoi Haboub ?</h3><ul><li>Voiture neuve 2025</li><li>Propre et entretenue</li><li>5 places, grand coffre</li><li>Prix clair, sans surprise</li><li>Réservation par WhatsApp</li></ul></div>
-<div class="ar"><h3>علاش حبوب؟</h3><ul><li>طوموبيل جديدة 2025</li><li>نقية ومصانة</li><li>5 بلايص وصندوق واسع</li><li>سومة واضحة بلا مفاجآت</li><li>الحجز عبر واتساب</li></ul></div></div>
+<div class="v-tag" style="left:auto;right:10mm;top:68mm"><span class="ar" style="font-family:C">لكل احتياجاتك</span></div><div class="cols"><div><h3>Pourquoi Haboub Location Voiture ?</h3><ul><li>Voiture neuve 2025</li><li>Propre et entretenue</li><li>5 places, grand coffre</li><li>Prix clair, sans surprise</li><li>Réservation par WhatsApp</li></ul></div>
+<div class="ar"><h3>علاش حبوب لكراء السيارات؟</h3><ul><li>طوموبيل جديدة 2025</li><li>نقية ومصانة</li><li>5 بلايص وصندوق واسع</li><li>سومة واضحة بلا مفاجآت</li><li>الحجز عبر واتساب</li></ul></div></div>
 <div class="towns"><b>Mazouna</b> · Sidi M'hamed Ben Ali · Aïn Merane · Guettar · Ouarizane · Mediouna<div class="ar">مازونة · سيدي امحمد بن علي · عين مران · القطار · واريزان · مديونة</div></div>
 <div class="contact"><div><div class="lab">APPELEZ · اتصل</div><div class="tel">0796 96 04 26</div><div class="wa"><i>WhatsApp</i> 0557 19 04 01</div><div class="hrs">Ouvert 09h–12h · 14h–18h</div><div class="hrs ar" style="font-family:C;text-align:left;direction:rtl;unicode-bidi:plaintext">مفتوح من 9 إلى 12 ومن 14 إلى 18</div></div>
 <div><div class="qrb">{QR}</div><div class="ql">Scannez · WhatsApp</div></div></div></div>
