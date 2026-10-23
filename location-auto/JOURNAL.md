@@ -25,3 +25,5 @@
 | 2026-10-21 | Sofiane | Décision 008 : logo Flow v1 retenu. Flow pour les visuels, ici pour mise en page, QR et fichiers d'impression. |
 | 2026-10-21 | Yasmine | Icône Flow et version fond blanc reçues. Photo de profil 1080 prête. |
 | 2026-10-21 | Lina | Affiche tarifs A3 v2 avec logo Flow. |
+| 2026-10-23 | Sofiane | Décision 009 : une seule voiture, Sandero kaki 2025 Extreme essence, 11 500 DA/j. Fiches FR + AR. |
+| 2026-10-23 | Lina | Modèle de fiche Sandero : post 4:5 et story 9:16, FR + AR, emplacement photo Flow. Prompts Flow écrits. |
