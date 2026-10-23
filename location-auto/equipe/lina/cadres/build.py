@@ -14,12 +14,12 @@ html,body{{-webkit-print-color-adjust:exact;print-color-adjust:exact}}.p{{width:
 c1=base+f""".p{{background:url({PHOTO}) 50% 60%/cover}}
 .sky{{position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,248,235,.82) 0%,rgba(255,248,235,.55) 32%,rgba(255,248,235,0) 52%)}}
 .logo{{position:absolute;left:30mm;top:20mm;width:150mm;height:52mm;background:url({LOGO_CL}) left center/contain no-repeat}}
-.t{{position:absolute;left:30mm;top:76mm;color:#101317}}
-.t h1{{font-family:M;font-weight:900;font-size:24mm;line-height:1;letter-spacing:-.5mm}}
+.t{{position:absolute;left:30mm;top:72mm;color:#101317}}
+.t h1{{font-family:M;font-weight:900;font-size:21mm;line-height:1;letter-spacing:-.5mm}}
 .t h1 b{{color:#E3262F}}
 .t h2{{font-family:C;font-weight:900;font-size:24mm;line-height:1.3;direction:rtl;text-align:left;margin-top:4mm}}
-.bar{{width:40mm;height:2.5mm;background:#E3262F;margin-top:7mm}}.s{{font-family:M;font-weight:700;font-size:11mm;margin-top:5mm;color:#2a2d31}}.t h2{{font-size:17mm !important}}.car{{font-family:C,M;font-weight:800;font-size:7mm;letter-spacing:1mm;margin-top:6mm;color:#3a3f45}}
-</style><div class="p"><div class="sky"></div><div class="logo"></div><div class="t"><h1>On vous confie<br>les <b>clés.</b></h1><p class="s">Prenez-en soin comme de la vôtre.</p><h2>الطوموبيل أمانة… حافظ عليها</h2><div class="bar"></div><div class="car">DACIA SANDERO STEPWAY · داسيا سانديرو</div></div></div>"""
+.bar{{width:40mm;height:2.5mm;background:#E3262F;margin-top:7mm}}.s{{font-family:M;font-weight:700;font-size:11mm;margin-top:5mm;color:#2a2d31}}.t h2{{font-size:19mm !important;margin-top:5mm !important}}.car{{font-family:C,M;font-weight:800;font-size:7mm;letter-spacing:1mm;margin-top:6mm;color:#3a3f45}}
+</style><div class="p"><div class="sky"></div><div class="logo"></div><div class="t"><h1>Entre nous,<br>c'est une affaire<br>de <b>confiance.</b></h1><h2>بيناتنا، الكلمة والثقة</h2><div class="bar"></div><div class="car">DACIA SANDERO STEPWAY · داسيا سانديرو</div></div></div>"""
 c2=base+f""".p{{background:repeating-linear-gradient(45deg,rgba(255,255,255,.035) 0 1.2mm,rgba(0,0,0,0) 1.2mm 2.4mm),repeating-linear-gradient(-45deg,rgba(0,0,0,.25) 0 1.2mm,rgba(0,0,0,0) 1.2mm 2.4mm),#121418;color:#F4F5F7}}
 .veil{{position:absolute;inset:0;background:radial-gradient(80% 90% at 50% 40%,rgba(8,9,11,.15),rgba(8,9,11,.75))}}
 .logo{{position:absolute;left:50%;top:22mm;transform:translateX(-50%);width:300mm;height:80mm;background:url({LOGO_DK}) center/contain no-repeat}}
