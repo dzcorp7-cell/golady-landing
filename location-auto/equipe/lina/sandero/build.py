@@ -15,7 +15,7 @@ T={'fr':dict(dir='ltr',font='M',model='Dacia Sandero',chips=['2025','Finition Ex
 SIZES={'post':(1080,1350),'story':(1080,1920)}
 def page(car,lang,fmt):
     t=T[lang]; W,H=SIZES[fmt]; carh=500 if fmt=='post' else 800
-    carcss=f"background:url(data:image/jpeg;base64,{b64(car)}) center/cover" if car else "background:linear-gradient(135deg,#2a2f37,#14171b);display:grid;place-items:center"
+    carcss=f"background:url(data:image/jpeg;base64,{b64(car)}) center/{'100%' if fmt=='post' else '112%'} auto no-repeat #0b0c0f" if car else "background:linear-gradient(135deg,#2a2f37,#14171b);display:grid;place-items:center"
     ph='' if car else '<div style="font:800 40px M;color:#E3262F;letter-spacing:4px">PHOTO FLOW ICI</div>'
     chips=''.join(f'<span>{c}</span>' for c in t['chips'])
     return f"""<!doctype html><html dir="{t['dir']}"><meta charset=utf8><style>{FONT}
