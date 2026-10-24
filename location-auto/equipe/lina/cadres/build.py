@@ -19,7 +19,7 @@ c1=base+f""".p{{background:url({PHOTO}) 50% 60%/cover}}
 .t h1 b{{color:#E3262F}}
 .t h2{{font-family:C;font-weight:900;font-size:24mm;line-height:1.3;direction:rtl;text-align:left;margin-top:4mm}}
 .bar{{width:40mm;height:2.5mm;background:#E3262F;margin-top:7mm}}.s{{font-family:M;font-weight:700;font-size:11mm;margin-top:5mm;color:#2a2d31}}.t h2{{font-size:19mm !important;margin-top:5mm !important}}.car{{font-family:C,M;font-weight:800;font-size:7mm;letter-spacing:1mm;margin-top:6mm;color:#3a3f45}}
-</style><div class="p"><div class="sky"></div><div class="logo"></div><div class="t"><h1>Entre nous,<br>c'est une affaire<br>de <b>confiance.</b></h1><h2>بيناتنا، الكلمة والثقة</h2><div class="bar"></div><div class="car">DACIA SANDERO STEPWAY · داسيا سانديرو</div></div></div>"""
+</style><div class="p"><div class="sky"></div><div class="logo"></div><div class="t"><h1>Entre nous,<br>c'est une affaire<br>de <b>confiance.</b></h1><h2>بيناتنا، الكلمة والثقة</h2><div class="bar"></div><div class="car">DACIA SANDERO STEPWAY · <bdi dir="rtl">داسيا سانديرو</bdi></div></div></div>"""
 c2=base+f""".p{{background:repeating-linear-gradient(45deg,rgba(255,255,255,.035) 0 1.2mm,rgba(0,0,0,0) 1.2mm 2.4mm),repeating-linear-gradient(-45deg,rgba(0,0,0,.25) 0 1.2mm,rgba(0,0,0,0) 1.2mm 2.4mm),#121418;color:#F4F5F7}}
 .veil{{position:absolute;inset:0;background:radial-gradient(80% 90% at 50% 40%,rgba(8,9,11,.15),rgba(8,9,11,.75))}}
 .logo{{position:absolute;left:50%;top:22mm;transform:translateX(-50%);width:300mm;height:80mm;background:url({LOGO_DK}) center/contain no-repeat}}
@@ -32,7 +32,11 @@ c2=base+f""".p{{background:repeating-linear-gradient(45deg,rgba(255,255,255,.035
 </style><div class="p"><div class="veil"></div><div class="wm"></div><div class="logo"></div>
 <div class="vals"><div class="v"><b>CONFIANCE</b><span>الثقة</span></div><div class="v"><b>LIBERTÉ</b><span>الحرية</span></div><div class="v"><b>PROXIMITÉ</b><span>القرب</span></div></div>
 <div class="bot">MAZOUNA · DEPUIS 2026</div></div>"""
-for n,h in (('carte-sandero-confiance-60x30',c1),):
+CLIO=u('equipe/lina/clio/photos-flow/clio-route.jpg')
+c3=c1.replace(PHOTO,CLIO).replace('50% 60%/cover','50% 50%/cover')
+c3=c3.replace("<h1>Entre nous,<br>c'est une affaire<br>de <b>confiance.</b></h1><h2>بيناتنا، الكلمة والثقة</h2>","<h1>Roulez<br>l'esprit <b>tranquille.</b></h1><h2>سوق وبالك هاني</h2>")
+c3=c3.replace('DACIA SANDERO STEPWAY · <bdi dir="rtl">داسيا سانديرو</bdi>','RENAULT CLIO 5 TECHNO · <bdi dir="rtl">رونو كليو</bdi>')
+for n,h in (('carte-sandero-confiance-60x30',c1),('carte-clio-tranquille-60x30',c3)):
     f=os.path.join(D,n+'.html'); open(f,'w').write(h)
     subprocess.run(['/opt/pw-browsers/chromium','--headless','--no-sandbox','--disable-gpu','--no-pdf-header-footer','--print-to-pdf='+os.path.join(D,n+'.pdf'),'file://'+f],capture_output=True); os.remove(f)
 print('ok')

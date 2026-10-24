@@ -36,3 +36,4 @@
 | 2026-10-24 | Lina | Cartes voiture 60x30 : Sandero prête ; Clio 5 Techno bleue en attente de photo Flow et prix. |
 | 2026-10-24 | Lina | Carte Sandero refaite : sans prix, photo Flow remise des clés, message de confiance « On vous confie les clés » / « الطوموبيل أمانة ». |
 | 2026-10-24 | Sofiane | Décision 011 : message « Entre nous, c'est une affaire de confiance » / « بيناتنا، الكلمة والثقة ». Carte Sandero mise à jour. |
+| 2026-10-24 | Lina | Carte Clio 60x30 « Roulez l'esprit tranquille ». Paire de cadres terminée. |
