@@ -90,8 +90,8 @@ td.in{height:5mm}
 .cgtitle .sub{font-family:var(--ui);font-size:8pt;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
 .cols{column-count:2;column-gap:7mm;column-rule:.5pt solid var(--rule-soft)}
 @media (max-width:700px){.cols{column-count:1}}
-.cols h3{font-family:var(--ui);font-size:7.8pt;font-weight:600;color:var(--accent);margin:1.8mm 0 .6mm;break-after:avoid;letter-spacing:.04em}
-.cols p,.cols li{font-size:7.9pt;line-height:1.32;margin:0 0 .8mm}
+.cols h3{font-family:var(--ui);font-size:7.8pt;font-weight:600;color:var(--accent);margin:1.4mm 0 .5mm;break-after:avoid;letter-spacing:.04em}
+.cols p,.cols li{font-size:7.9pt;line-height:1.28;margin:0 0 .65mm}
 .cols ul{padding-left:3.5mm;margin:0 0 1mm}
 .cols li{padding-left:.5mm}
 .cols .first{margin-top:0}
@@ -102,14 +102,14 @@ td.in{height:5mm}
 
 .ar-page{direction:rtl}
 .ar-page .cols h3{font-family:var(--ar);font-size:9.8pt;font-weight:700}
-.ar-page .cols p,.ar-page .cols li{font-family:var(--ar);font-size:8.9pt;line-height:1.4}
+.ar-page .cols p,.ar-page .cols li{font-family:var(--ar);font-size:8.9pt;line-height:1.34}
 .ar-page .cols ul{padding-left:0;padding-right:4mm}
 .ar-page .cgtitle h1{font-family:var(--ar);font-size:16pt;letter-spacing:0;text-transform:none}
 .ar-page .amt{font-family:var(--ar);font-size:8.3pt}
 .ar-page th,.ar-page td{text-align:right;font-family:var(--ar);font-size:8.3pt}
 .ar-page .excl table{font-size:8.3pt}
 
-.accept{margin-top:2.5mm;border:1pt solid var(--accent);padding:2mm 3mm;display:grid;grid-template-columns:1fr auto;gap:4mm;font-size:8.5pt;align-items:end;break-inside:avoid}
+.accept{margin-top:1.5mm;border:1pt solid var(--accent);padding:1.5mm 3mm;display:grid;grid-template-columns:1fr auto;gap:4mm;font-size:8.5pt;align-items:end;break-inside:avoid}
 .accept .sgn{min-width:48mm;border-bottom:.6pt dotted var(--ink);font-family:var(--ui);font-size:7.5pt;color:var(--muted)}
 .ar-page .accept{font-family:var(--ar);font-size:10pt}
 
@@ -158,7 +158,7 @@ td.in{height:5mm}
 <div class="brief">
   <div><b>Caution · الكفالة</b><span></span><i>مبلغ الضمان، يُسترجع عند الرجوع</i></div>
   <div><b>Franchise sinistre · الفرنشيز</b><span></span><i>يبقى على عاتق المستأجر في حالة حادث</i></div>
-  <div><b>Km inclus / jour · الكيلومترات</b><span></span><i>الزائد يُحتسب بـ ____ دج/كلم</i></div>
+  <div><b>Km inclus / jour · الكيلومترات</b><span>450 km / 24 h</span><i>الزائد 20 دج/كلم</i></div>
   <div><b>Retard · التأخير</b><span></span><i>بعد 30 دقيقة تسامح</i></div>
 </div>
 
@@ -291,8 +291,8 @@ td.in{height:5mm}
 
 <h3>Art. 2 · Conditions du locataire</h3>
 <ul>
-<li>Âge minimum <span class="amt">[25] ans</span> ; permis valide depuis au moins <span class="amt">[2] ans</span>, de la catégorie du véhicule.</li>
-<li>Originaux présentés : pièce d'identité ou passeport, permis, justificatif de domicile. Le loueur en conserve copie.</li>
+<li>Âge minimum <span class="amt">[25] ans</span> ; permis valide depuis au moins <span class="amt">5 ans</span>, de la catégorie du véhicule.</li>
+<li>Originaux présentés : pièce d'identité ou passeport et permis. Le loueur en conserve copie.</li>
 <li>Toute fausse déclaration sur l'identité, l'adresse ou le permis entraîne la résiliation immédiate aux torts du locataire et engage sa responsabilité civile et pénale.</li>
 </ul>
 
@@ -319,8 +319,8 @@ td.in{height:5mm}
 
 <h3>Art. 6 · Kilométrage et carburant</h3>
 <ul>
-<li>Le forfait inclut <span class="amt">[____] km</span> par 24 h (ou kilométrage illimité si coché en page 1). Tout km supplémentaire est facturé <span class="amt">[____] DA</span>.</li>
-<li>Le véhicule est restitué au niveau de carburant du départ. Le carburant manquant est facturé au prix de la pompe majoré de <span class="amt">[500] DA</span> de frais de service.</li>
+<li>Le forfait inclut <span class="amt">450 km</span> par 24 h (ou kilométrage illimité si coché en page 1). Tout km supplémentaire est facturé <span class="amt">20 DA</span>.</li>
+<li>Le véhicule est restitué au niveau de carburant du départ. Le carburant manquant est facturé au prix de la pompe.</li>
 <li>Toute intervention sur le compteur est interdite.</li>
 </ul>
 
@@ -359,7 +359,10 @@ td.in{height:5mm}
 <p>Le locataire est seul responsable des infractions, amendes, mises en fourrière et retraits de permis survenus pendant la location, y compris notifiés après restitution. Le loueur peut communiquer son identité aux autorités.</p>
 
 <h3>Art. 11 · Documents et clés</h3>
-<p>Carte grise, attestation d'assurance, contrôle technique et clés sont remis au départ et rendus au retour. Leur perte est facturée <span class="amt">[____] DA</span> plus les frais réels de remplacement. Le véhicule est réputé non restitué tant que clés et documents ne sont pas rendus.</p>
+<ul>
+<li>Au départ, le véhicule contient une <b>copie légalisée de la carte grise</b>, l'attestation d'assurance, la vignette et le contrôle technique. L'original de la carte grise reste chez le loueur et n'est jamais remis au locataire.</li>
+<li>Les clés et les documents confiés sont rendus au retour. La perte des clés ou d'un document est facturée <span class="amt">10 000 DA</span> plus les frais réels de remplacement. Le véhicule est réputé non restitué tant que les clés ne sont pas rendues.</li>
+</ul>
 
 <h3>Art. 12 · Restitution, annulation, résiliation</h3>
 <ul>
@@ -388,8 +391,8 @@ td.in{height:5mm}
 
 <h3>المادة 2 · شروط المستأجر</h3>
 <ul>
-<li>السن الأدنى <span class="amt">[25] سنة</span>؛ رخصة سياقة سارية منذ <span class="amt">[سنتين]</span> على الأقل ومن صنف السيارة.</li>
-<li>تقديم الوثائق الأصلية: بطاقة التعريف أو جواز السفر، رخصة السياقة، إثبات الإقامة. تحتفظ الوكالة بنسخة منها.</li>
+<li>السن الأدنى <span class="amt">[25] سنة</span>؛ رخصة سياقة سارية منذ <span class="amt">5 سنوات</span> على الأقل ومن صنف السيارة.</li>
+<li>تقديم الوثائق الأصلية: بطاقة التعريف أو جواز السفر ورخصة السياقة. تحتفظ الوكالة بنسخة منها.</li>
 <li>كل تصريح كاذب حول الهوية أو العنوان أو الرخصة يؤدي إلى الفسخ الفوري على مسؤولية المستأجر ويعرّضه للمتابعة المدنية والجزائية.</li>
 </ul>
 
@@ -416,8 +419,8 @@ td.in{height:5mm}
 
 <h3>المادة 6 · الكيلومترات والوقود</h3>
 <ul>
-<li>يشمل الكراء <span class="amt">[____] كلم</span> لكل 24 ساعة (أو كيلومترات غير محدودة إذا أُشّر عليها في الصفحة 1). يُحتسب كل كلم زائد بـ<span class="amt">[____] دج</span>.</li>
-<li>تُرجَع السيارة بمستوى وقود الانطلاق. يُحتسب الوقود الناقص بسعر المحطة مع مصاريف خدمة <span class="amt">[500] دج</span>.</li>
+<li>يشمل الكراء <span class="amt">450 كلم</span> لكل 24 ساعة (أو كيلومترات غير محدودة إذا أُشّر عليها في الصفحة 1). يُحتسب كل كلم زائد بـ<span class="amt">20 دج</span>.</li>
+<li>تُرجَع السيارة بمستوى وقود الانطلاق. يُحتسب الوقود الناقص بسعر المحطة.</li>
 <li>يُمنع أي تدخل في العداد.</li>
 </ul>
 
@@ -456,7 +459,10 @@ td.in{height:5mm}
 <p>المستأجر وحده مسؤول عن المخالفات والغرامات والحجز في المحشر وسحب الرخصة الواقعة أثناء الكراء، بما فيها المبلَّغة بعد الإرجاع. يجوز للمؤجِّر تبليغ هويته للسلطات.</p>
 
 <h3>المادة 11 · الوثائق والمفاتيح</h3>
-<p>تُسلَّم البطاقة الرمادية وشهادة التأمين والمراقبة التقنية والمفاتيح عند الانطلاق وتُرجَع عند الرجوع. يُحتسب ضياعها بـ<span class="amt">[____] دج</span> زائد مصاريف الاستبدال الحقيقية. تُعتبر السيارة غير مُرجَعة ما لم تُرجَع المفاتيح والوثائق.</p>
+<ul>
+<li>توجد في السيارة عند الانطلاق <b>نسخة مُصادق عليها من البطاقة الرمادية</b> وشهادة التأمين والڤينيات والمراقبة التقنية. يبقى أصل البطاقة الرمادية لدى المؤجِّر ولا يُسلَّم للمستأجر إطلاقاً.</li>
+<li>تُرجَع المفاتيح والوثائق المُسلَّمة عند الرجوع. يُحتسب ضياع المفاتيح أو أي وثيقة بـ<span class="amt">10 000 دج</span> زائد مصاريف الاستبدال الحقيقية. تُعتبر السيارة غير مُرجَعة ما لم تُرجَع المفاتيح.</li>
+</ul>
 
 <h3>المادة 12 · الإرجاع والإلغاء والفسخ</h3>
 <ul>
