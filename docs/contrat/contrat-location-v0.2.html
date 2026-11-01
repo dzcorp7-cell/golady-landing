@@ -97,7 +97,13 @@ table.etat th{vertical-align:middle}
 .sig .ar{font-family:var(--ar);font-size:10pt;direction:rtl;text-align:right;display:block;color:var(--ink)}
 .mention{font-family:var(--ui);font-size:7.2pt;color:var(--muted);margin-top:2mm;border-top:.5pt solid var(--rule-soft);padding-top:1.2mm;display:grid;grid-template-columns:1fr 1fr;gap:4mm}
 .mention .ar{font-family:var(--ar);font-size:9pt;direction:rtl;text-align:right}
-.retline{font-family:var(--ui);font-size:7.8pt;border:.5pt solid var(--rule);padding:1.2mm 2mm;margin:1mm 0 1.5mm;line-height:1.55}
+.retl{font-family:var(--ui);font-size:8.5pt;margin:1mm 0 .5mm}
+.rettab{width:100%;border-collapse:collapse;font-family:var(--ui);font-size:8.3pt}
+.rettab td{border:.5pt solid var(--rule);padding:1mm 2.5mm}
+.rettab td:last-child{text-align:right;width:52mm;font-variant-numeric:tabular-nums;white-space:nowrap}
+.rettab tr.tot td{background:var(--accent-soft);font-weight:600}
+.rettab .muted{color:var(--muted);font-family:var(--ar);font-size:8.5pt;margin-right:1.5mm;float:right}
+.rettab td{overflow:hidden}
 .signgrid{display:grid;grid-template-columns:26mm 1fr 1fr;border:.5pt solid var(--rule);border-left:0;border-top:0}
 .signgrid>div{border-left:.5pt solid var(--rule);border-top:.5pt solid var(--rule);padding:1.4mm 2mm}
 .signgrid .sh{background:var(--accent-soft);font-family:var(--ui);font-size:7.8pt;font-weight:600}
@@ -275,7 +281,16 @@ table.etat th{vertical-align:middle}
   <div class="pane" style="min-height:22mm"><b>Au retour · عند الرجوع</b></div>
 </div>
 <h2><span>6 · Restitution au retour</span><span class="ar">6 · الاسترجاع عند الرجوع</span></h2>
-<div class="retline">Rendu le ____/____/2026 à ____h____ · km parcourus ________ · excédent ________ km · carburant manquant ________ · retard ________ · dégâts ________ DA · Caution : ☐ restituée ☐ retenue ________ DA · Solde : ☐ réglé ☐ reste dû ________ DA</div>
+<div class="retl">Véhicule rendu le ____ / ____ / 2026 à ____ h ____ &nbsp;·&nbsp; compteur retour ____________ km</div>
+<table class="rettab">
+  <tr><td>Kilomètres parcourus <span class="muted">المسافة المقطوعة</span></td><td>____________ km</td></tr>
+  <tr><td>Kilomètres excédentaires × 20 DA <span class="muted">كلم زائدة</span></td><td>________ km = ________ DA</td></tr>
+  <tr><td>Carburant manquant <span class="muted">نقص الوقود</span></td><td>________ DA</td></tr>
+  <tr><td>Retard <span class="muted">التأخير</span></td><td>________ DA</td></tr>
+  <tr><td>Dégâts <span class="muted">الأضرار</span></td><td>________ DA</td></tr>
+  <tr class="tot"><td>Total à déduire de la caution <span class="muted">مجموع ما يُخصم</span></td><td>________ DA</td></tr>
+  <tr><td>Caution versée ________ DA <span class="muted">الكفالة</span></td><td>restituée ________ · retenue ________ DA</td></tr>
+</table>
 <div class="sig" style="margin-top:1.5mm">
   <div style="min-height:22mm"><b>Le locataire · <span class="ar" style="display:inline">المستأجر</span></b>Signature au retour · <span class="ar">الإمضاء عند الرجوع</span></div>
   <div style="min-height:22mm"><b>Pour l'agence · <span class="ar" style="display:inline">عن الوكالة</span></b>Signature et cachet · <span class="ar">إمضاء وختم الوكالة</span></div>
