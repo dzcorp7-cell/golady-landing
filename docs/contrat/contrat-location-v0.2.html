@@ -61,6 +61,10 @@ h2 .ar{font-family:var(--ar);font-size:10.5pt;letter-spacing:0;text-transform:no
 .f .v{border-bottom:.6pt dotted var(--ink);min-height:4.5mm;background:var(--field);font-family:var(--ui);font-size:9pt;padding:0 1.5mm;min-width:0;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
 .checks{display:flex;gap:5mm;flex-wrap:wrap;font-family:var(--ui);font-size:8.5pt;margin-top:1.2mm}
 .box{display:inline-block;width:3.2mm;height:3.2mm;border:.7pt solid var(--ink);vertical-align:-.5mm;margin-right:1mm}
+.pricebox{border:.6pt solid var(--rule);margin-top:1.8mm;padding:1.8mm 2.5mm;display:flex;flex-direction:column;gap:1.4mm;font-family:var(--ui);font-size:9pt}
+.pricebox .pl{display:flex;flex-wrap:wrap;align-items:baseline;gap:1.5mm}
+.pricebox .bl{border-bottom:.6pt dotted var(--ink);min-width:17mm;font-weight:500;display:inline-block}
+.pricebox .modes{justify-content:space-between;border-top:.5pt solid var(--rule-soft);padding-top:1.2mm;margin-top:.3mm}
 
 table{width:100%;border-collapse:collapse;font-family:var(--ui);font-size:8.5pt}
 th,td{border:.5pt solid var(--rule);padding:1.1mm 2mm;text-align:left;vertical-align:middle}
@@ -186,26 +190,16 @@ td.in{height:5mm}
   <div class="f"><span class="lf">CT valable au</span><span class="v"></span><span class="la">المراقبة التقنية</span></div>
 </div>
 
-<h2><span>3 · Durée, prix, paiement</span><span class="ar">3 · المدة والثمن والدفع</span></h2>
-<div class="grid">
-  <div class="f"><span class="lf">Départ</span><span class="v">____ / ____ / 2026 &nbsp;à&nbsp; ____ h ____</span><span class="la">الانطلاق</span></div>
-  <div class="f"><span class="lf">Retour prévu</span><span class="v">____ / ____ / 2026 &nbsp;à&nbsp; ____ h ____</span><span class="la">الرجوع</span></div>
-  <div class="f"><span class="lf">Lieu départ / retour</span><span class="v"></span><span class="la">المكان</span></div>
+<h2><span>3 · Durée et prix</span><span class="ar">3 · المدة والثمن والدفع</span></h2>
+<div class="grid c3">
+  <div class="f"><span class="lf">Départ</span><span class="v">__/__/2026 à __h__</span><span class="la">الانطلاق</span></div>
+  <div class="f"><span class="lf">Retour prévu</span><span class="v">__/__/2026 à __h__</span><span class="la">الرجوع</span></div>
   <div class="f"><span class="lf">Nombre de jours</span><span class="v"></span><span class="la">عدد الأيام</span></div>
 </div>
-<div class="tscroll" style="margin-top:1.5mm">
-<table>
-<tr><th>Désignation</th><th class="ar">البيان</th><th>DA</th></tr>
-<tr><td>Prix journalier ________ DA × ____ jour(s)</td><td class="ar">الثمن اليومي × عدد الأيام</td><td class="num in"></td></tr>
-<tr><td>Options (2e conducteur, livraison, siège enfant…)</td><td class="ar">خيارات</td><td class="num in"></td></tr>
-<tr><td><b>Total location</b> &nbsp;·&nbsp; acompte versé ________ DA &nbsp;·&nbsp; reste au départ ________ DA</td><td class="ar"><b>مجموع الكراء</b></td><td class="num in"></td></tr>
-<tr><td><b>Dépôt de garantie (caution)</b> restituable au retour, art. 5</td><td class="ar"><b>مبلغ الضمان</b> يُسترجع عند الرجوع</td><td class="num in"></td></tr>
-</table>
-</div>
-<div class="checks">
-  <span>Paiement : <span class="box"></span>Espèces <span class="box"></span>CCP/virement <span class="box"></span>Carte</span>
-  <span>Caution : <span class="box"></span>Espèces <span class="box"></span>Chèque non encaissé <span class="box"></span>Autre ______</span>
-  
+<div class="pricebox">
+  <div class="pl"><span>Prix par jour</span><b class="bl">________ DA</b><span>×</span><b class="bl">____ j</b><span>=&nbsp; Total</span><b class="bl" style="min-width:26mm">________________ DA</b></div>
+  <div class="pl"><span>Payé au départ</span><b class="bl">________ DA</b><span>· Reste</span><b class="bl">________ DA</b><span style="margin-left:auto">Caution <small style="color:var(--muted)">(restituable, art. 5)</small></span><b class="bl">________ DA</b></div>
+  <div class="pl modes"><span>Paiement : <span class="box"></span>Espèces <span class="box"></span>CCP/virement <span class="box"></span>Carte</span><span>Caution : <span class="box"></span>Espèces <span class="box"></span>Chèque non encaissé</span></div>
 </div>
 
 <div class="sig">
