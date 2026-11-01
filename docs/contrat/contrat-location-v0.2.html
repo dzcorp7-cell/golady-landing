@@ -74,6 +74,12 @@ td.ar,th.ar{direction:rtl;text-align:right;font-family:var(--ar);font-size:9.5pt
 td.num{text-align:right;font-variant-numeric:tabular-nums;width:26mm}
 td.in{height:5mm}
 .tscroll{overflow-x:auto}
+table.etat td:first-child,table.etat th:first-child{line-height:1.25}
+table.etat td:first-child b{font-weight:600;font-size:8.5pt;display:block}
+table.etat th:first-child{padding:0}
+.td-ar{font-family:var(--ar);font-size:8pt;color:var(--muted);display:block;direction:rtl;text-align:right;margin-top:.3mm}
+.th-ar{font-family:var(--ar);font-size:8.5pt;color:var(--muted);display:block;direction:rtl;text-align:right;font-weight:500;margin-top:.3mm}
+table.etat th{vertical-align:top}
 
 .two{display:grid;grid-template-columns:1fr 1fr;gap:3mm}
 @media (max-width:600px){.two{grid-template-columns:1fr}}
@@ -222,13 +228,13 @@ td.in{height:5mm}
 <div class="cgtitle"><h1>État des lieux du véhicule · محضر معاينة السيارة</h1><div class="sub">Annexe au contrat n° _______ · HABOUB LOCATION · immatriculation ______________</div></div>
 <h2><span>4 · État du véhicule au départ et au retour, contradictoire</span><span class="ar">4 · حالة السيارة عند الانطلاق والرجوع، معاينة حضورية</span></h2>
 <div class="tscroll">
-<table>
-<tr><th style="width:44mm"></th><th>Départ · الانطلاق</th><th>Retour · الرجوع</th></tr>
-<tr><td>Kilométrage · العداد</td><td class="in">_____________ km</td><td class="in">_____________ km</td></tr>
-<tr><td>Carburant · الوقود</td><td>☐1/8 ☐2/8 ☐3/8 ☐4/8 ☐5/8 ☐6/8 ☐7/8 ☐8/8</td><td>☐1/8 ☐2/8 ☐3/8 ☐4/8 ☐5/8 ☐6/8 ☐7/8 ☐8/8</td></tr>
-<tr><td>Pneus, roue secours, cric, triangle · العجلات والعدة</td><td class="in">☐ OK &nbsp; ☐ remarque :</td><td class="in">☐ OK &nbsp; ☐ remarque :</td></tr>
-<tr><td>Propreté, documents à bord, clés · النظافة والوثائق</td><td class="in">☐ OK &nbsp; ☐ remarque :</td><td class="in">☐ OK &nbsp; ☐ remarque :</td></tr>
-<tr><td>Date et heure réelles · التاريخ والساعة</td><td class="in"></td><td class="in"></td></tr>
+<table class="etat">
+<tr><th style="width:46mm"></th><th>Départ<span class="th-ar">الانطلاق</span></th><th>Retour<span class="th-ar">الرجوع</span></th></tr>
+<tr><td><b>Kilométrage</b><span class="td-ar">العداد</span></td><td class="in">_____________ km</td><td class="in">_____________ km</td></tr>
+<tr><td><b>Carburant</b><span class="td-ar">الوقود</span></td><td>☐1/8 ☐2/8 ☐3/8 ☐4/8 ☐5/8 ☐6/8 ☐7/8 ☐8/8</td><td>☐1/8 ☐2/8 ☐3/8 ☐4/8 ☐5/8 ☐6/8 ☐7/8 ☐8/8</td></tr>
+<tr><td><b>Pneus, roue de secours, cric, triangle, gilet</b><span class="td-ar">العجلات والعدة</span></td><td class="in">☐ OK &nbsp; ☐ remarque :</td><td class="in">☐ OK &nbsp; ☐ remarque :</td></tr>
+<tr><td><b>Propreté, documents à bord, clés</b><span class="td-ar">النظافة والوثائق والمفاتيح</span></td><td class="in">☐ OK &nbsp; ☐ remarque :</td><td class="in">☐ OK &nbsp; ☐ remarque :</td></tr>
+<tr><td><b>Date et heure réelles</b><span class="td-ar">التاريخ والساعة</span></td><td class="in"></td><td class="in"></td></tr>
 </table>
 </div>
 <div class="two" style="margin-top:1.5mm">
