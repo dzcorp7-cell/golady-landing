@@ -98,6 +98,7 @@ table.etat th{vertical-align:middle}
 .mention{font-family:var(--ui);font-size:7.2pt;color:var(--muted);margin-top:2mm;border-top:.5pt solid var(--rule-soft);padding-top:1.2mm;display:grid;grid-template-columns:1fr 1fr;gap:4mm}
 .mention .ar{font-family:var(--ar);font-size:9pt;direction:rtl;text-align:right}
 .retl{font-family:var(--ui);font-size:8.5pt;margin:1mm 0 .5mm}
+.retsep{font-family:var(--ui);font-size:8pt;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin:2.5mm 0 1mm}
 .rettab{width:100%;border-collapse:collapse;font-family:var(--ui);font-size:8.3pt}
 .rettab td{border:.5pt solid var(--rule);padding:1mm 2.5mm}
 .rettab td:last-child{text-align:right;width:52mm;font-variant-numeric:tabular-nums;white-space:nowrap}
@@ -240,7 +241,7 @@ table.etat th{vertical-align:middle}
 <section class="page" id="p2">
 <div class="minilogo"><img src="__LOGO_SRC__" alt="HABOUB LOCATION"></div>
 <div class="cgtitle"><h1>État des lieux du véhicule · محضر معاينة السيارة</h1></div>
-<h2><span>4 · État du véhicule au départ et au retour, contradictoire</span><span class="ar">4 · حالة السيارة عند الانطلاق والرجوع، معاينة حضورية</span></h2>
+<h2><span>4 · État des lieux et restitution</span><span class="ar">4 · معاينة الحالة والاسترجاع</span></h2>
 <div class="tscroll">
 <table class="etat">
 <tr><th style="width:46mm"></th><th>Départ<span class="th-ar">الانطلاق</span></th><th>Retour<span class="th-ar">الرجوع</span></th></tr>
@@ -252,7 +253,7 @@ table.etat th{vertical-align:middle}
 </table>
 </div>
 <div class="two" style="margin-top:1.5mm">
-  <div class="pane"><b>Dégâts au départ · الأضرار عند الانطلاق</b>
+  <div class="pane" style="min-height:34mm"><b>Dégâts et observations — départ · الأضرار والملاحظات</b>
     <svg class="carsvg big" viewBox="0 0 300 70" aria-label="silhouette de voiture, vue de dessus">
       <rect x="20" y="12" width="260" height="46" rx="18" fill="none" stroke="#5f584e" stroke-width="1"/>
       <rect x="80" y="18" width="140" height="34" rx="8" fill="none" stroke="#5f584e" stroke-width="1"/>
@@ -261,8 +262,8 @@ table.etat th{vertical-align:middle}
       <rect x="40" y="56" width="22" height="8" rx="2" fill="#fff" stroke="#5f584e" stroke-width="1"/><rect x="238" y="56" width="22" height="8" rx="2" fill="#fff" stroke="#5f584e" stroke-width="1"/>
       <text x="8" y="38" font-size="8" fill="#5f584e" font-family="sans-serif">AV</text><text x="283" y="38" font-size="8" fill="#5f584e" font-family="sans-serif">AR</text>
     </svg>
-    Marquer : R rayure · B bosse · E éclat · C cassé</div>
-  <div class="pane"><b>Dégâts au retour · الأضرار عند الرجوع</b>
+    Marquer : R rayure · B bosse · E éclat · C cassé<br>Observations : ________________________________________</div>
+  <div class="pane" style="min-height:34mm"><b>Dégâts et observations — retour · الأضرار والملاحظات</b>
     <svg class="carsvg big" viewBox="0 0 300 70" aria-label="silhouette de voiture, vue de dessus">
       <rect x="20" y="12" width="260" height="46" rx="18" fill="none" stroke="#5f584e" stroke-width="1"/>
       <rect x="80" y="18" width="140" height="34" rx="8" fill="none" stroke="#5f584e" stroke-width="1"/>
@@ -271,16 +272,11 @@ table.etat th{vertical-align:middle}
       <rect x="40" y="56" width="22" height="8" rx="2" fill="#fff" stroke="#5f584e" stroke-width="1"/><rect x="238" y="56" width="22" height="8" rx="2" fill="#fff" stroke="#5f584e" stroke-width="1"/>
       <text x="8" y="38" font-size="8" fill="#5f584e" font-family="sans-serif">AV</text><text x="283" y="38" font-size="8" fill="#5f584e" font-family="sans-serif">AR</text>
     </svg>
-    Photos horodatées prises : ☐ départ &nbsp; ☐ retour</div>
+    Photos horodatées prises : ☐ départ &nbsp; ☐ retour<br>Observations : ________________________________________</div>
 </div>
 
 
-<h2><span>5 · Observations</span><span class="ar">5 · ملاحظات</span></h2>
-<div class="two">
-  <div class="pane" style="min-height:22mm"><b>Au départ · عند الانطلاق</b></div>
-  <div class="pane" style="min-height:22mm"><b>Au retour · عند الرجوع</b></div>
-</div>
-<h2><span>6 · Restitution au retour</span><span class="ar">6 · الاسترجاع عند الرجوع</span></h2>
+<div class="retsep">Décompte au retour · حساب الاسترجاع</div>
 <div class="retl">Véhicule rendu le ____ / ____ / 2026 à ____ h ____ &nbsp;·&nbsp; compteur retour ____________ km</div>
 <table class="rettab">
   <tr><td>Kilomètres parcourus <span class="muted">المسافة المقطوعة</span></td><td>____________ km</td></tr>
