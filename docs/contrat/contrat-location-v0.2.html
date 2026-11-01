@@ -28,7 +28,9 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--fr);font-s
 .head small{display:block;font-family:var(--ui);color:var(--muted);font-size:8pt}
 .logobar{display:flex;justify-content:center;margin-bottom:1mm;margin-top:-1mm}
 .logobar img{height:13mm;width:auto;max-width:100%}
-.head2{} 
+.head2{}
+.head.onecol{grid-template-columns:1fr;text-align:center;justify-items:center}
+.head.onecol .fr{line-height:1.5}
 .ph{color:var(--warn)}
 
 h1{font-size:15pt;font-weight:700;letter-spacing:.06em;text-transform:uppercase;text-align:center;margin:2mm 0 0}
@@ -133,27 +135,18 @@ td.in{height:5mm}
 <!-- ======================= PAGE 1 : FICHE CONTRAT ======================= -->
 <section class="page" id="p1">
 <div class="logobar"><img src="__LOGO_SRC__" alt="HABOUB LOCATION Mazouna"></div>
-<div class="head">
+<div class="head onecol">
   <div class="fr">
     <small>Location de véhicules sans chauffeur</small>
     <small>RC n° <span class="ph">[…………………]</span> · NIF <span class="ph">[…………………]</span> · AI <span class="ph">[…………]</span></small>
-    <small>Rue du stade, Mazouna, wilaya de Relizane</small>
-    <small>Tél. 07 96 96 04 26 <span class="ph">· [e-mail / site]</span></small>
-  </div>
-  <div class="ar">
-    <small>كراء السيارات بدون سائق</small>
-    <small>س.ت رقم <span class="ph">[…………]</span> · ر.ج <span class="ph">[…………]</span> · م.ض <span class="ph">[………]</span></small>
-    <small>شارع الملعب، مازونة، ولاية غليزان</small>
-    <small>الهاتف 07 96 96 04 26</small>
+    <small>Rue du stade, Mazouna, wilaya de Relizane · Tél. 07 96 96 04 26</small>
   </div>
 </div>
 
 <h1>Contrat de location de véhicule</h1>
-<div class="h1ar">عقد كراء سيارة</div>
 <div class="numline">
   <span>Contrat n° <b>_______ / 2026</b></span>
   <span>Fait à <b>_____________</b> le <b>____ / ____ / 2026</b></span>
-  <span dir="rtl" style="font-family:var(--ar);font-size:10pt">عقد رقم <b>_______ / 2026</b></span>
 </div>
 
 <div class="brief">
