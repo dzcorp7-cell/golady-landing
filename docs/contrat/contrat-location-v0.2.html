@@ -54,7 +54,8 @@ h2 .ar{font-family:var(--ar);font-size:10.5pt;letter-spacing:0;text-transform:no
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:1mm 5mm}
 .grid .full{grid-column:1/-1}
 .grid.c3{grid-template-columns:1fr 1fr 1fr}
-@media (max-width:600px){.grid,.grid.c3{grid-template-columns:1fr}}
+.grid.veh{grid-template-columns:repeat(12,1fr)}
+@media (max-width:600px){.grid,.grid.c3,.grid.veh{grid-template-columns:1fr}.grid.veh .f{grid-column:1/-1 !important}}
 .f{display:grid;grid-template-columns:auto 1fr auto;align-items:baseline;gap:1.5mm;min-width:0}
 .f .lf{white-space:nowrap;font-size:9pt}
 .f .la{font-family:var(--ar);font-size:9.5pt;direction:rtl;white-space:nowrap;color:var(--muted)}
@@ -82,9 +83,9 @@ td.in{height:5mm}
 .carsvg.big{max-height:38mm}
 .legend{font-family:var(--ui);font-size:7.5pt;color:var(--muted);margin-top:1mm}
 
-.sig{display:grid;grid-template-columns:1fr 1fr;gap:5mm;margin-top:3mm}
+.sig{display:grid;grid-template-columns:1fr 1fr;gap:6mm;margin-top:4mm}
 @media (max-width:600px){.sig{grid-template-columns:1fr}}
-.sig div{border-top:.8pt solid var(--ink);padding-top:1.2mm;min-height:20mm;font-family:var(--ui);font-size:8pt;color:var(--muted)}
+.sig div{border-top:.8pt solid var(--ink);padding-top:1.2mm;min-height:30mm;font-family:var(--ui);font-size:8pt;color:var(--muted)}
 .sig b{display:block;color:var(--ink);font-size:9pt}
 .sig .ar{font-family:var(--ar);font-size:10pt;direction:rtl;text-align:right;display:block;color:var(--ink)}
 .mention{font-family:var(--ui);font-size:7.2pt;color:var(--muted);margin-top:2mm;border-top:.5pt solid var(--rule-soft);padding-top:1.2mm;display:grid;grid-template-columns:1fr 1fr;gap:4mm}
@@ -182,15 +183,15 @@ td.in{height:5mm}
 </div>
 
 <h2><span>2 · Le véhicule</span><span class="ar">2 · السيارة</span></h2>
-<div class="grid c3">
-  <div class="f"><span class="lf">Marque</span><span class="v"></span><span class="la">النوع</span></div>
-  <div class="f"><span class="lf">Modèle</span><span class="v"></span><span class="la">الطراز</span></div>
-  <div class="f"><span class="lf">Couleur</span><span class="v"></span><span class="la">اللون</span></div>
-  <div class="f"><span class="lf">Immatriculation</span><span class="v"></span><span class="la">رقم التسجيل</span></div>
-  <div class="f"><span class="lf">N° châssis</span><span class="v"></span><span class="la">رقم الهيكل</span></div>
-  <div class="f"><span class="lf">Carburant</span><span class="v"></span><span class="la">الوقود</span></div>
-  <div class="f full" style="grid-column:span 2"><span class="lf">Assurance (cie / police n°)</span><span class="v"></span><span class="la">التأمين</span></div>
-  <div class="f"><span class="lf">CT valable au</span><span class="v"></span><span class="la">المراقبة التقنية</span></div>
+<div class="grid veh">
+  <div class="f" style="grid-column:span 6"><span class="lf">Marque</span><span class="v"></span><span class="la">النوع</span></div>
+  <div class="f" style="grid-column:span 6"><span class="lf">Modèle</span><span class="v"></span><span class="la">الطراز</span></div>
+  <div class="f" style="grid-column:span 8"><span class="lf">Immatriculation</span><span class="v"></span><span class="la">رقم التسجيل</span></div>
+  <div class="f" style="grid-column:span 4"><span class="lf">Couleur</span><span class="v"></span><span class="la">اللون</span></div>
+  <div class="f" style="grid-column:span 8"><span class="lf">N° châssis</span><span class="v"></span><span class="la">رقم الهيكل</span></div>
+  <div class="f" style="grid-column:span 4"><span class="lf">Carburant</span><span class="v"></span><span class="la">الوقود</span></div>
+  <div class="f" style="grid-column:span 5"><span class="lf">CT valable au</span><span class="v"></span><span class="la">المراقبة التقنية</span></div>
+  <div class="f" style="grid-column:span 7"><span class="lf">Assurance n° / cie</span><span class="v"></span><span class="la">التأمين</span></div>
 </div>
 
 <h2><span>3 · Durée et prix</span><span class="ar">3 · المدة والثمن والدفع</span></h2>
@@ -206,14 +207,13 @@ td.in{height:5mm}
 </div>
 
 <div class="sig">
-  <div><b>Le locataire · <span class="ar" style="display:inline">المستأجر</span></b>« Lu et approuvé » · signature et empreinte · <span class="ar">قرأت ووافقت · الإمضاء والبصمة</span></div>
-  <div><b>Le loueur · <span class="ar" style="display:inline">المؤجِّر</span></b>Signature et cachet · إمضاء وختم الوكالة</div>
+  <div><b>Le locataire · <span class="ar" style="display:inline">المستأجر</span></b>« Lu et approuvé » · signature et empreinte<br><span class="ar">قرأت ووافقت · الإمضاء والبصمة</span></div>
+  <div><b>Le loueur · <span class="ar" style="display:inline">المؤجِّر</span></b>Signature et cachet de l'agence<br><span class="ar">إمضاء وختم الوكالة</span></div>
 </div>
 <div class="mention oneline">
-  <div>Contrat établi en deux exemplaires originaux, un pour chaque partie. L'état des lieux (page 2) et les conditions générales (pages 3 et 4) font partie intégrante du contrat. Le locataire reconnaît avoir reçu copie des documents du véhicule.</div>
+  <div>Établi en deux exemplaires originaux. Les pages 2 à 4 font partie intégrante du contrat ; le locataire en a reçu copie.</div>
   <div class="ar">حُرّر هذا العقد في نسختين أصليتين، نسخة لكل طرف. معاينة الحالة (الصفحة 2) والشروط العامة (الصفحتان 3 و4) جزء لا يتجزأ من العقد. يقرّ المستأجر باستلام نسخة من وثائق السيارة.</div>
 </div>
-<div class="foot">HABOUB LOCATION · <span class="ph">RC [………] · NIF [………]</span><span>Contrat n° _______ · page 1 / 4</span></div>
 </section>
 
 <!-- ======================= PAGE 2 : ÉTAT DES LIEUX ======================= -->
@@ -270,7 +270,6 @@ td.in{height:5mm}
   <div style="min-height:22mm"><b>Le locataire · المستأجر</b>Rendu le ____/____/2026 à ____h____. Caution : ☐ restituée en totalité ☐ retenue ________ DA, motif : ______________________________. Signature :</div>
   <div style="min-height:22mm"><b>Pour l'agence · عن الوكالة</b>Km parcourus ________ · km excédentaires ________ · carburant manquant ________ · retard ________ · dégâts ________ DA. Solde : ☐ réglé ☐ reste dû ________ DA. Signature :</div>
 </div>
-<div class="foot">HABOUB LOCATION · <span class="ph">RC [………] · NIF [………]</span><span>Contrat n° _______ · page 2 / 4</span></div>
 </section>
 
 <!-- ======================= PAGE 3 : CG FRANÇAIS ======================= -->
@@ -371,7 +370,6 @@ td.in{height:5mm}
 <p>Le contrat est régi par le droit algérien. À défaut de règlement amiable, tout litige relève du tribunal compétent du siège du loueur.</p>
 </div>
 <div class="accept"><div>Je soussigné(e), locataire, déclare avoir lu et accepté l'ensemble des présentes conditions générales.</div><div class="sgn">Date, signature et empreinte</div></div>
-<div class="foot">HABOUB LOCATION · <span class="ph">RC [………] · NIF [………]</span><span>Contrat n° _______ · page 3 / 4</span></div>
 </section>
 
 <!-- ======================= PAGE 4 : CG ARABE ======================= -->
@@ -472,6 +470,5 @@ td.in{height:5mm}
 <p>يخضع العقد للقانون الجزائري. عند تعذّر الحل الودي يُعرض كل نزاع على المحكمة المختصة لمقر المؤجِّر.</p>
 </div>
 <div class="accept"><div>أنا الموقّع أدناه، المستأجر، أصرّح بأنني قرأت ووافقت على جميع هذه الشروط العامة.</div><div class="sgn">التاريخ، الإمضاء والبصمة</div></div>
-<div class="foot" style="direction:ltr">HABOUB LOCATION · <span class="ph">RC [………] · NIF [………]</span><span>Contrat n° _______ · page 4 / 4</span></div>
 </section>
 </div>
