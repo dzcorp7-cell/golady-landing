@@ -78,7 +78,8 @@ table.etat td:first-child,table.etat th:first-child{line-height:1.25}
 table.etat td:first-child b{font-weight:600;font-size:8.5pt;display:block}
 table.etat th:first-child{padding:0}
 .td-ar{font-family:var(--ar);font-size:8pt;color:var(--muted);display:block;direction:rtl;text-align:right;margin-top:.3mm}
-.th-ar{font-family:var(--ar);font-size:8.5pt;color:var(--muted);font-weight:400;margin-left:2.5mm}
+.th-ar{font-family:var(--ar);font-size:8.5pt;color:var(--muted);font-weight:400}
+table.etat tr:first-child th:nth-child(n+2){display:flex;justify-content:space-between;align-items:baseline}
 table.etat th{vertical-align:middle}
 
 .two{display:grid;grid-template-columns:1fr 1fr;gap:3mm}
@@ -96,6 +97,13 @@ table.etat th{vertical-align:middle}
 .sig .ar{font-family:var(--ar);font-size:10pt;direction:rtl;text-align:right;display:block;color:var(--ink)}
 .mention{font-family:var(--ui);font-size:7.2pt;color:var(--muted);margin-top:2mm;border-top:.5pt solid var(--rule-soft);padding-top:1.2mm;display:grid;grid-template-columns:1fr 1fr;gap:4mm}
 .mention .ar{font-family:var(--ar);font-size:9pt;direction:rtl;text-align:right}
+.retline{font-family:var(--ui);font-size:7.8pt;border:.5pt solid var(--rule);padding:1.2mm 2mm;margin:1mm 0 1.5mm;line-height:1.55}
+.signgrid{display:grid;grid-template-columns:26mm 1fr 1fr;border:.5pt solid var(--rule);border-left:0;border-top:0}
+.signgrid>div{border-left:.5pt solid var(--rule);border-top:.5pt solid var(--rule);padding:1.4mm 2mm}
+.signgrid .sh{background:var(--accent-soft);font-family:var(--ui);font-size:7.8pt;font-weight:600}
+.signgrid .sr{font-family:var(--ui);font-size:8.5pt;font-weight:600;display:flex;flex-direction:column;justify-content:center;line-height:1.2}
+.signgrid .sr span{font-family:var(--ar);font-weight:400;color:var(--muted);font-size:8pt}
+.signgrid .sc{min-height:16mm}
 .mention.oneline{display:block}
 .mention.oneline > div{font-size:6.8pt;line-height:1.35;margin-bottom:.6mm}
 .mention.oneline .ar{font-size:8pt;line-height:1.5;text-align:right}
@@ -225,7 +233,7 @@ table.etat th{vertical-align:middle}
 <!-- ======================= PAGE 2 : ÉTAT DES LIEUX ======================= -->
 <section class="page" id="p2">
 <div class="minilogo"><img src="__LOGO_SRC__" alt="HABOUB LOCATION"></div>
-<div class="cgtitle"><h1>État des lieux du véhicule · محضر معاينة السيارة</h1><div class="sub">Annexe au contrat n° _______ · HABOUB LOCATION · immatriculation ______________</div></div>
+<div class="cgtitle"><h1>État des lieux du véhicule · محضر معاينة السيارة</h1></div>
 <h2><span>4 · État du véhicule au départ et au retour, contradictoire</span><span class="ar">4 · حالة السيارة عند الانطلاق والرجوع، معاينة حضورية</span></h2>
 <div class="tscroll">
 <table class="etat">
@@ -263,18 +271,15 @@ table.etat th{vertical-align:middle}
 
 <h2><span>5 · Observations</span><span class="ar">5 · ملاحظات</span></h2>
 <div class="two">
-  <div class="pane" style="min-height:42mm"><b>Au départ · عند الانطلاق</b></div>
-  <div class="pane" style="min-height:42mm"><b>Au retour · عند الرجوع</b></div>
+  <div class="pane" style="min-height:22mm"><b>Au départ · عند الانطلاق</b></div>
+  <div class="pane" style="min-height:22mm"><b>Au retour · عند الرجوع</b></div>
 </div>
-<h2><span>6 · Signatures au départ</span><span class="ar">6 · الإمضاءات عند الانطلاق</span></h2>
-<div class="sig" style="margin-top:1mm">
-  <div style="min-height:20mm"><b>Le locataire · المستأجر</b>Reconnaît l'état décrit ci-dessus · يقرّ بالحالة المبيّنة أعلاه</div>
-  <div style="min-height:20mm"><b>Pour l'agence · عن الوكالة</b></div>
-</div>
-<h2><span>7 · Restitution et clôture</span><span class="ar">7 · الاسترجاع وإقفال العقد</span></h2>
-<div class="sig" style="margin-top:1mm">
-  <div style="min-height:22mm"><b>Le locataire · المستأجر</b>Rendu le ____/____/2026 à ____h____. Caution : ☐ restituée en totalité ☐ retenue ________ DA, motif : ______________________________. Signature :</div>
-  <div style="min-height:22mm"><b>Pour l'agence · عن الوكالة</b>Km parcourus ________ · km excédentaires ________ · carburant manquant ________ · retard ________ · dégâts ________ DA. Solde : ☐ réglé ☐ reste dû ________ DA. Signature :</div>
+<h2><span>6 · Signatures départ et retour</span><span class="ar">6 · الإمضاء عند الانطلاق والرجوع</span></h2>
+<div class="retline">Au retour · عند الرجوع : rendu le ____/____/2026 à ____h____ · km parcourus ________ · excédent ________ km · carburant manquant ________ · retard ________ · dégâts ________ DA · Caution : ☐ restituée ☐ retenue ________ DA · Solde : ☐ réglé ☐ reste dû ________ DA</div>
+<div class="signgrid">
+  <div class="sh"></div><div class="sh">Le locataire · المستأجر</div><div class="sh">Pour l'agence · الوكالة</div>
+  <div class="sr">Au départ<span>الانطلاق</span></div><div class="sc"></div><div class="sc"></div>
+  <div class="sr">Au retour<span>الرجوع</span></div><div class="sc"></div><div class="sc"></div>
 </div>
 </section>
 
