@@ -78,8 +78,8 @@ table.etat td:first-child,table.etat th:first-child{line-height:1.25}
 table.etat td:first-child b{font-weight:600;font-size:8.5pt;display:block}
 table.etat th:first-child{padding:0}
 .td-ar{font-family:var(--ar);font-size:8pt;color:var(--muted);display:block;direction:rtl;text-align:right;margin-top:.3mm}
-.th-ar{font-family:var(--ar);font-size:8.5pt;color:var(--muted);font-weight:400}
-table.etat tr:first-child th:nth-child(n+2){display:flex;justify-content:space-between;align-items:baseline}
+.th-ar{font-family:var(--ar);font-size:8.5pt;color:var(--muted);font-weight:400;float:right}
+table.etat tr:first-child th{overflow:hidden}
 table.etat th{vertical-align:middle}
 
 .two{display:grid;grid-template-columns:1fr 1fr;gap:3mm}
@@ -274,12 +274,11 @@ table.etat th{vertical-align:middle}
   <div class="pane" style="min-height:22mm"><b>Au départ · عند الانطلاق</b></div>
   <div class="pane" style="min-height:22mm"><b>Au retour · عند الرجوع</b></div>
 </div>
-<h2><span>6 · Signatures départ et retour</span><span class="ar">6 · الإمضاء عند الانطلاق والرجوع</span></h2>
-<div class="retline">Au retour · عند الرجوع : rendu le ____/____/2026 à ____h____ · km parcourus ________ · excédent ________ km · carburant manquant ________ · retard ________ · dégâts ________ DA · Caution : ☐ restituée ☐ retenue ________ DA · Solde : ☐ réglé ☐ reste dû ________ DA</div>
-<div class="signgrid">
-  <div class="sh"></div><div class="sh">Le locataire · المستأجر</div><div class="sh">Pour l'agence · الوكالة</div>
-  <div class="sr">Au départ<span>الانطلاق</span></div><div class="sc"></div><div class="sc"></div>
-  <div class="sr">Au retour<span>الرجوع</span></div><div class="sc"></div><div class="sc"></div>
+<h2><span>6 · Restitution au retour</span><span class="ar">6 · الاسترجاع عند الرجوع</span></h2>
+<div class="retline">Rendu le ____/____/2026 à ____h____ · km parcourus ________ · excédent ________ km · carburant manquant ________ · retard ________ · dégâts ________ DA · Caution : ☐ restituée ☐ retenue ________ DA · Solde : ☐ réglé ☐ reste dû ________ DA</div>
+<div class="sig" style="margin-top:1.5mm">
+  <div style="min-height:22mm"><b>Le locataire · <span class="ar" style="display:inline">المستأجر</span></b>Signature au retour · <span class="ar">الإمضاء عند الرجوع</span></div>
+  <div style="min-height:22mm"><b>Pour l'agence · <span class="ar" style="display:inline">عن الوكالة</span></b>Signature et cachet · <span class="ar">إمضاء وختم الوكالة</span></div>
 </div>
 </section>
 
