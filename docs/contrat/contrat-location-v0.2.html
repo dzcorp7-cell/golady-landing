@@ -128,8 +128,8 @@ table.etat .totrow td{background:var(--accent-soft);font-weight:600}
 .cols{column-count:2;column-gap:7mm;column-rule:.5pt solid var(--rule-soft)}
 @media (max-width:700px){.cols{column-count:1}}
 .cols h3.first{margin-top:0}
-.cols h3{font-family:var(--ui);font-size:8.5pt;font-weight:600;color:var(--accent);margin:2.5mm 0 .9mm;break-after:avoid;letter-spacing:.04em}
-.cols p,.cols li{font-size:8.5pt;line-height:1.4;margin:0 0 1.2mm}
+.cols h3{font-family:var(--ui);font-size:8.1pt;font-weight:600;color:var(--accent);margin:1.7mm 0 .6mm;break-after:avoid;letter-spacing:.04em}
+.cols p,.cols li{font-size:8pt;line-height:1.3;margin:0 0 .8mm}
 .cols ul{padding-left:3.5mm;margin:0 0 1mm}
 .cols li{padding-left:.5mm}
 .cols .first{margin-top:0}
@@ -139,8 +139,8 @@ table.etat .totrow td{background:var(--accent-soft);font-weight:600}
 .excl th,.excl td{padding:.6mm 1.5mm}
 
 .ar-page{direction:rtl}
-.ar-page .cols h3{font-family:var(--ar);font-size:10.8pt;font-weight:700}
-.ar-page .cols p,.ar-page .cols li{font-family:var(--ar);font-size:9.8pt;line-height:1.55}
+.ar-page .cols h3{font-family:var(--ar);font-size:10pt;font-weight:700}
+.ar-page .cols p,.ar-page .cols li{font-family:var(--ar);font-size:9pt;line-height:1.4}
 .ar-page .cols ul{padding-left:0;padding-right:4mm}
 .ar-page .cgtitle h1{font-family:var(--ar);font-size:16pt;letter-spacing:0;text-transform:none}
 .ar-page .amt{font-family:var(--ar);font-size:8.3pt}
@@ -244,7 +244,7 @@ table.etat .totrow td{background:var(--accent-soft);font-weight:600}
 <div class="recu"><span>Facture / reçu n° ________ remis au locataire</span><span>Caution reçue le ____ / ____ / 2026</span></div>
 
 <div class="sig">
-  <div><b>Le locataire · <span class="ar" style="display:inline">المستأجر</span></b>« Lu et approuvé » · signature et empreinte<br><span class="ar">قرأت ووافقت · الإمضاء والبصمة</span></div>
+  <div><b>Le locataire · <span class="ar" style="display:inline">المستأجر</span></b>« Lu et approuvé, y compris les conditions générales (pages 3-4) » · signature et empreinte<br><span class="ar">قرأت ووافقت، بما في ذلك الشروط العامة (ص 3-4) · الإمضاء والبصمة</span></div>
   <div><b>Le loueur · <span class="ar" style="display:inline">المؤجِّر</span></b>Signature et cachet de l'agence<br><span class="ar">إمضاء وختم الوكالة</span></div>
 </div>
 <div class="mention oneline">
@@ -346,7 +346,7 @@ table.etat .totrow td{background:var(--accent-soft);font-weight:600}
 <h3>Art. 5 · Prix et caution</h3>
 <ul>
 <li>Prix réglé au départ, en dinars, selon le tarif affiché.</li>
-<li>Caution versée au départ (montant page 1), rendue au retour après vérification, déduction faite des sommes dues.</li>
+<li>Caution versée au départ (montant page 1), rendue au retour après vérification, déduction faite des sommes dues justifiées par devis, facture ou l'état des lieux.</li>
 <li>Si les sommes dues dépassent la caution, le locataire paie la différence sous <span class="amt">8 jours</span>.</li>
 </ul>
 
@@ -362,14 +362,15 @@ table.etat .totrow td{background:var(--accent-soft);font-weight:600}
 <li>Véhicule livré propre et en bon état ; l'état de la page 2 fait foi entre les parties.</li>
 <li>Le locataire surveille les niveaux et les pneus et conduit en bon père de famille.</li>
 <li>L'usure normale est à la charge du loueur ; toute panne par faute ou négligence est à celle du locataire.</li>
-<li>Aucune réparation sans accord écrit ; aucune indemnité pour panne ou immobilisation.</li>
+<li>Aucune réparation sans accord écrit du loueur. En cas de panne non imputable au locataire, le loueur fournit un véhicule de remplacement ou rembourse les journées non utilisées ; aucune autre indemnité n'est due.</li>
 </ul>
 
 <h3>Art. 8 · Assurance et dommages</h3>
 <ul>
-<li>Couverture souscrite : <span class="amt">[RC seule / tous risques]</span>, police en page 1.</li>
-<li>En cas de dommage dont le locataire est responsable, la réparation est à sa charge et se déduit de la caution, ainsi que les frais d'immobilisation pendant la réparation.</li>
-<li>L'assurance ne joue pas (dommage à 100 % du locataire) si : conducteur non déclaré, alcool ou stupéfiants, permis non valide, usage interdit, vol par négligence, fausse déclaration, infraction au Code de la route.</li>
+<li>Couverture souscrite : <span class="amt">[RC seule / tous risques]</span>, police en page 1. La garantie de responsabilité civile envers les tiers reste acquise conformément à l'ordonnance 74-15.</li>
+<li>En cas de dommage dont le locataire est responsable, la réparation et les frais d'immobilisation se déduisent de la caution.</li>
+<li>Le locataire rembourse au loueur toute somme que l'assureur refuse au titre d'une déchéance ou exclusion (conducteur non déclaré, alcool ou stupéfiants, permis non valide, usage interdit, vol par négligence, fausse déclaration, infraction grave ayant causé ou aggravé le sinistre). La caution garantit le paiement sans en constituer le plafond.</li>
+<li>Si le véhicule est irréparable, volé ou détruit et non pris en charge par l'assureur, le locataire doit la valeur du véhicule au jour du sinistre, déduction faite de toute indemnité versée.</li>
 <li>Effets personnels non couverts.</li>
 </ul>
 <div class="excl">
@@ -393,22 +394,23 @@ table.etat .totrow td{background:var(--accent-soft);font-weight:600}
 
 <h3>Art. 11 · Documents et clés</h3>
 <ul>
-<li>Au départ : copie légalisée de la carte grise, attestation d'assurance, vignette, contrôle technique. L'original de la carte grise reste chez le loueur.</li>
-<li>Perte de clés ou d'un document : <span class="amt">10 000 DA</span> plus le coût réel de remplacement.</li>
+<li>Au départ : copie légalisée de la carte grise accompagnée du présent contrat signé (qui justifie la détention), attestation d'assurance, vignette, contrôle technique. L'original de la carte grise reste chez le loueur, qui prend en charge toute immobilisation résultant d'un document non conforme qu'il a fourni.</li>
+<li>Perte de clés ou d'un document : <span class="amt">10 000 DA</span> (forfait de remplacement).</li>
 </ul>
 
 <h3>Art. 12 · Restitution, annulation, résiliation</h3>
 <ul>
 <li>Restitution au lieu, au jour et à l'heure convenus, aux horaires d'ouverture.</li>
-<li>Annulation moins de <span class="amt">[48] h</span> avant le départ : acompte conservé.</li>
+<li>Annulation moins de <span class="amt">[48] h</span> avant le départ : acompte conservé ; si le loueur se désiste, l'acompte est restitué.</li>
 <li>Le loueur peut résilier et reprendre le véhicule en cas de manquement.</li>
+<li>Les sommes forfaitaires du présent contrat (retard, perte de clés, annulation) constituent une clause pénale (art. 184 du Code civil) : exigibles après mise en demeure et révisables par le juge.</li>
 </ul>
 
 <h3>Art. 13 · Données personnelles</h3>
-<p>Les données servent à gérer la location, conservées selon la loi n° 18-07, et peuvent être transmises à l'assureur et aux autorités en cas de sinistre ou d'infraction.</p>
+<p>Les données (identité, permis, coordonnées) servent à gérer la location et le recouvrement. Responsable : HABOUB LOCATION. Destinataires : assureur et autorités en cas de sinistre ou d'infraction. Conservation : un an après restitution, sauf litige. Droit d'accès et de rectification au titre de la loi n° 18-07.</p>
 
 <h3>Art. 14 · Litiges</h3>
-<p>Contrat régi par le droit algérien ; à défaut d'accord amiable, tribunal compétent du siège du loueur.</p>
+<p>Contrat régi par le droit algérien. À défaut d'accord amiable, le litige est porté devant le tribunal territorialement compétent selon le Code de procédure civile et administrative. En cas de divergence entre les versions française et arabe, la version arabe fait foi.</p>
 </div>
 
 </section>
@@ -445,7 +447,7 @@ table.etat .totrow td{background:var(--accent-soft);font-weight:600}
 <h3>المادة 5 · الثمن والكفالة</h3>
 <ul>
 <li>يُدفع الثمن عند الانطلاق بالدينار حسب التسعيرة المعلّقة.</li>
-<li>تُدفع الكفالة عند الانطلاق (القيمة في الصفحة 1)، وتُرجَع بعد المعاينة بعد خصم المبالغ المستحقة.</li>
+<li>تُدفع الكفالة عند الانطلاق (القيمة في الصفحة 1)، وتُرجَع بعد المعاينة بعد خصم المبالغ المستحقة المُثبَتة بفاتورة أو تقدير أو محضر المعاينة.</li>
 <li>إذا تجاوزت المبالغ المستحقة الكفالة يدفع المستأجر الفرق خلال <span class="amt">8 أيام</span>.</li>
 </ul>
 
@@ -461,14 +463,15 @@ table.etat .totrow td{background:var(--accent-soft);font-weight:600}
 <li>تُسلَّم السيارة نظيفة وفي حالة جيدة ؛ معاينة الصفحة 2 حجة بين الطرفين.</li>
 <li>يراقب المستأجر المستويات والعجلات ويقود قيادة الرجل الحريص.</li>
 <li>الاهتلاك العادي على المؤجِّر ؛ وكل عطب بخطأ أو إهمال على المستأجر.</li>
-<li>لا تصليح دون إذن كتابي ؛ ولا تعويض عن عطب أو توقف.</li>
+<li>لا تصليح دون إذن كتابي من المؤجِّر. وفي حالة عطب لا يُنسب إلى المستأجر، يوفّر المؤجِّر سيارة بديلة أو يُرجِع ثمن الأيام غير المستعملة ؛ ولا يُستحق أي تعويض آخر.</li>
 </ul>
 
 <h3>المادة 8 · التأمين والأضرار</h3>
 <ul>
-<li>التغطية المكتتبة : <span class="amt">[مسؤولية مدنية / كل المخاطر]</span>، العقد في الصفحة 1.</li>
-<li>في حالة ضرر يكون المستأجر مسؤولاً عنه، يتحمّل تكلفة التصليح التي تُخصم من الكفالة، إضافة إلى مصاريف التوقف أثناء التصليح.</li>
-<li>لا يسري التأمين (الضرر 100% على المستأجر) في حالة : سائق غير مصرّح، كحول أو مخدرات، رخصة غير سارية، استعمال ممنوع، سرقة بإهمال، تصريح كاذب، مخالفة قانون المرور.</li>
+<li>التغطية المكتتبة : <span class="amt">[مسؤولية مدنية / كل المخاطر]</span>، العقد في الصفحة 1. تبقى ضمانة المسؤولية المدنية تجاه الغير قائمة طبقاً للأمر 74-15.</li>
+<li>في حالة ضرر يكون المستأجر مسؤولاً عنه، تُخصم تكلفة التصليح ومصاريف التوقف من الكفالة.</li>
+<li>يُرجِع المستأجر للمؤجِّر كل مبلغ يرفضه المؤمِّن بسبب سقوط الحق أو الاستثناء (سائق غير مصرّح، كحول أو مخدرات، رخصة غير سارية، استعمال ممنوع، سرقة بإهمال، تصريح كاذب، مخالفة جسيمة تسبّبت في الضرر أو زادته). والكفالة ضمان للدفع وليست سقفاً.</li>
+<li>إذا كانت السيارة غير قابلة للتصليح أو سُرقت أو أُتلفت ولم يتكفّل بها المؤمِّن، يدفع المستأجر قيمة السيارة يوم الحادث بعد خصم أي تعويض مدفوع.</li>
 <li>الأمتعة الشخصية غير مغطاة.</li>
 </ul>
 <div class="excl">
@@ -492,22 +495,23 @@ table.etat .totrow td{background:var(--accent-soft);font-weight:600}
 
 <h3>المادة 11 · الوثائق والمفاتيح</h3>
 <ul>
-<li>عند الانطلاق : نسخة مُصادق عليها من البطاقة الرمادية، شهادة التأمين، الڤينيات، المراقبة التقنية. ويبقى أصل البطاقة الرمادية لدى المؤجِّر.</li>
-<li>ضياع المفاتيح أو وثيقة : <span class="amt">10 000 دج</span> زائد التكلفة الحقيقية للاستبدال.</li>
+<li>عند الانطلاق : نسخة مُصادق عليها من البطاقة الرمادية مرفقة بهذا العقد الموقّع (يُثبت حيازة السيارة)، شهادة التأمين، الڤينيات، المراقبة التقنية. ويبقى أصل البطاقة الرمادية لدى المؤجِّر الذي يتحمّل كل حجز ناتج عن وثيقة غير مطابقة قدّمها.</li>
+<li>ضياع المفاتيح أو وثيقة : <span class="amt">10 000 دج</span> (مبلغ جزافي للاستبدال).</li>
 </ul>
 
 <h3>المادة 12 · الإرجاع والإلغاء والفسخ</h3>
 <ul>
 <li>الإرجاع في المكان والتاريخ والساعة المتفق عليها، خلال أوقات العمل.</li>
-<li>الإلغاء قبل أقل من <span class="amt">[48] ساعة</span> من الانطلاق : يُحتفظ بالتسبيق.</li>
+<li>الإلغاء قبل أقل من <span class="amt">[48] ساعة</span> من الانطلاق : يُحتفظ بالتسبيق ؛ وإذا تراجع المؤجِّر يُرجَع التسبيق.</li>
 <li>يجوز للمؤجِّر الفسخ واسترجاع السيارة عند الإخلال.</li>
+<li>المبالغ الجزافية في هذا العقد (التأخير، ضياع المفاتيح، الإلغاء) شرط جزائي (المادة 184 من القانون المدني) : تُستحق بعد الإعذار ويمكن للقاضي تعديلها.</li>
 </ul>
 
 <h3>المادة 13 · المعطيات الشخصية</h3>
-<p>تُستعمل المعطيات لتسيير الكراء وتُحفظ طبقاً للقانون 18-07، ويجوز تبليغها لشركة التأمين والسلطات في حالة حادث أو مخالفة.</p>
+<p>تُستعمل المعطيات (الهوية، الرخصة، الاتصال) لتسيير الكراء والتحصيل. المسؤول : حبوب لوكاسيون. المرسَل إليهم : المؤمِّن والسلطات عند حادث أو مخالفة. مدة الحفظ : سنة بعد الإرجاع إلا عند نزاع. وللمستأجر حق الاطلاع والتصحيح طبقاً للقانون 18-07.</p>
 
 <h3>المادة 14 · النزاعات</h3>
-<p>يخضع العقد للقانون الجزائري ؛ وعند تعذّر الحل الودي تختصّ محكمة مقر المؤجِّر.</p>
+<p>يخضع العقد للقانون الجزائري. وعند تعذّر الحل الودي يُعرض النزاع على المحكمة المختصة إقليمياً وفق قانون الإجراءات المدنية والإدارية. وعند اختلاف النصّين الفرنسي والعربي يُعتمد النص العربي.</p>
 </div>
 
 </section>
