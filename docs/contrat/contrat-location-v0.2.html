@@ -94,7 +94,8 @@ table.etat .totrow td{background:var(--accent-soft);font-weight:600}
 
 .sig{display:grid;grid-template-columns:1fr 1fr;gap:6mm;margin-top:4mm}
 @media (max-width:600px){.sig{grid-template-columns:1fr}}
-.sig div{border-top:.8pt solid var(--ink);padding-top:1.2mm;min-height:30mm;font-family:var(--ui);font-size:8pt;color:var(--muted)}
+.recu{display:flex;justify-content:space-between;gap:4mm;font-family:var(--ui);font-size:8pt;color:var(--muted);margin-top:1.5mm;border:.5pt solid var(--rule);padding:1.3mm 2.5mm}
+.sig div{border-top:.8pt solid var(--ink);padding-top:1.5mm;min-height:38mm;font-family:var(--ui);font-size:8pt;color:var(--muted)}
 .sig b{display:block;color:var(--ink);font-size:9pt}
 .sig .ar{font-family:var(--ar);font-size:10pt;direction:rtl;text-align:right;display:block;color:var(--ink)}
 .mention{font-family:var(--ui);font-size:7.2pt;color:var(--muted);margin-top:2mm;border-top:.5pt solid var(--rule-soft);padding-top:1.2mm;display:grid;grid-template-columns:1fr 1fr;gap:4mm}
@@ -126,8 +127,9 @@ table.etat .totrow td{background:var(--accent-soft);font-weight:600}
 .cgtitle .sub{font-family:var(--ui);font-size:8pt;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
 .cols{column-count:2;column-gap:7mm;column-rule:.5pt solid var(--rule-soft)}
 @media (max-width:700px){.cols{column-count:1}}
-.cols h3{font-family:var(--ui);font-size:7.8pt;font-weight:600;color:var(--accent);margin:1.4mm 0 .5mm;break-after:avoid;letter-spacing:.04em}
-.cols p,.cols li{font-size:7.9pt;line-height:1.28;margin:0 0 .65mm}
+.cols h3.first{margin-top:0}
+.cols h3{font-family:var(--ui);font-size:8.5pt;font-weight:600;color:var(--accent);margin:2.5mm 0 .9mm;break-after:avoid;letter-spacing:.04em}
+.cols p,.cols li{font-size:8.5pt;line-height:1.4;margin:0 0 1.2mm}
 .cols ul{padding-left:3.5mm;margin:0 0 1mm}
 .cols li{padding-left:.5mm}
 .cols .first{margin-top:0}
@@ -137,8 +139,8 @@ table.etat .totrow td{background:var(--accent-soft);font-weight:600}
 .excl th,.excl td{padding:.6mm 1.5mm}
 
 .ar-page{direction:rtl}
-.ar-page .cols h3{font-family:var(--ar);font-size:9.8pt;font-weight:700}
-.ar-page .cols p,.ar-page .cols li{font-family:var(--ar);font-size:8.9pt;line-height:1.34}
+.ar-page .cols h3{font-family:var(--ar);font-size:10.8pt;font-weight:700}
+.ar-page .cols p,.ar-page .cols li{font-family:var(--ar);font-size:9.8pt;line-height:1.55}
 .ar-page .cols ul{padding-left:0;padding-right:4mm}
 .ar-page .cgtitle h1{font-family:var(--ar);font-size:16pt;letter-spacing:0;text-transform:none}
 .ar-page .amt{font-family:var(--ar);font-size:8.3pt}
@@ -150,7 +152,7 @@ table.etat .totrow td{background:var(--accent-soft);font-weight:600}
 .ar-page .accept{font-family:var(--ar);font-size:10pt}
 
 .svgbox{border:.6pt solid var(--rule);padding:2mm 3mm;margin-top:.5mm}
-.bigcar{width:100%;max-height:46mm;display:block;margin:0 auto}
+.bigcar{width:100%;max-height:54mm;display:block;margin:0 auto}
 .svgbox .leg{font-family:var(--ui);font-size:7.8pt;color:var(--muted);margin-top:1.5mm;line-height:1.7}
 .split{display:grid;grid-template-columns:1fr 1fr;gap:7mm;margin-top:1mm;align-items:start}
 @media(max-width:600px){.split{grid-template-columns:1fr}}
@@ -237,6 +239,7 @@ table.etat .totrow td{background:var(--accent-soft);font-weight:600}
   <div class="pl"><span style="margin-left:auto">Caution <small style="color:var(--muted)">(restituable, art. 5)</small></span><b class="bl">________ DA</b></div>
   <div class="pl modes"><span>Paiement : <span class="box"></span>Espèces <span class="box"></span>CCP/virement <span class="box"></span>Carte</span><span>Caution : <span class="box"></span>Espèces <span class="box"></span>Chèque non encaissé</span></div>
 </div>
+<div class="recu"><span>Facture / reçu n° ________ remis au locataire</span><span>Caution reçue le ____ / ____ / 2026</span></div>
 
 <div class="sig">
   <div><b>Le locataire · <span class="ar" style="display:inline">المستأجر</span></b>« Lu et approuvé » · signature et empreinte<br><span class="ar">قرأت ووافقت · الإمضاء والبصمة</span></div>
@@ -301,9 +304,9 @@ table.etat .totrow td{background:var(--accent-soft);font-weight:600}
   </div>
   <div>
     <h2><span>Signatures au retour</span><span class="ar">الإمضاء عند الرجوع</span></h2>
-    <div class="sig" style="grid-template-columns:1fr;margin-top:1mm;gap:3mm">
-      <div style="min-height:20mm"><b>Le locataire · <span class="ar" style="display:inline">المستأجر</span></b>Signature et empreinte · <span class="ar">الإمضاء والبصمة</span></div>
-      <div style="min-height:20mm"><b>Pour l'agence · <span class="ar" style="display:inline">عن الوكالة</span></b>Signature et cachet · <span class="ar">إمضاء وختم الوكالة</span></div>
+    <div class="sig" style="grid-template-columns:1fr;margin-top:1mm;gap:4mm">
+      <div style="min-height:28mm"><b>Le locataire · <span class="ar" style="display:inline">المستأجر</span></b>Signature et empreinte · <span class="ar">الإمضاء والبصمة</span></div>
+      <div style="min-height:28mm"><b>Pour l'agence · <span class="ar" style="display:inline">عن الوكالة</span></b>Signature et cachet · <span class="ar">إمضاء وختم الوكالة</span></div>
     </div>
   </div>
 </div>
