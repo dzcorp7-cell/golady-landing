@@ -149,6 +149,16 @@ table.etat .totrow td{background:var(--accent-soft);font-weight:600}
 .accept .sgn{min-width:48mm;border-bottom:.6pt dotted var(--ink);font-family:var(--ui);font-size:7.5pt;color:var(--muted)}
 .ar-page .accept{font-family:var(--ar);font-size:10pt}
 
+.svgbox{border:.6pt solid var(--rule);padding:2mm 3mm;margin-top:.5mm}
+.bigcar{width:100%;max-height:46mm;display:block;margin:0 auto}
+.svgbox .leg{font-family:var(--ui);font-size:7.8pt;color:var(--muted);margin-top:1.5mm;line-height:1.7}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:7mm;margin-top:1mm;align-items:start}
+@media(max-width:600px){.split{grid-template-columns:1fr}}
+.rettab2{width:100%;border-collapse:collapse;font-family:var(--ui);font-size:8.3pt;margin-top:1mm}
+.rettab2 td{border:.5pt solid var(--rule);padding:1.1mm 2.5mm}
+.rettab2 td:last-child{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;width:40mm}
+.rettab2 .muted{color:var(--muted);font-family:var(--ar);font-size:8.5pt;float:right}
+.rettab2 tr.totrow td{background:var(--accent-soft);font-weight:600}
 @page{size:A4;margin:0}
 @media print{
   body{background:#fff;padding:0}
@@ -243,6 +253,7 @@ table.etat .totrow td{background:var(--accent-soft);font-weight:600}
 <section class="page" id="p2">
 <div class="minilogo"><img src="__LOGO_SRC__" alt="HABOUB LOCATION"></div>
 <div class="cgtitle"><h1>État des lieux du véhicule · محضر معاينة السيارة</h1></div>
+
 <h2><span>4 · État des lieux et restitution</span><span class="ar">4 · معاينة الحالة والاسترجاع</span></h2>
 <div class="tscroll">
 <table class="etat">
@@ -252,42 +263,50 @@ table.etat .totrow td{background:var(--accent-soft);font-weight:600}
 <tr><td><b>Pneus, roue de secours, cric, triangle, gilet</b><span class="td-ar">العجلات والعدة</span></td><td class="in">☐ OK &nbsp; ☐ remarque :</td><td class="in">☐ OK &nbsp; ☐ remarque :</td></tr>
 <tr><td><b>Propreté, documents à bord, clés</b><span class="td-ar">النظافة والوثائق والمفاتيح</span></td><td class="in">☐ OK &nbsp; ☐ remarque :</td><td class="in">☐ OK &nbsp; ☐ remarque :</td></tr>
 <tr><td><b>Date et heure réelles</b><span class="td-ar">التاريخ والساعة</span></td><td class="in"></td><td class="in"></td></tr>
-<tr><td colspan="3" class="secrow">Décompte au retour — à déduire de la caution · حساب الاسترجاع</td></tr>
-<tr><td><b>Km excédentaires</b> × 20 DA<span class="td-ar">كلم زائدة</span></td><td colspan="2" class="in">________ km = ________ DA</td></tr>
-<tr><td><b>Carburant manquant</b><span class="td-ar">نقص الوقود</span></td><td colspan="2" class="in">________ DA</td></tr>
-<tr><td><b>Retard</b><span class="td-ar">التأخير</span></td><td colspan="2" class="in">________ DA</td></tr>
-<tr><td><b>Dégâts</b><span class="td-ar">الأضرار</span></td><td colspan="2" class="in">________ DA</td></tr>
-<tr class="totrow"><td><b>Total à déduire</b><span class="td-ar">المجموع</span></td><td colspan="2">________ DA</td></tr>
-<tr><td><b>Caution</b> ________ DA<span class="td-ar">الكفالة</span></td><td colspan="2">restituée ________ · retenue ________ DA</td></tr>
 </table>
 </div>
-<div class="two" style="margin-top:1.5mm">
-  <div class="pane" style="min-height:34mm"><b>Dégâts et observations — départ · الأضرار والملاحظات</b>
-    <svg class="carsvg big" viewBox="0 0 300 70" aria-label="silhouette de voiture, vue de dessus">
-      <rect x="20" y="12" width="260" height="46" rx="18" fill="none" stroke="#5f584e" stroke-width="1"/>
-      <rect x="80" y="18" width="140" height="34" rx="8" fill="none" stroke="#5f584e" stroke-width="1"/>
-      <line x1="150" y1="18" x2="150" y2="52" stroke="#5f584e" stroke-width="1"/>
-      <rect x="40" y="6" width="22" height="8" rx="2" fill="#fff" stroke="#5f584e" stroke-width="1"/><rect x="238" y="6" width="22" height="8" rx="2" fill="#fff" stroke="#5f584e" stroke-width="1"/>
-      <rect x="40" y="56" width="22" height="8" rx="2" fill="#fff" stroke="#5f584e" stroke-width="1"/><rect x="238" y="56" width="22" height="8" rx="2" fill="#fff" stroke="#5f584e" stroke-width="1"/>
-      <text x="8" y="38" font-size="8" fill="#5f584e" font-family="sans-serif">AV</text><text x="283" y="38" font-size="8" fill="#5f584e" font-family="sans-serif">AR</text>
-    </svg>
-    Marquer : R rayure · B bosse · E éclat · C cassé<br>Observations : ________________________________________</div>
-  <div class="pane" style="min-height:34mm"><b>Dégâts et observations — retour · الأضرار والملاحظات</b>
-    <svg class="carsvg big" viewBox="0 0 300 70" aria-label="silhouette de voiture, vue de dessus">
-      <rect x="20" y="12" width="260" height="46" rx="18" fill="none" stroke="#5f584e" stroke-width="1"/>
-      <rect x="80" y="18" width="140" height="34" rx="8" fill="none" stroke="#5f584e" stroke-width="1"/>
-      <line x1="150" y1="18" x2="150" y2="52" stroke="#5f584e" stroke-width="1"/>
-      <rect x="40" y="6" width="22" height="8" rx="2" fill="#fff" stroke="#5f584e" stroke-width="1"/><rect x="238" y="6" width="22" height="8" rx="2" fill="#fff" stroke="#5f584e" stroke-width="1"/>
-      <rect x="40" y="56" width="22" height="8" rx="2" fill="#fff" stroke="#5f584e" stroke-width="1"/><rect x="238" y="56" width="22" height="8" rx="2" fill="#fff" stroke="#5f584e" stroke-width="1"/>
-      <text x="8" y="38" font-size="8" fill="#5f584e" font-family="sans-serif">AV</text><text x="283" y="38" font-size="8" fill="#5f584e" font-family="sans-serif">AR</text>
-    </svg>
-    Photos horodatées prises : ☐ départ &nbsp; ☐ retour<br>Observations : ________________________________________</div>
+
+<h2><span>Dégâts — marquer sur le schéma</span><span class="ar">الأضرار — تُعلَّم على الرسم</span></h2>
+<div class="svgbox">
+  <svg viewBox="0 0 440 150" class="bigcar" aria-label="schéma du véhicule : vue de dessus et de profil">
+    <!-- vue de dessus -->
+    <rect x="20" y="38" width="250" height="74" rx="30" fill="none" stroke="#5f584e" stroke-width="1.2"/>
+    <path d="M70 46 Q95 60 175 60 Q230 60 250 48" fill="none" stroke="#5f584e" stroke-width=".8"/>
+    <path d="M70 104 Q95 90 175 90 Q230 90 250 102" fill="none" stroke="#5f584e" stroke-width=".8"/>
+    <rect x="95" y="60" width="105" height="30" rx="8" fill="none" stroke="#5f584e" stroke-width=".8"/>
+    <line x1="147" y1="60" x2="147" y2="90" stroke="#5f584e" stroke-width=".8"/>
+    <rect x="46" y="28" width="28" height="11" rx="2" fill="#fff" stroke="#5f584e"/><rect x="216" y="28" width="28" height="11" rx="2" fill="#fff" stroke="#5f584e"/>
+    <rect x="46" y="111" width="28" height="11" rx="2" fill="#fff" stroke="#5f584e"/><rect x="216" y="111" width="28" height="11" rx="2" fill="#fff" stroke="#5f584e"/>
+    <text x="4" y="78" font-size="9" fill="#5f584e" font-family="sans-serif">AV</text><text x="274" y="78" font-size="9" fill="#5f584e" font-family="sans-serif">AR</text>
+    <text x="120" y="79" font-size="8" fill="#9a9284" font-family="sans-serif">dessus</text>
+    <!-- vue de profil -->
+    <path d="M300 104 L300 78 Q303 60 328 57 L352 50 Q372 40 398 42 L420 44 Q430 52 430 70 L430 104 Z" fill="none" stroke="#5f584e" stroke-width="1.2"/>
+    <path d="M330 57 L350 52 L392 52 L402 70 L330 70 Z" fill="none" stroke="#5f584e" stroke-width=".8"/>
+    <circle cx="328" cy="104" r="12" fill="#fff" stroke="#5f584e"/><circle cx="406" cy="104" r="12" fill="#fff" stroke="#5f584e"/>
+    <text x="352" y="122" font-size="8" fill="#9a9284" font-family="sans-serif">profil</text>
+  </svg>
+  <div class="leg">Marquer : <b>R</b> rayure · <b>B</b> bosse · <b>E</b> éclat · <b>C</b> cassé &nbsp;·&nbsp; Photos horodatées prises : ☐ départ ☐ retour<br>Observations : ______________________________________________________________________________</div>
 </div>
 
-
-<div class="sig" style="margin-top:1.5mm">
-  <div style="min-height:22mm"><b>Le locataire · <span class="ar" style="display:inline">المستأجر</span></b>Signature au retour · <span class="ar">الإمضاء عند الرجوع</span></div>
-  <div style="min-height:22mm"><b>Pour l'agence · <span class="ar" style="display:inline">عن الوكالة</span></b>Signature et cachet · <span class="ar">إمضاء وختم الوكالة</span></div>
+<div class="split">
+  <div>
+    <h2><span>Décompte au retour</span><span class="ar">حساب الاسترجاع</span></h2>
+    <table class="rettab2">
+      <tr><td>Km excédentaires × 20 DA<span class="muted">كلم زائدة</span></td><td>________ km = ________ DA</td></tr>
+      <tr><td>Carburant manquant<span class="muted">نقص الوقود</span></td><td>________ DA</td></tr>
+      <tr><td>Retard<span class="muted">التأخير</span></td><td>________ DA</td></tr>
+      <tr><td>Dégâts<span class="muted">الأضرار</span></td><td>________ DA</td></tr>
+      <tr class="totrow"><td>Total à déduire<span class="muted">المجموع</span></td><td>________ DA</td></tr>
+      <tr><td>Caution ________ DA<span class="muted">الكفالة</span></td><td>restituée ________ DA</td></tr>
+    </table>
+  </div>
+  <div>
+    <h2><span>Signatures au retour</span><span class="ar">الإمضاء عند الرجوع</span></h2>
+    <div class="sig" style="grid-template-columns:1fr;margin-top:1mm;gap:3mm">
+      <div style="min-height:20mm"><b>Le locataire · <span class="ar" style="display:inline">المستأجر</span></b>Signature et empreinte · <span class="ar">الإمضاء والبصمة</span></div>
+      <div style="min-height:20mm"><b>Pour l'agence · <span class="ar" style="display:inline">عن الوكالة</span></b>Signature et cachet · <span class="ar">إمضاء وختم الوكالة</span></div>
+    </div>
+  </div>
 </div>
 </section>
 
