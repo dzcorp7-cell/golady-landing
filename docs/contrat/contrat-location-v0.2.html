@@ -51,7 +51,7 @@ h1{font-size:15pt;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
 h2{font-family:var(--ui);font-size:8pt;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:2mm 0 1mm;display:flex;justify-content:space-between;align-items:baseline;gap:3mm;border-bottom:.6pt solid var(--rule);padding-bottom:.6mm}
 h2 .ar{font-family:var(--ar);font-size:10.5pt;letter-spacing:0;text-transform:none;direction:rtl;font-weight:500}
 
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:1mm 5mm}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:1.4mm 5mm}
 .grid .full{grid-column:1/-1}
 .grid.c3{grid-template-columns:1fr 1fr 1fr}
 .grid.veh{grid-template-columns:repeat(12,1fr)}
@@ -59,7 +59,7 @@ h2 .ar{font-family:var(--ar);font-size:10.5pt;letter-spacing:0;text-transform:no
 .f{display:grid;grid-template-columns:auto 1fr auto;align-items:baseline;gap:1.5mm;min-width:0}
 .f .lf{white-space:nowrap;font-size:9pt}
 .f .la{font-family:var(--ar);font-size:9.5pt;direction:rtl;white-space:nowrap;color:var(--muted)}
-.f .v{border-bottom:.6pt dotted var(--ink);min-height:4.5mm;background:var(--field);font-family:var(--ui);font-size:9pt;padding:0 1.5mm;min-width:0;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.f .v{border-bottom:.6pt dotted var(--ink);min-height:5mm;background:var(--field);font-family:var(--ui);font-size:9pt;padding:0 1.5mm;min-width:0;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
 .checks{display:flex;gap:5mm;flex-wrap:wrap;font-family:var(--ui);font-size:8.5pt;margin-top:1.2mm}
 .box{display:inline-block;width:3.2mm;height:3.2mm;border:.7pt solid var(--ink);vertical-align:-.5mm;margin-right:1mm}
 .pricebox{border:.6pt solid var(--rule);margin-top:1.8mm;padding:1.8mm 2.5mm;display:flex;flex-direction:column;gap:1.4mm;font-family:var(--ui);font-size:9pt}
@@ -73,6 +73,7 @@ th{background:var(--accent-soft);font-weight:600;font-size:8pt}
 td.ar,th.ar{direction:rtl;text-align:right;font-family:var(--ar);font-size:9.5pt}
 td.num{text-align:right;font-variant-numeric:tabular-nums;width:26mm}
 td.in{height:5mm}
+table.etat td{padding-top:2.6mm;padding-bottom:2.6mm}
 .tscroll{overflow-x:auto}
 table.etat td:first-child,table.etat th:first-child{line-height:1.25}
 table.etat td:first-child b{font-weight:600;font-size:8.5pt;display:block}
@@ -95,7 +96,7 @@ table.etat .totrow td{background:var(--accent-soft);font-weight:600}
 .sig{display:grid;grid-template-columns:1fr 1fr;gap:6mm;margin-top:4mm}
 @media (max-width:600px){.sig{grid-template-columns:1fr}}
 .recu{display:flex;justify-content:space-between;gap:4mm;font-family:var(--ui);font-size:8pt;color:var(--muted);margin-top:1.5mm;border:.5pt solid var(--rule);padding:1.3mm 2.5mm}
-.sig div{border-top:.8pt solid var(--ink);padding-top:1.5mm;min-height:38mm;font-family:var(--ui);font-size:8pt;color:var(--muted)}
+.sig div{border-top:.8pt solid var(--ink);padding-top:1.5mm;min-height:41mm;font-family:var(--ui);font-size:8pt;color:var(--muted)}
 .sig b{display:block;color:var(--ink);font-size:9pt}
 .sig .ar{font-family:var(--ar);font-size:10pt;direction:rtl;text-align:right;display:block;color:var(--ink)}
 .mention{font-family:var(--ui);font-size:7.2pt;color:var(--muted);margin-top:2mm;border-top:.5pt solid var(--rule-soft);padding-top:1.2mm;display:grid;grid-template-columns:1fr 1fr;gap:4mm}
@@ -157,7 +158,7 @@ table.etat .totrow td{background:var(--accent-soft);font-weight:600}
 .split{display:grid;grid-template-columns:1fr 1fr;gap:7mm;margin-top:1mm;align-items:start}
 @media(max-width:600px){.split{grid-template-columns:1fr}}
 .rettab2{width:100%;border-collapse:collapse;font-family:var(--ui);font-size:8.3pt;margin-top:1mm}
-.rettab2 td{border:.5pt solid var(--rule);padding:1.1mm 2.5mm}
+.rettab2 td{border:.5pt solid var(--rule);padding:2.2mm 2.5mm}
 .rettab2 td:last-child{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;width:40mm}
 .rettab2 .muted{color:var(--muted);font-family:var(--ar);font-size:8.5pt;float:right}
 .rettab2 tr.totrow td{background:var(--accent-soft);font-weight:600}
@@ -307,8 +308,8 @@ table.etat .totrow td{background:var(--accent-soft);font-weight:600}
   <div>
     <h2><span>Signatures au retour</span><span class="ar">الإمضاء عند الرجوع</span></h2>
     <div class="sig" style="grid-template-columns:1fr;margin-top:1mm;gap:4mm">
-      <div style="min-height:28mm"><b>Le locataire · <span class="ar" style="display:inline">المستأجر</span></b>Signature et empreinte · <span class="ar">الإمضاء والبصمة</span></div>
-      <div style="min-height:28mm"><b>Pour l'agence · <span class="ar" style="display:inline">عن الوكالة</span></b>Signature et cachet · <span class="ar">إمضاء وختم الوكالة</span></div>
+      <div style="min-height:36mm"><b>Le locataire · <span class="ar" style="display:inline">المستأجر</span></b>Signature et empreinte · <span class="ar">الإمضاء والبصمة</span></div>
+      <div style="min-height:36mm"><b>Pour l'agence · <span class="ar" style="display:inline">عن الوكالة</span></b>Signature et cachet · <span class="ar">إمضاء وختم الوكالة</span></div>
     </div>
   </div>
 </div>
